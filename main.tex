@@ -1,0 +1,865 @@
+% Created by Bonita Graham
+% Last update: February 2019 By Kestutis Bendinskas
+
+% Authors: 
+% Please do not make changes to the preamble until after the solid line of %s.
+
+\documentclass[10pt]{article}
+\usepackage[explicit]{titlesec}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\usepackage{hyphenat}
+\usepackage{ragged2e}
+\RaggedRight
+
+% These commands change the font. If you do not have Garamond on your computer, you will need to install it.
+% \usepackage{garamondx}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amsthm}
+\usepackage{graphicx}
+
+% This adjusts the underline to be in keeping with word processors.
+\usepackage{soul}
+\setul{.6pt}{.4pt}
+
+
+% The following sets margins to 1 in. on top and bottom and .75 in on left and right, and remove page numbers.
+\usepackage{geometry}
+\geometry{vmargin={1in,1in}, hmargin={.75in, .75in}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagenumbering{gobble}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+% These Commands create the label style for tables, figures and equations.
+\usepackage[labelfont={footnotesize,bf} , textfont=footnotesize]{caption}
+\captionsetup{labelformat=simple, labelsep=period}
+\newcommand\num{\addtocounter{equation}{1}\tag{\theequation}}
+\renewcommand{\theequation}{\arabic{equation}}
+\makeatletter
+\renewcommand\tagform@[1]{\maketag@@@ {\ignorespaces {\footnotesize{\textbf{Equation}}} #1.\unskip \@@italiccorr }}
+\makeatother
+\setlength{\intextsep}{10pt}
+\setlength{\abovecaptionskip}{2pt}
+\setlength{\belowcaptionskip}{-10pt}
+
+\renewcommand{\textfraction}{0.10}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\floatpagefraction}{0.90}
+
+% These commands set the paragraph and line spacing
+\titleformat{\section}
+  {\normalfont}{\thesection}{1em}{\MakeUppercase{\textbf{#1}}}
+\titlespacing\section{0pt}{0pt}{-10pt}
+\titleformat{\subsection}
+  {\normalfont}{\thesubsection}{1em}{\textit{#1}}
+\titlespacing\subsection{0pt}{0pt}{-8pt}
+\renewcommand{\baselinestretch}{1.15}
+
+% This designs the title display style for the maketitle command
+\makeatletter
+\newcommand\sixteen{\@setfontsize\sixteen{16pt}{6}}
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+\vspace{-.375in}
+\sixteen\bfseries \@title
+\medskip
+\end{flushleft}
+\textit{\@author}
+\egroup}
+\makeatother
+
+% This styles the bibliography and citations.
+%\usepackage[biblabel]{cite}
+\usepackage[sort&compress]{natbib}
+\setlength\bibindent{2em}
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}\hfill}
+\makeatother
+\renewcommand{\citenumfont}[1]{\textbf{#1}}
+\bibpunct{}{}{,~}{s}{,}{,}
+\setlength{\bibsep}{0pt plus 0.3ex}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Authors: Add additional packages and new commands here.  
+% Limit your use of new commands and special formatting.
+
+% Place your title below. Use Title Capitalization.
+\title{Korolev Crater Special Administrative Region - Mars society prize 2020}
+
+% Add author information below. Communicating author is indicated by an asterisk, the affiliation is shown by superscripted lower case letter if several affiliations need to be noted.
+\author{Alex Sharp}
+
+\pagestyle{empty}
+\begin{document}
+
+% Makes the title and author information appear.
+\vspace*{.01 in}
+\maketitle
+\vspace{.12 in}
+
+% Abstracts are required.
+\section*{abstract}
+The Korolev Crater Special Administrative region is a design entry to the Mars City State Design Competition, created by the Mars society. 
+
+
+Random junk ->
+
+Thorium breeder shell on top of the fast neutron reactor
+
+Cryogenic energy storage via LN2 - heated via industrial waste heat (to boil LN2 to N2). N2 used to pressurize tanks. N2 feed taken to the reactor to be heated, passed through turbines, an isovolumetric heat exchanger (to regenerate heat) before being discharged to atmosphere.
+
+LN2 used to maintain LO2 tanks, as LN2 boils above LO2, so having two tanks in thermal contact will keep the LO2 cool and low pressure.
+
+Orbital traffic control - run as a component of the UN. split up space into zones, each zone is run by an orbital traffic control station that coordinates orbits and landing slots.
+
+Search and rescue/emergency services - it's easy to be stuck in the middle of nowhere, so a team with a shuttle should be stationed to ensure the safety of people.
+
+Military outpost - UN peacekeeping force to ensure stability on mars. Paid for by the UN, but mostly staffed and equipped by Martians under contract.
+
+Rubric:
+    30 points technical design: What engineering systems will be used? How will they work?
+    This we should have covered
+    30 points economic: How can the city state be made economically successful?
+    This also looks fairly good
+    20 points social/cultural/political:  What should Martian society be like? What kinds of schools, arts, sports and other activities should there be? How, given a fresh start, can life on Mars be made better than life on Earth? How should the city state govern itself?
+    We have some stuff here
+    20 points aesthetic: How can the city state be made an attractive and enjoyable place to live?
+    This is basically not done
+
+TODO Legals
+Island of Palmas Case - Scott, Hague Court Reports 2d 83 (1932), (Perm. Ct. Arb. 1928), 2 U.N. Rep. Intl. Arb. Awards 829
+Created the precedent that 'Peaceful and continuous display of territorial sovereignty is as good as title'. Sitting within the framework of Terra Nullius for the initial creation of a claim, this provides a basis for an ongoing claim.
+
+TODO Demo Stats (from demo.py)
+School age size 659581
+Working age size 518156
+Retirement age size 30583
+Population doubles every 23 years
+
+Employed 492248 unemployed 25907
+GDP \$28252M
+SWF growth \$825M
+Tax take \$4237M
+SWF debt cap \$120B
+Housing spend \$3955M
+Housing stock value \$736B
+
+
+
+TODO: Rewrite
+A common saying in investment is that 'capital follows return'. Thomas picketty's work 'on capital'(?) shows the real return (inflation adjusted) of a diversified portfolio across the global economy has been positive for well over a century. This implies exponential growth in the economy, which contradicts the standard model of resource constrained growth which forms an S shaped or sigmoid style curve. Part of this can be explained through technology progressively growing the roof of the S curve. Another component comes from the world not developing uniformly - the growth curve of Europe started earlier than the curve of North america, which was earlier than that of South East Asia, which is earlier than that of Africa and Latin America. Capital then followed those growth curves and so continued to see exponential growth. The key point is that the pension funds of Europe and North America didn't pay for investment in the factories of Shenzhen, they did so because they were following the return. The key point to think about is if they had such great returns (as they were early on in their growth curves), why did investment in later developing economies start earlier? The total amount of investment that an economy can reasonably take is based on their excess economic capacity - the capacity that exists past the minimum required to maintain the population. From a design perspective this then gives us a set of hard goals. Increasing GDP/capita through both mass resource extraction and increased education, and increasing population to raise both domestic demand and GDP.
+
+
+Rewrite from later on re. zubrin's design.
+https://www.centauri-dreams.org/2020/05/29/sublake-settlements-for-mars/comment-page-1/
+
+Domes - 100m in diameter, 12m tall. Split into 4 levels, each 2.5M tall with additional walkways and the like. Built of a steel spaceframe structure covered in foam insulation for thermal rejection, each deck is then cut up into living rooms, commercial rooms, etc. With walls again full of insulating foam, pipework and electrical conduit. Each deck is then managed by an air handling unit, that manages both standard HVAC as well as air processing to remove excess Co2 and replace O2, along with fire detection and suppression. A similar unit is the water handling unit that produces hot water for the deck (via industrial waste heat) and managing the distribution of cold water and grey water return. Each dome has a living capacity of approximately 30,000m2. At 25m2 per person, and leaving aside spare space, that's enough space for approximately 1K people. A small train line connects through the basements of the domes, which are arranged in concentric circles around the outside of the crater allowing for easy movement of people and cargo.
+
+Created via melting the ice out through warm saline water. The water is warmed through industrial waste heat, and the melt water is removed through periodic TSSE. The saline stream can be liquid at the freezing point of water, and so can easily return to the carving drone to be reheated.
+
+TSSE section - This colony uses a two step Temperature swing solvent extraction system to recycle water in to new potable water. The first stage uses Diisopropylamine (DIPA), the second uses Diethyl ether (Eth). The general concept behind TSSE is that the amount of water that can be carried in a solvent is temperature dependent, even for solvents that are mostly immiscible with water. So if you take a solvent, mix it with water (to saturate it with water), and then change the temperature so that significantly less water can be held in the solvent, the remaining water will naturally form an aqueous layer and can be removed. The major advantages of this is that it runs almost entirely off low quality waste heat, it requires only chemicals and materials that are easy to produce in situ, and it's easy to scale up to meet the needs of the colony. The major downside of the single stage process is that significant amounts of DIPA will contaminate the water output, making it unsuitable for drinking and likely uneconomical. The second stage is used, then, to extract the DIPA from the water via Eth. The Eth is then easily removed from the water as it is mostly immiscable with a low boiling point and high vapor pressure. A final stage of activated charcoal is used for safety. Finally minerals are added to treat the water - NaF to help with dental health, NaOCl in trace amounts as a disinfectant, and a buffered mixture of common ions to ensure that the water ph is slightly alkaline, helping to ensure metal pipes passivate properly and that leeched metal ions are insoluble.
+
+Ref: CRC handbook of chemistry and physics - 84th Ed. https://pubs.acs.org/doi/10.1021/acs.estlett.9b00182
+
+https://spectrum.ieee.org/view-from-the-valley/at-work/start-ups/quantum-dots-shift-sunlights-spectrum-to-speed-plant-growth
+
+Quantum dot greenhouses?
+
+Starship rocket costs - primarily reduced by increasing starship lifespan, at least to the 10 year mark. Then cost drops in other factors help. The major component is that the market for rocket travel needs to be reasonably competitive otherwise prices don't match costs - rocket production companies and launch providers should not be vertically integrated.
+
+TODO Nuclear Hoppers - Originally brought up by Zubrin as a general idea, the idea is that mars's gravity is light enough that otherwise unconventional designs will work. The Nuclear hopper is essentially a tank full of frozen CO2 hooked into an open core nuclear reactor via an expander cycle turbopump. Pressurization is via autologous bleed off, as the CO2 heated from the reactor core are pumped back into the tank to boil more of the CO2, maintaining tank pressure. The hoppers themselves are unmanned cargo rockets with minimal shielding for radiation insensitive cargo, designed to be automatically loaded with cargo containers from a multimodal terminal managed through an automated logistics system. The reactor itself has a core made of a 3d printed open cell ceramic foam, fuelled with U233 bred from Th in the main reactor complex. Reactor control is maintained through a set of 3d printed Be baffles on the outside of the reactor, that can be rotated to change the amount of reflected neutrons as the Be concentration (and so the cross section) is non uniform. The nozzle is also printed and contains channels for regenerative cooling.
+
+TODO Nutritional information - Vitamin C/D/Iodine deficiency is likely going to be widespread, so foods will need to be fortified with artificial sources.
+
+TODO Demographic data-
+https://www.cdc.gov/csels/dsepd/ss1978/lesson3/section3.html
+https://en.wikipedia.org/wiki/Age_and_female_fertility
+
+TODO Cultural - Given that space is at a premium, there would be a greater reliance on shared public resources. Larger shared bathrooms, larger shared laundromats, shared kitchen/eating spaces, etc. This would then come with a set of social norms and laws that make that clean and convenient - Singapore style bathroom cleanliness inspectors, cultural norms about minding your own business and respecting the commons, etc. Along with a greater use of public funds to provide and maintain those public spaces. This would then be in contrast to the much greater sense of freedom and individuality for those who are working outdome and generally aren't around people.
+- As you have a set of people from a various backgrounds coming together, you're going to have a unique accent along with unique cultural ideals forming. Direct democracy then makes the laws of society a much closer realisation of the cultural ideals, making it legally more unique.
+- Re. games, likely relying on e sports due to a lack of conventional fields and the like. Games are likely going to rely on the same basic building blocks of everyday life, so likely going to be built around cooperative Ai to help solve tasks or compete. There would also be a set of water/beach recreation in KC that wouldn't be found elsewhere on mars - Most martians would never learn how to swim.
+- Fines and service fees would be based on hour of wage, rather than a fixed dollar amount.
+- Pets and the like are not generally a thing, mostly due to practicality.
+- As the society is mostly underground and so doesn't really need to care about the day/night cycle, the people will be separated into a set of time delineated 'shifts'. This allows for smaller communal spaces to be used 24/7, rather than needing to build much larger spaces that are only occupied for a small fraction of each day. This also helps to spread out traffic, and helps to ensure that the capital equipment (in factories, schools, etc) is in constant use as there isn't a major price difference between the shifts, unlike on earth.
+- Using more communal space allows for less personal space. Down from ~20m^2, through to 1-5m^2 (Capsule hotel style bed through to a small studio room). More space for storage would be via 'pay as you use' storage, which would store/retrieve various standard sized containers in a larger warehouse. You would place the items in, update an inventory, and then have warehouse robots then stack the boxes you don't need until you need it again, in exchange for a small monthly fee. On a per m^3 basis, this is much more efficient than trying to keep everything on your own in one room.
+- More communal space would also allow for things like arcades, computer cafe's, low cost 24h restaurants, etc. to thrive. There would also be smaller private areas (reading rooms, etc) which can be either booked or rented on an as needed basis.
+
+TODO Recreation - KC is unique in that it can run it's own beach. That would provide a unique set of recreation/sporting opportunities, as a slightly submerged module with an open bottom can be sitting at equal pressure with the surrounding water, and so can be filled with sand (crushed rock), with grow/heat lights for illumination and waste reactor heat to warm the water/air to make it a small tropical island. With the right set of plumbing, the water could be stocked with small, friendly fish/etc.
+
+TODO Fountains/waterfalls for air perfusion - with large amounts of new oxygen generation/co2 sequestration happening in hydroponic algea gardens, small fountains/artificial waterfalls would provide a way to keep the air fresh while circulating gasses. The major issue is dealing with pumping biomass fouling equipment, so the water is likely going to be the supernatant after some form of filtration. Possibly using a combination of cyclonic filtration and straight decanting as Algea only generally grows near a light source. The nutrient rich water could also be used to grow small plants around the 'artificial ponds'. This would also be useful around the 'artificial beach'.
+
+TODO Food - Some spices are easy to engineer either chemically (ie. simple esters) or biologically (ie. limonine, linalool). These flavours would then be orders of magnitude cheaper than flavors produced via hydroponic spices, which would then be orders of magnitude cheaper than needing imported spices from earth. This will change the palate of Martians, as the food they're accustomed to eat will be influenced by this.
+
+TODO Internet - The internet based economy is a key segment, both of the export economy and to satisfy local demand. Link layer, long range laser links are used to provide packet forwarding over extended distances, specifically from a HEO outer shell of the Starlink constellation on earth and a similar but smaller constellation in HMO. Both constellations would form their own Autonomous Systems (AS's), peering over those packet links, extending the internet advertisements of both earth and mars to each other. This is the L3 of the Martian internet, using the OSI model. The issue here is that although packets can be routed and sent, the extreme time delay prevents the use of higher level protocols. As such, Martian ISPs provide L4/L7 proxy services, similar to a more traditional VPN service, where connections are proxied on earth via a proxy that understands the time delay. An example of this would be a mail relay that batches and forwards mail, spooling it from the local planet to allow it to effectively interoperate with the existing mail server infrastructure. Existing CDN technology such as NAP's would then be used to allow for existing large scale content providers (youtube, etc) to deploy content on Mars, accessible as normal, with application level changes to deal with the increased spooling delays. This would include things like automatically uploading movies or content created from artists that a user has "subscribed" to, making it accessible via a local data center. As another example, if you're on the Martian internet and you click on a link that isn't cached, that link would bring you to a 'holding' page, while it waits for the page to be spooled from Earth and added to the local cache. Once it's in that local cache, clicking on that link for any other user behind that proxy would then be essentially instant. In general, ISP's would provide caching proxies for most of their users, but for security reasons companies and the like would run their own, renting capacity from earth in something akin to the standard VPN model.
+
+
+TODO Building materials - Biosynthetic composites. 
+10.1126/science.aaf8991 - Synthetic Nacre. Chitin mineralised with Ca/Mg forming a super hard mother-of-pearl style structure.
+https://www.youtube.com/watch?v=Fx8TcGrCOSI - Artificial silk with mineralisation tags, causing it to form a composite 'brick' when added to mineralised water.
+More standard regolith concrete, or bioplastic/concrete composite (so standard concrete, just with bioplastic reinforcing mesh instead of standard steel rebar)
+
+TODO - Silica processing
+- Glass manufacture
+- Silicon grease/etc. manufacture
+- Aggregate for concrete manufacture.
+
+TODO Mushroom farming - One step in converting excess biomass back into food is via mushroom farming. Mushroom farming isn't especially intensive, but requires O2 and waste biomass that can be seeded with spores to form eatable mushrooms, but more importantly catabolise the remaining biomass into simpler components for farming. This helps deal with insoluble products that can't be ground into a colloid and fed into the hydroponic system. The other major alternative is pyrolysis.
+
+TODO Calcs:
+- Energy requirements in general
+--- Energy requirements to refuel a starship
+--- Energy requirements to refine metals
+--- Energy requirements per person
+
+TODO: Diagrams
+- Diagram showing the futures markets.
+- Diagram showing delegative democracy.
+- Demographic diagram
+- Economic diagram
+- Fix the other diagrams with more readable symbols, etc.
+- Diagram for the Zn/S/I cycle?
+- Integrate diagrams into the text
+
+TODO: Structure
+- Decide on Latex template
+- Latex for chemistry?
+
+TODO:
+- Futures market for industrial products to provide stability for demand/price, allowing for banks to lend for large scale capital expenditure.
+- Alkane cracking to methane -> methane reforming to form hydrogen.
+- Ammonia decomposition via Na/NaNH2 to also form hydrogen.
+- Multiple overlapping supply curves with different characteristics. ie. electrolysis units have low fixed cost but high marginal/average cost, farms are a massive capital project but have very low average cost, S/I reactors have medium capital costs, and medium average cost of production.
+- Multiple overlapping supply curves induce elasticity in supply + demand. Inelastic supply/demand curves form an unstable equilibrium, which can be fatal. Form a series of artificial 'automatic stabilisers' to help ensure a stable equilibrium.
+
+
+TODO: TODO list
+
+% Keywords are required.
+\section*{keywords} 
+List Eight to Ten Capitalized Keywords Separated by \ul{Semicolons}; Do Not Use Period at The End
+
+\vspace{.12 in}
+
+% Start the main part of the manuscript here.
+% Comment out section headings if inappropriate to your discipline.
+% If you add additional section or subsection headings, use an asterisk * to avoid numbering. 
+
+\section*{introduction}
+https://www.centauri-dreams.org/2020/05/29/sublake-settlements-for-mars/
+
+
+The section outline below is obligatory for STEM fields. For creative fields, it might be subject specific; however, \textit{References}, \textit{About Student Author(s)}, and \textit{Press Summary} sections are required.
+
+In-text reference citations should support statements made on behalf of others.\cite{journal} See detailed comments about references on the next page. 
+
+\ul{To underline a portion of text}, use the \verb+\ul{}+ command in lieu of \verb+\underline{}+
+
+For units, check for space between a number and its unit (exceptions are percent \% and degree $^\circ$ signs). Use Symbol font for micro ($\mu$), not u or $u$. Latin words (\textit{etc., et al., i.e.}), and Latin names of species, (e.g. \textit{E. coli}) and web sites should be italicized in text and in references. In a sentence, spell out numbers under $10$ instead of using a number (\textit{i.e.}, use six and not $6$).
+
+When you need to refer to \textbf{Figure \ref{sample image}}, \textbf{Table \ref{sample table}}, \textbf{Scheme 1}, \textbf{Step 1}, and \textbf{Equation \ref{equ1}} please bold those words in the text and in the title. The table itself should be centered.
+
+\section*{Introduction}
+Korolev Crater is an ice filled crater located at 73 degrees north, 165 degrees east on Mars. It contains approximately 2000 cubic KM of water ice inside an ancient impact crater approximately 80KM in diameter. The crater's rim rises approximately 2KM above the floor of the $Planum Boreum$ which surround it. The city of Korolev crater is built circumnavigating the craters rim. Primarily on the northernmost point, with an outcrop winding down the crator to the nuclear reactor and associated chemical plants. The city extends in a crescent shape with greenhouses and the like taking up most of the room. The lake itself has been covered with a layer of fatty acids, forming a "fat cap". This fat cap has a negligible vapor pressure in the thin martian atmosphere, and floats on water. This then allows the water underneath it to be heated to form a vast stable glacial lake. This lake then constrained in a series of aquaculture segments - each segment allowing nutrient rich water to grow algae, fish, etc. With a darkened base to reduce the albedo and so retain more of the warmth of the martian sun.
+
+
+$https://en.wikipedia.org/wiki/Korolev_(Martian_crater)$
+\section*{Social/Cultural/political design}
+
+\subsection*{Political design}
+The Korolev Crater SAR is a special administrative region of the United States of America. That is to say, that it has a relationship with the United states much as Hong Kong has to China under the Sino Brish joint declaration - It has it's own currency and monetary policy, it has it's own laws, etc. but it is still American land protected by the US military. 
+
+The KCSAR political system is a delegative democracy. Somewhat of a mix between a direct and a representational democracy, the power of all the decisions of government are determined by a (ranked choice) vote of the citizens themselves. However as voting on matters of government would take an excessive amount of time for most people, the right to directly vote is generally delegated to a series of delegates, for a particular issue or issues. For example, a citizen could delegate military decisions to person X, economic decisions to person Y and social matters to person Z, while reserving their own vote for issues that they care about personally. These delegations can be modified at any time, and while delegates can roughly associate in political parties, these parties don't need to be for all issues. This is accomplished using cryptographic primitives such as homomorphic encryption and linkable ring signatures, allowing for both anonymous voting and cryptographic security that the delegated vote count generated was correct and that it came from the set of citizens. This means of direct action is undertaken for decisions generated internally to the government (ie. from a minister to determine their course of action), petitions from citizens for redress, and matters of interpretation of law, similar to a high court appeal. In this way the government, and the laws it enacts is in accordance with the will of the people.
+
+The fourth branch of the KCSAR government is a Taiwanese style Auditor branch. This branch exists primarily to ensure that all other branches are acting correctly and in accordance with the laws. Some members of the audit branch have access to security clearances and so can audit anything within the government, correcting any issues found. Petitions can be made to the auditor branch, similar to a FOIA request, where even if documents cannot be revealed to the public (or only with excessive redactions), questions can still be asked and publicly accessible summaries made. This auditor branch would also 
+
+
+
+\subsection*{Social/Cultural design}
+More shared spaces/less personal space due to space shortages.
+More communal nature
+Greater 
+Increased reliance on E sports vs. normal sports
+More adventurous nature due to increased risk in everyday life
+
+Genetically engineered design
+
+\section*{Technical design}
+\subsection{Power and thermal design}
+Of critical importance to any functioning society is its energy economy. The core of the KCSAR is an integral fast spectrum two fluid molten salt reactor operating at approximately 750C at a power output of Xth. The reactor uses Hastalloy-N fuel pins, created on Earth, which are full of a fuel salt containing a mix of plutonium and U238 as fuel. The outer coolant salt is chloride based. And as an integral or 'swimming pool design', a single crucible containing the entire assembly is constructed using reasonably standard high temperature materials. As most of the corrosion problems found in molten salt are due to water or oxygen impurities in the salt itself, operating under Argon on mars removes those. And by separating the fuel into disposable fuel pins, only the small pins require superalloys to produce and ship. These pins also physically separate out the fuel salt, which needs special attention due to condensation of fission products, outgassing of Xenon and Krypton, etc. from the heat transport salt, which is the majority of the reactor and is chemically inert. As it's a liquid fuel, it can also be burned more completely, as the standard Xenon intercalation problems found in solid MOX aren't present. As it's a fast spectrum reactor, there also isn't a requirement to isotropically separate lithium for the FliBe mixed fuel salt.
+
+High pressure turbines are precision parts that are hard to transport, and hard to land. As such, rather than a sCo2 or Brayton cycle turbine system that would ordinarily be found on earth, the KCSAR Reactor, instead, connects to a larger series of low pressure turbines. These turbines are then simple enough for mass production using local martian materials. Normally in a power application this would be disastrous, however as a Combined Heat and Power (CHP) system, the excess thermal energy is used as 'plant heat' for a series of chemical plants producing everything from fuel, to (indirectly) food in the KCSAR.
+
+Thermal energy is very carefully managed via the thermal distribution manager. This takes in a series of input fluids from the reactor, the absorbtion chillers, etc. It also takes in the waste heat from various parts of the chemical industrial facility. It also creates new high temperature inputs via a turboinductor. It then mixes those inputs to create output loops at the various chemically useful temperatures, finally producing a rejection loop which contains heat that is too low grade to be used in industry.
+
+http://www.academia.edu/download/48701931/ACT-RPR-PRO-1107-LS-NTER.pdf
+
+Thermal rejection is a major issue on mars, as even though the atmosphere is very cold, it's also very thin. As such convection isn't effective at radiating the energy required to power a city, and radiators would need to be impractically large. Luckily as the reqctor is built right next to a glacial lake, it can reject all of it's waste heat into the lake. This has the added effect of keeping the lake warm for the cold water fish and algea to grow. Similarly bulk cooling is an issue on mars - being able to chill things to below the temperature of the lake is difficult. As such, a series of absorbtion chillers are run using the waste heat from the reactor. Primarily a $LiBr$ chiller, producing chilled water at ~2C. Secondarily an ammonia absortion chiller, producing a chilled methanol loop at -30C. These loops are used primarily in the chemical industry, although they are piped into the city itself for various industrial tasks (for example, industrial cooling for food fridges).
+
+The reactor is designed to run at 100\% of rated capacity 24/7, redirecting it's output into various bulk industrial tasks if the energy isn't needed in the form of electrical power.
+
+
+Direct Liquid Contact  Next Generation Approach to
+Combined CO 2 Recovery and Humidity Control for
+Extended Missions
+Stephen F. Yates 1 and Alexander Bershitsky.
+
+Considerations for Capturing and Converting Martian CO 2
+with Room Temperature Ionic Liquid-Based ISRU Systems
+Michael A. Lotto 1 , Jordan B. Holquist 2 , David M. Klaus 3 , and James A. Nabity 4
+University of Colorado, Boulder, CO 80309, United States
+
+\subsection*{Zinc sulfur iodine thermoelectochemical oxygenic cycle}
+
+Overall steps
+\begin{itemize}
+    \item ZnI2 + CO2 -> ZnO + I2 + CO
+    \begin{itemize}
+        \item ZnI2(g) -> Zn(l) + I2(g) (900k)
+        \item Zn(l) + Co2 -> ZnO(s) + Co (750k)
+    \end{itemize}
+    \item ZnO + 2HI -> H2O + ZnI2 (400K)
+    \item I2 + So2 + 2H2o -> H2So4 + 2HI (electrochemical, V~0.1V)
+    \item H2So4 decomposition H2So4 -> H2O + So3 + 1/2O2
+    \begin{itemize}
+        \item H2So4 -> H2O + So3 (680K)
+        \item 2So3 -> 2So2 + O2 (1080K)
+    \end{itemize}
+    \item Filtration of So2 and O2 via an ionic liquid 10.1016/j.ijhydene.2008.08.002 10.1016/j.jhazmat.2011.07.059
+\end{itemize}
+
+The electrochemical bunsen reactor is used as it separates off the sulfur cycle from the iodine cycle through the PEM membrane, which radically simplifies the design as the liquid liquid separators (and dealing with the HI azerotropes) aren't required and the entire reactor can run at atmospheric pressure. The two primary chemical cycles here are the iodine cycle and the sulfur cycle, which come together in the bunsen reaction.
+
+Key components are the need for recouperators between stages as they operate at greatly differing temperatures. The So3 condenser in the H2So4 decomposer to recycle the So3 for decomposition. And the ionic liquid separation of the So2 (to return to the electrolytic cell and complete the sulfur cycle) and the O2 (the output gas) using caprolactam tetrabutylammonium bromide (10.1016/j.jhazmat.2011.07.059). Along with a conc H3PO4 dehumidifier in the ZnI2 return and an Ionic liquid Co2 separator on the CO exhaust to recycle unreacted Co2, and to allow the device to selectively extract Co2 from a mixed input stream (say of raw martian atmosphere).
+
+The H2So4 decomposition stack is the westinghouse design, with seals only on the low temperature segment (10.1016/j.jhazmat.2011.07.059).
+
+If needed, the input gas stream can be heated through a turbo inductor to convert the input gas into a smaller portion of higher temperature gas that can run the higher temperature reactions.
+
+\subsection{Transportation}
+Transportation from the main settlement to the outlying mining settlements is via autonomous truck on roads designed for those trucks. They are made of roughly compacted rocks and soil, are generally flat, and have the markings required for safe automated navigation. On some roads for closer settlements they also have cables and pipes laying next to the roadside providing power, water, copper or optical fiber for telecommunications, and waste water return. These pipes are insulated and contain heaters to keep them above freezing. 
+
+\subsection{Mining operations}
+Mining on mars is crucial to provide the raw materials required to build and maintain a healthy civilisation. The issue with Mining bases is that they are small and have to be reasonably self sufficient, as trucking in oxygen and water is not economically viable. As such, they use a ZSI oxygen generator powered from a mass produced kilopower style reactor. They also extract water and Co2 from the air using ionic liquids, providing input to the ZSI plant and water recycling plant. The water recycling plant takes in recycled waste water, extracts the water using Temperature Swing Solvent Extraction and rejects concentrated brine as waste. This is efficient enough to allow for metabolic water production and imported food to provide for the water needs of the small base.
+
+Most of the mining operation itself is, like any major mining operation on earth, carried out by robots. Those robots are not autonomous, but they are semiautonomous. This is much easier to do, but it does require that the mining technicians look in on the robots from time to time to hand them commands when they are unsure of what to do, and to override their behaviors if they intend on doing something dangerous or counterproductive. The other major task involves dealing with robot maintainance and repair, which is made easier as industrial robots are made out of interchangable parts which are mass produced in the city. 
+
+\subsection{Factories}
+The key component to the Martian economy is the industrial sector. Even though things like complete objects (computers, etc.) aren't economical to import from earth, bare silicon is only slightly more expensive per unit weight and most other components can be made out of locally sourced materials. 
+
+Plastics - the fundimental issue with 3d printing and other additive manufacture is that although it can make anything, it can't make everything. The speed and cost required is simply too high for mass produced items. As such, using EDM machines to produce injection molds allows for mass production of high precision plastic parts made from bioplastics such as PHB.
+
+A key component of factories is factory labor. Surprisingly little of the modern day assembly of consumer products is fully automated. As such a sizable labor force is needed in the production of goods for the local population, and the price of labor for that force needs to be reasonably low in order for goods to be affordable for the average consumer.
+
+
+\subsection*{Chemical industry}
+Aside:
+Co2 can be pulled in from the Atmosphere, but the atmosphere is very thin so the costs to compress it, chemically separate it from the N2/Ar/etc. is high. An alternative is to use carbonate roasters. Carbonates, ground into a fine powder, are placed in a chamber and heated. The heat then breaks down the carbonates into Co2 and an oxide (ie. CaCo3 -> CaO + CO2), it also releases the water of hydration from the crystal structure. Autologous heating uses the cooler gasses produced by the roasting, heated via a heat exchanger from reactor waste heat, to heat the chamber and continue the roasting process. The chamber is constantly pumped down, and the hot gasses are cooled via a heat exchanger (producing a recycled waste heat stream) before the water is condensed and the Co2 is separated and pressurised for storage.
+
+https://www.researchgate.net/profile/Paul_Niles/publication/47374184_Deep_crustal_carbonate_rocks_exposed_by_meteor_impact_on_Mars/links/004635143366fdd629000000/Deep-crustal-carbonate-rocks-exposed-by-meteor-impact-on-Mars.pdf
+
+
+The primary aim of the KC chemical industry is to convert the available input materials (regolith, atmosphere, wastes, etc) into new useful products for either the city itself, or for export.
+
+A critical reaction for industry is the Zn/S/I thermochemical cycle to produce CO, H2 and O2 from water. This does require superalloys to be imported from earth to sustain some of the high temperature and corrosive processes in it. This then allows for the Sabatier reaction to run on the syngas, to directly produce CH4, using nothing but thermal energy. This is very important as thermal energy is dirt cheap, comparatively.
+
+A similarly critical reaction is the Haber process, to convert H2 and atmospheric N2 into NH3 for farming and chemical synthesis applications.
+
+A side reaction that is run when there isn't enough demand for Ch4 is the reaction to generate methanol directly from CO and H2. This is then used as food for methanotrophic bacteria, which are grown for food and industrial purposes.
+
+One major electrochemical plant is a chloralkali plant. Using salts extracted from regolith, it produces chlorine gas, as well as Sodium hydroxide, and indirectly sodium hypochlorite for cleaning.
+
+Direct reduction of regolith producing offgas streams of H2S and H3P, which are repurposed as grow media. Aluminium is reduced from aluminia via Ch4.
+
+Separation of the martian air produces internally Co2, N2 and Ar. Ar is used as the buffer gas in the city's atmosphere.
+
+Ficher tropsch production of artificial long chain hydrocarbons from syngas.
+
+One of the more important resources is ethene, produced via syngas on a Ruthenium catalyst. That then allows for the production of PVC plastics, complex organic chemistry, etc.
+
+One major issue with the ISRU production of complex chemical products is the production of aromatics. As Mars doesn't contain crude oil, the standard synthesis approaches which are generally based around benzene, analine and their derivatives simply can't be performed directly on mars. It is technically possible to produce aromatics completely synthetically, but the plant requirements render this mostly infeasible. Doing so biosynthetically is a lot more feasible, however. You simply need a source of glucose (perhaps via the glucose polymer cellulose), a bioreactor, and some basic proces chemistry to clean up the results.
+
+\begin{itemize}
+    \item producing ethene from the dehydration of ethanol produced via standard fermentation
+    \item E. coli SP1.1/PTS.SC6.090B, a species of E coli with a metabolism that was genetically modified to mass produce Shikimic acid, that acid can then be rapidly converted to Phenol using steam over a copper catalyst. 
+r polustrus -> Most versatile thing https://en.wikipedia.org/wiki/Rhodopseudomonas_palustris
+
+    \item E. coli QP1.1/pKD12.138 produces Quinic acid, which can be readily converted into hydroquinone using a hypochlorite oxidation. 
+    \item E. coli MPS15/pET28-0958-ACC/pBAD-LPPβ to mass produce triglycerides and other fats and edible oils. These are useful as a food source, but also as an industrial source for things like soaps, cremes, surfactants, etc. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4295399/
+    \item E. coli JM109SG (pKSSEP1, pMCSH5) to mass produce PHB (a reusable thermobioplastic) from glucose
+    \item The addition of various cellulases/hemicellulases in the various E coli based cultures to allow them to grow on a diet of mostly cellulose
+    \item The production of alcohols from alkanes via oxidation on Methylococcuscapsulatus(Bath).
+    \item The production of Methylococcuscapsulatus (Bath) on Methanol/methane and NH4Cl, to convert spare reactor capacity to biomass. Carbon capture efficiency is approximately 60\%, with a doubling time of approximately 2.5 hours.
+    \item The production of Penicillin in yeast https://www.nature.com/articles/ncomms15202/
+    \item  a mechanism of producing artificial milk/cheese/other dairy products from yeast derived proteins http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=20170273328.PGNR.&OS=DN/20170273328&RS=DN/20170273328
+    \item mass producing nylon from cellulose via biologically derived phenol (via cyclohexanone and caprolactam)
+    \item mass production of butyl rubber from ethanol on mixed oxide beds
+    \item Producing acetone from ethanol on ZnO-Fe 2 O 3 beds
+    \item Producing ethanol/acetate from syngas using Clostridium ljungdahlii 
+    \item Converting proteins and biomass into ammonia and biofuel -> cube 10 m on each side can provide 1 ton of ammonia/day, 400kg assorted alcohols.
+    \item convert any remainder to syngas to be recycled into new biomass
+    \item Catalytic pyrolysis of biomass over HZSM-5 to produce BTX (benzine/toluine/xylene).
+\end{itemize}
+
+
+"Wood Formation in Trees Is Increased by Manipulating PXY-Regulated Cell Division" 10.1016/j.cub.2015.02.023 to get giant plants
+
+Bisphenol epoxy ->
+Bisphenol A (Phenol and acetone)
+ECH from glycerine
+
+500kg/ha/year from cyanobacteria
+600ha
+
+600w/m2 on mars = 600MW/square km
+
+Agrobacterium -> Transfer to plants
+
+Damage supressor protein -> From tartigrades
+
+r polustrus -> Most versitile thing https://en.wikipedia.org/wiki/Rhodopseudomonas_palustris
+
+"Cell free protein synthesis"
+
+
+Factoring insurance, collateralized lines of credit trade contracts
+
+Ammonia from protein - https://doi.org/10.1016/j.ymben.2014.02.007
+
+
+Ethanol and acetate production from synthesis gas via fermentation
+processes using anaerobic bacterium, Clostridium ljungdahlii
+Habibollah Younesi a , Ghasem Najafpour b,∗ , Abdul Rahman Mohamed a
+
+Direct Conversion of Bio-ethanol to Isobutene on Nanosized Zn x Zr y O z
+Mixed Oxides with Balanced AcidBase Sites
+Junming Sun, † Kake Zhu, † Feng Gao, ‡ Chongmin Wang, † Jun Liu, † Charles H. F. Peden, † and Yong Wang* ,†,‡
+
+
+
+Growth yields of methanotrophs - David J. Leak** and  Howard Dalton 
+https://www.frontiersin.org/articles/10.3389/fmicb.2018.02947/full
+
+At 10mg/L/H, every 5KL (or 5 cubic meters) of bioreactor volume produces 1KG/fat/day. At the standard north american dose of 160g of fat per day, that's approximately 0.8 cubic meters per person, to have the entirety of their dietary fat needs taken care off synthetically.
+
+Automated greenhouses for more complex tasks such as hydroponic vegetable production are still very much a work in progress. Automatic farming of grasses, however, is a much simpler task that has been automated for years. Automated farming of Miscanthus giganteus (elephant grass) in a low pressure greenhouse environment allows for the conversion of large amounts of water, martian atmosphere and a small amount of micronutrients into tons of cellulose per ha. In northern europe, Elephant grass has a yield of approximately 22 dry tons per ha. Given that the insolation of Mars is roughly half that of earth, an assumption is made that yield will be over 1/4 of the earth yield. That's 5.5 tons/ha/year. Total cellulose content is approximately 80\%, so that's 4.4 tons of cellulose per year per ha, with the rest being various byproducts. It was shown that with pretreating, cellulose enzymes can release 80-90\% of the total cellulose content as sugars, leaving 3.5 tons of sugar per ha per year as a conservative estimate.
+
+With a standard assumption of 16 kilojoules per gram of glucose, that's 52253 MJ of energy. At 9kj/day/person, that's enough energy to feed 15,895 people per ha. For a city of 1000000, that would require farms of approximately 63Ha. Including industrial capacity, that's likely to be 100Ha, or approximately 1 square kilometer.
+
+"The improvement of enzymatic hydrolysis efficiency of rape straw andMiscanthus giganteuspolysaccharides"
+
+
+TODO - Get a spreadsheet working for this. And find better approximations.
+
+Bath - going from 1 ton biomass to 2 tons biomass requires 1.6 tons of CH3OH, and an O2 ratio of ~1, that requires 1.6 tons O2. That would then require 50000 moles of O2, requiring the splitting of 0.9 Tons of water. 100000 moles of CH3OH then requires 200000 moles of H2, requiring the splitting of 3.6 tonnes with a total of 4.5 Tons of water, 4.4 Tons of Co2. 
+
+https://marspedia.org/images/a/a2/Propellant_production.png
+
+13Mwh -> 400kg of methane. 32.5Mwh/Ton of methane. 1.6 tones of Ch4 ~= 52 Mwh per tonne biomass.
+
+Assuming it's the same as Spirulina (approx). Spirulina is 16kj/g. 1 Tonne biomass = 16000000kj = 1777 person days worth of food = 29kwh/person day of food. For 1000000 people, that's 29twh, or roughly 1tw continuously.
+
+
+
+
+
+
+
+
+Hydroquinone, like phenol, is a very widely used aromatic. An example of this is for the production of acetomiphen, which can be produced from hydroquinone via acetic acid/ammonium acetate.
+ 
+
+Some major industrial compounds can also be produced multiple ways, for example ethene can be produced both from the dehydration of (fermented) ethanol, but also directly from Co2 and H2 in a sabatier style reaction. 
+
+Another byproduct of biosynthesis via 
+
+Benzene-Free Synthesis of Phenol**
+James M. Gibson, Phillip S. Thomas, Joshua D. Thomas,
+Jessica L. Barker, Sunil S. Chandran, Mason K. Harrup,
+Karen M. Draths, and John W. Frost*
+
+https://www.sciencedirect.com/science/article/pii/002195178390297X
+
+
+
+https://www.sciencedirect.com/science/article/abs/pii/S0306261913002055
+
+The reverse water gas shift reaction converts Carbon dioxide and hydrogen to carbon monoxide and water. Given the existing thermochemical plant to split water, this provides an oxygen generation cycle where the H2 is recycled from the water back to the RWGS reactor, with the O2 being released to the atmosphere.
+
+
+YSZ stabilised Ruthinium - 450C, Cs/Ru (Ru/CeO2) = 0.3 at 5 bar of pressure. Attach MgCl to the Haber reactor -> NH3 gets adsorbed into MgCl forming Mg(Nh3)6Cl2. This pulls the reaction through to completion.
+
+"Yittria-Stabilized Zirconia (YSZ) Supports for Low Temperature Ammonia Synthesis"  Zhenyu Zhang*, Sarah Livingston, Thomas F. Fuerst, J. Douglas Way, Colin A. Wolden, Colorado School of Mines
+Lucy Fitzgerald, University College Dublin
+Simona Liguori, Worcester Polytechnic Institute
+
+Ca(NH 3 ) 8 Cl 2 at 0.1Mpa tank pressure for NH3 storage.
+
+Safety of Ammonia As Hydrogen and Energy Carriers
+Presented on November 13, 2019 during the Ammonia Energy Conference 2019 
+
+Store hydrogen/nitrogen temporarily as ammonia, then split with Sodium metal on nickel wool at 550C with a recouperator and a small inductive heater.
+
+Hydrogen Production from Ammonia Using Sodium Amide
+William I. F. David,* ,†,‡ Joshua W. Makepeace, †,‡ Samantha K. Callear, † Hazel M. A. Hunter, †
+James D. Taylor, † Thomas J. Wood, † and Martin O. Jones †
+
+
+Optimizing Absorptive Separation for
+Intensification of Ammonia Production
+Bosong Lin, Fouzia Nowrin, Mahdi Malmali
+Chemical Engineering
+Texas Tech University
+
+Splitting of water is 300kj/mol. *2 for the thermal process, that's 600kj/mol, producing 2G H2 and 16G O2. 
+
+Sabatier -> Co2 + 4H2 -> CH4 + 2H2O
+
+so 2 mol H2 produces 0.5 mol Ch4. That's 8g methane.
+
+so 8g methane, 16g O2 per 600kj. 
+to produce 1T methane, 2T O2, requires 75,000,000,000j.  75GJ
+
+Star ship uses 1200T of propellant. 1,200,000,000g
+
+CH4 + 2O2 -> Co2 + 2H2O
+
+W(Ch4) + W(2O2) = 1200T
+
+16 * N(CH4) + 32 * N(O2) = 1200T
+N(Ch4) = 2*N(O2)
+N(O2) = N(Ch4) / 2
+
+16 * N(CH4) + 32 * (CH4)/2 = 1200
+16 * N(CH4) + 16 * CH4 = 1200
+32 * Ch4 = 1200
+ch4 = 37.5T
+
+To produce 1 star ship worth of propellant requires 600T * 75GJ/T = 45,000GJ = 45TJ
+1MWH = 3,600MJ
+1GWH = 3,600GJ = 3.6TJ
+1TWH = 3,600TJ
+
+1 star ship = 12.5GWH of power.
+
+
+\subsection*{Farming}
+
+Farming comes in many forms and at many price points. From eatable industrial inputs (such as bulk glucose or protein powder), through to battery chickens and fish. 
+
+\subsubsection*{Eatable industrial inputs}
+These foods are useful for industry, but also make up the bulk of the diet for lower class Martians.
+
+Methanotrophs
+These organisms use methanol, generated from excess reactor power, as both a carbon source and as an energy source as they have methane monooxidase. This allows them to grown rapidly (Some have a doubling time of under 3h), off a diet that is produced using primarily nuclear thermal energy, and produce a number of products, such as polyhydroxybutyrate for bioplastic production as well as for the production of protein (via Methylococcus capsulatus) as well as through the production of Vitamin B12, artificial oils, etc.
+
+Grass Farms
+Whilst building robotic greenhouses that can grow standard crops en masse is a daunting technical challenge, being able to reliably grow a lawn is comparitively simple. Small modular greenhouse sections fused together, filled with low pressure Co2 enhanced atmosphere, are used to grow low light grasses. These are then robotically mowed using a fairly standard robotic lawnmower, as they are too short to be human maintainable. The mowed grass is then cracked into glucose via cellulase enzymes producing large quantities of cheap industrial glucose. The growth beds for the farms is processed crushed regolith. This regolith no longer has any peroxide or other salts, forming essentially a hydroponic growth bed.
+
+Spirulina
+Spirulina is a cyanobacteria which grows rapidly to produce nutrient rich biomass. Due to it's thermal requirements, it's grown in insulated trays under the lake, sitting at about 30C. This is used directly as feed for people, but also as animal feed. Spirulina is so cheap to produce as it requires very little nutrition in it's growth media, only requiring a small concentration of nitrate/phosphate/carbonate to grow rapidly.
+
+\subsubsection*{Middle class food}
+Battery chickens, fed on the eatable industrial inputs, are grown both for eggs and for meat. Given the cost of space, this meat is reasonably expensive. However processed meat, which is extended with added cellulose, industrial protein, etc. is cheaper and still reasonably equivilant.
+
+Salmon and other cold water fish are also extensively farmed under the lake, in the form of large bioplastic pens. These pens help insulate the water inside from thermal disruptions, and they keep nutrients contained to maintain the local food cycle. Water from the fish farms is used to help grow the Grass farms in a form of aquaponic arrangement.
+
+Hydroponic gardens
+Growing a more standard selection of vegetables, grains, spices and the like. Hydroponic gardens require significantly larger spaces, and due to the complexity in harvesting, require much thicker walls to allow for a shirtsleeves environment for humans.
+
+\subsubsection*{Upper class food}
+For the exceptionally wealthy, imported food from earth in the form of chocolate, coffee, and other products that are hard to grow are available. Given the cost of transport, this is reserved as being a luxury item. Some semiluxury foods are created as a mix of local and imported ingrediants - ie. chocolate made using artificial oils and bulk glucose on an imported coca base is considerably cheaper than an equivalent block fully imported from earth.
+
+
+
+
+
+
+https://www.sciencedirect.com/science/article/pii/S1003995308600341
+
+
+
+
+
+\subsection*{Water}
+
+As this colony is built around an artificial lake, water itself isn't scarce in the sense that it would be on a more isolated settlement. That said, lake water isn't initially potable for either human consumption or industrial processes.
+
+Lakewater is treated using TSSE. TSSE is temperature swing solvent extraction and involves using a solvent that can hold differing amounts of water depending on temperature. As the solvent is heated, it absorbs water from the raw water inlet. The water filled solvent is then separated from the raw water in and cooled. This cooler solvent then rejects the excess water, which forms in a separate aqueous layer. Trace amounts of solvent remain in the water, which is removed by passing the clean water through a series of oil layers to catch the remaining solvent, leaving clean drinking water. This process was chosen as it requires very simple mechanical equipment with no need for high precision semi permeable membranes as you would find in a more standard reverse osmosis system. The TSSE process is run from the plant heat from the reactor, and recycles heat internally using a recuperator.
+
+Wastewater treatment - comes in two stages. Greywater and blackwater.
+
+Greywater treatment (from showers, etc) is water that is not especially polluted, specifically it contains no major harmful biological organisms. It is passed through a simple filter stage before being pushed into the aquaponics loop.
+
+Blackwater treatment is more complex, but mostly as it contains organisms that need to be killed before it can be used as fertiliser. Blackwater is mixed with greywater, and then mixed with NaOCl to sterilise, before filtering it and mixing it into the aquaponics loop.
+
+\subsection*{Atmosphere}
+The atmosphere for the city itself is low pressure Oxygen/Argon, with Co2 removed via Amine scrubbers and rejected as a chemical input. The grass farms are low pressure Co2 enriched, with scrubbers on the return loop to allow the O2 generated by the grass to go via the city. The hydroponic farms are at standard pressure, but are still Co2 enriched. O2 bleed lines feed in from the cryogenic Lox tanks to replenish O2 as needed to maintain a stable partial pressure of oxygen. Air is maintained through a set of pressure regulation stations, which take in lines of oxygen enriched Air, argon, and a reject line (for excess atmosphere), and balance the lines to ensure that local atmospheric conditions are met. Compressed buffer tanks of Argon are also available in the case of a sudden pressure drop. Respirators that also enclose the ears and eyes are maintained at regular intervals to ensure that even in the event of an underpressure situation, that citizens still have enough time to return to safety, even if they're unable to find or put on a full pressure suit.
+
+Atmospheric monitors are affixed on every compartment, with alarms that are set off in the case of gross underpressure, or if the partial pressure of oxygen or Co2 is too far out of bounds. Dust is a serious problem within a mars colony, so primary filtration of air to remove small particles is essential to prevent chronic silicosis. Cyclonic filtration with a second electrostatic stage is preferred here, as it removes the need to build and maintain fleets of filters around the city. 
+
+\section*{Economic design}
+
+\section{Financial engineering mars}
+
+\subsection{Catastrophe bonds}
+One key component of the reinsurance market is catastrophe or 'cat' bonds. These are bonds that pay the bearer some fixed amount of money if some event happens. They are generally issued only for events that effect large portions of the population, and they trade at approximately the market implied probability of the event happening * the payout. They are key for insurance companies as they can buy cat bonds to hedge out systematic risks in their portfolio.
+
+\subsection{Leased rockets}
+One key development in the advent of reusable rockets is the ability to lease rockets. That is to say, instead of raising space specific venture capital money from investors and using that to pay in advance for a rocket that, say, a space tourism company will own outright. Instead they can go to a leasing company who will buy the rocket for them under loan and allow them access to it for a much lower monthly fee. That fee can then be offset through the profits generated by operating the rocket, allowing companies that would not ordinarily have the resources to go into the space business to operate there. This improves economies of scale for launch providers, and helps to grow the space industry.
+
+The issue with rocket leasing companies are that rockets are a) expensive purchases and b) at the moment new enough that proper actuarial models on the risks involved don't yet exist. To solve these problems requires a restructure and the creation of a new type of insurance.
+
+At it's most fundamental level, a lease is made up of: a) money borrowed to buy the asset, b) the rights to the payment stream from the leasee and c) the rights to any form of security. If you add in d) an insurance policy for the shortfall between the value of the payment stream and the asset and the value of the loan, then if packaged up you can resell the package as debt with the same credit rating as your insurer. With the lease then sold off on the wholesale debt market, the initial funds are then refilled, including extra from profit on the lease. 
+
+Credit default swap -> Insurance on default via market.
+
+The cycle is then:
+\begin{itemize}
+    \item Use an existing pool of funds to buy a new rocket and write up a new lease for a customer
+    \item Work with the insurer to buy the insurance policy for the lease - this would be a premium paid monthly from the customer, and would pay out in the event that the residual value of the rocket doesn't cover the remaining lease payments.
+    \item Package up the rights and the insurance policy into a new debt issue
+    \item Sell that debt on the open market to other financial institutions.
+\end{itemize}
+
+This solves the basic issue in terms of requiring specialist capital for the creation of rockets at the cost of requiring the creation of a new type of insurance. That's a simpler issue, however. Especially as that insurance can be built on the back of both catastrophe bonds as well as government reinsurance programs, restricting the unhedged risk to the insurer to be mostly standard commercial risk.
+
+\section{property market}
+KC follows a Singaporian model for property ownership within the city boundaries itself - land is granted to private individuals, open to trade, mortgage, rental, etc. but only for a fixed period of time. As each section is created and the volume inside is sectioned off for land deeds an 'expiry date' is created at the design refurnishment lifetime of the section - generally 30 to 50 years in the future. At this future time, all the land grants expire and revert back to the government. The section is then refurnished and redivided. The important consequence of this is that land gets cheaper over time, making it more accessible to first home buyers.
+
+These loans, in a similar manner to the rocket leases are then combined into CMOs - Collateralized mortgage obligations. Units in those CMO's are then sold on to toher banks to provide ready working capital for the martian banks to continue to lend. As an example a \$1M loan over 50 years at 1.8\% interest with 2\% inflation would return \$1.6M. So a bank that can borrow from the short term money markets, fund and then sell the mortgage, will end up with \$600K of rapid profit. Most importantly, it's a way to convert the GDP of the KC colony into cash for short term investments.
+
+\section{Soverign wealth fund and retirement}
+KC also follows a singaporean model for retirement saving. Each year, each employee pays 10\% of their gross income to buy units in the KC soverign wealth fund (SWF). That fund is a trust, managed by the government, that invests in local businesses both in terms of investment loans and in terms of equity investments. Over time, the units in that trust become worth more and more money, until eventually at retirement the worker starts selling down their units to fund a pension. This pension is 'topped up' to a minimum amount by the government in case of a short fall.
+
+This soverign wealth fund is also topped up with the proceeds from land sales, mineral rights sales, patents generated from public universities and the sale of other public goods. This fund is also used to subsidise imports of capital goods (machines, reagents, etc.)
+
+\section{Universal basic income and wages}
+Unemployment and homelessness are real problems in a society where air has a real cost and space is expensive. Especially as prosecuting crime is exceptionally expensive on a small colony, trying to ensure that people's needs are met is important. As such all citizens recieve a UBI. This a cash payment consisting of the current market value of the basic goods and services needed to survive. This is then netted off at tax time, through a progressive tax such that for anyone of middle class or above means, the value of the tax is greater than the value of the UBI. 
+
+Taking a Swedish model to minimum wages and unions, there is no minimum wage on the KC. Workers can, however, band together to form unions which can then demand a set of basic working conditions for their members.
+
+\section{Sponsored migration program}
+Getting good people to mars is a challenge. At an estimated \$500KUSD per person for a one way trip, that's out of the reach of most of the most promising candidates (who are likely young and well educated, and so have limited wealth). Issuing the tickets on debt is one option, but that raises issues with creditworthiness of the candidates, and issues securitising the debt (the technique mentioned earlier to allow for the creation of much larger debt markets). One key point, however, is that the new candidate is going to become a citizen and grow the local economy. The government can build an actuarial model of the net present value of the net tax increase of the citizen over their expected lifetime (including any costs from public services) and use that to determine a) what portion of the ticket price to subsidize or b) what portion of the ticket price to underwrite. As underwriting only costs money if the new citizen defaults, it's a good way to bring in productive members of society with currently bad credit. One other option is to include the option to have friends and family pool collateral to reduce the risk of the loan to the point that banks would lend against it.
+
+As an example, the 500KUSD ticket cost if spread over 75 years at 2\% interest would be worth approximately 10K a year. That's well within the budget of a middle or upper class worker with a skill set, however if they were fresh out of university it's unlikely that they'd ever be able to get the loan. Similarly it's easy to see how a new member of the middle or upper class, especially one who is young and healthy, would grow the local economy by more than 10KUSD per year in tax revenue. As such it makes sense for the government to borrow against future expected tax income to pay for the ticket.
+
+\section{Social design}
+The basic truth of any new colony is that R, the basic reproductive rate or the number of people born per person, must stay above 1 in order to survive. In modern western societies, this isn't the case barring immigration, and a direct importation of western culture on this issue is going to lead to almost immediate demographic collapse until the number of colonists is below the minimum sustainable number and the colony fails.
+
+One method forward is a direct incentivisation for parenthood - a UBI for minors. This would be a payment for a basket of goods that represent a reasonably enjoyable life for a minor. This payment would be made to the parents in trust of the minor, and would be audited from time to time to ensure that the money provided is going to their wellbeing. There are also direct tax breaks, providing more leave or other allowances for parents, and spending money on advertisemnts and other social messaging to help advertise the concept of parenthood.
+
+Schooling and training is also vitally important. The standard western 'prussian' style of schooling made sense back when Prussia needed to mass produce factory workers out of uneducated farmers. In the information age, there are far more effective ways to teach. And the raw outcomes can also be heavily optimised around cheaper outcomes. As an example, a doctor can easily take decades to train, but the skills required to treat common illnesses and injuries can be gained much more rapidly. As such for the same amount of effort, you can have a larger pool of medical professionals who can handle more cases in the distribution that they're found in the actual population.
+
+By grouping students together by ability (not by age group), by allowing them access to lectures and other materials from a variety of sources and access to teaching assistants, it's possible to significantly enhance teaching speed.
+
+Genetic engineering of humans is something that is either technically or ethically out of the grasp of humanity, and is likely to be for some time. There are other techniques that allow for similar outcomes while being significantly less powerful, however. Embrionic selection is one of these techniques.
+
+Mechanically it's similar to IVF - gametes are extracted from the parents. They are then fused to form blastocysts which then start growing. In a standard IVF treatment, this would be the end - the blastocysts would be implanted and the next generation would begin. In embryonic selection, however, a cell is taken from each of the blastocysts. That cell then has its full genome sequenced using something like a nanopore sequencer. That full genome sequence is then processed to determine their individual genetic polymorphisms. That polymorphism map is then handed to an artificially intelligent system that will then issue a score based on how well that blastocyst is expected to fare on mars. The blastocysts are then ranked, and only the highest ranking ones are implanted and grow up to be the next generation. (
+Embryo selection for cognative enhancement gwern Carl Shulman and Nick Bostrom)
+
+
+
+\section*{Aesthetic design}
+
+
+\section{Cryocooler}
+https://www.cell.com/joule/pdf/S2542-4351(18)30471-9.pdf
+
+Solar absorber - undoped Ge film sitting under an epitaxial GeO2 layer for scratch resistance.
+ZnSe window sits under the solar absorber and allows only IR to pass through.
+Both of these layers have low power active cooling to remove heat buildup and to prevent radiative emission through to the black body radiator - they are cooled back to ambient temperature.
+
+Black anoized Al black body radiator in a dewar under the layers, which is a heat exchanger for He. He enters through the bottom and is cooled, providing a cold he loop to chill the cryogenic tanks. The chilled He is used to primarily liquidy boiled off gasses, but also to cool the liquid gas as needed. As mars has a thin atmosphere, building larger vacuum chambers is comparably easier, and the atmosphere itself will be radiating less IR at night as a black body.
+
+
+
+butyl rubber -> from ethanol.
+
+Oderant for fires - Ethanethiol
+
+\section{The Malthusian trap}
+In general the Malthusian trap for an economy is where, on average, each individual in that economy produces as much over their lifetime as they require to live. There is very little extra output leading to essentially no growth even over extended periods of time, and the society is vulnerable to even small changes in economic production. Since industrialisation, capital projects have been able to help move economies out of that trap. In exchange for a single large fixed cost, they greatly reduce the variable cost required to support the society. Take a farm for example - the cost for any particular person to go hunting for their own food is significantly less than that of building a farm. That said, the total cost of the community of having all of its members hunt is significantly greater than the total cost of farming. For an extraplanatery colony, this is an important consideration as even the simplest of resources required to survive require reasonably complex methods to produce - you cannot simply wring the oxygen out of water by hand, as an example. As such, there is a hard requirement for capital intensive infrastructure for the colony to exist. With the advent of credit systems large enough to handle the capital reuqired, that reframes the problem. Specifically in terms of what is the average economic output of each member of the community in excess of the loan payments required for the capital expenditures required for the colony to sustain them. As economies of scale reduce the cost per person of this infrastructure, this implies two population limits. The first is the Malthusian limit - the point where economic production is well in excess of the loan payments required. The second is the minimal viable point, which is the point at which the entirely of the economic output is equal to the loan repayments. Below that minimal viable point, the colony simply cannot sustain itself.
+
+As such a primary concern of the martian economy is the simple production of population, specifically population that is actively contributing to GDP. Given the incredible cost of importing people, as many as possible need to be native martianborn. This then creates a chain of secondary requirements that then follow.
+
+\begin{enumerate}
+
+\item Education - reducing the excess time spent in education is a major factor in reducing the time in which citizens are economically unproductive. Another major factor is structural unemployment - as such adult education programs are both needed and should be fully funded to help train adults to meet the job requirements of the market as it stands. Similarly prioritising spending on early education and parenting programs helps enhance outcomes per dollar spent.
+
+\item Employment - An important relationship between unemployment and inflation is characterised via the Phillips curve. In general it's required that ~5\% of otherwise able members of the economy need to sit idle to prevent inflation due to wage increases from causing excess inflation in general. As mars colonies are dependant on cheap debt to fund the capital projects required for them to survive, maintaining both low and stable inflation is a chief concern. On the other hand, having 5\% of a population sitting idle is also unacceptably wasteful. A solution to this is a federal jobs guarantee. By providing a job to every able bodied worker at below market wages, much closer to full employment can be obtained. This also comes in to play with a lack of overall minimum wage - as there is a UBI safety net 
+
+\item Law and order - When people are expensive, locking them up becomes prohibitively expensive as opposed to a more rehabilitative model. Similarly early intervention programs and other programs to help prevent criminal behaviour from taking hold are also much more attractive. Finally policies preventing ghettoization, and ensuring that every individual has access to jobs and a reasonably bright future helps to prevent the formation of larger scale structural crime. Similarly spending more on parenting programs and resources to help stop the cycle of adverse parenting conditions is warranted.
+
+\item Benefits - Means tested benefits programs are popular politically but generally fail in practice as they tend to produce adverse incentives. One standard example are benefits that actively encourage underemployed people to not attempt to work more as the net wage increase can often be negative. By replacing those with a UBI system, paid for by a progressive tax, there are no more adverse incentives. There is always a clear incentive to work more if you are able. 
+
+\item Capital gains taxes - Capital gains taxes are taxes levied on the increased value of capital goods - businesses, property, etc. Active asset rollover exceptions then allow for those taxes to be deferred or removed entirely as long as the profits generated from the sale of the previous capital assets are used to reinvest in new capital assets. This provides a strong incentive for individuals to keep reinvesting, helping to grow the economy.
+
+\item Land value taxes - Land value taxes are taxes on the unimproved value of land. Land in this case would include the 3d real estate of the colony - the apartment, shop, etc. The primary reason behind land value taxes is to provide an economic incentive for land to be used for it's most efficient purpose. If a section of land is currently an industrial zone, for example, and it would be more efficient for that to be a shopping center or residential center, LVT's provide an inventive for the industrial zone to relocate. It also helps to counteract the standard 'asset price ratchet' that you find in low interest rate conditions - as land becomes more expensive, the taxes on that land increase in proportion, making the increased prices harder to justify without a valid reason.
+
+\item Domestic demand vs. the balance of trade. One key component of an economy is gross domestic demand, or the ability for the economy to produce new value over time. The balance of trade is an interesting component for an interplanetary colony as shipping costs are high for most standard goods, making it hard to compete for, say, standard consumer goods. That said, not all exports are physical, with intellectual property being the most obvious alternative but the financial markets being far larger. Using the financial markets to convert gross domestic demand in to a counterbalance for the balance of trade (say through the sale of business, consumer or housing debt, or via the share market) is a key requirement to make the colony viable long term.
+
+\end{enumerate}
+
+\section{The balance of trade}
+The balance of trade in an isolated colony is vitally important as it needs to be able to be able to pay for the imports it needs to survive.
+
+Imports
+\begin{enumerate}
+    \item Consumer goods
+    \item Bulk pharmaceuticals - in bulk active ingredient form, to be processed into its final form on mars
+    \item Chemical reagents that are expensive or otherwise impossible to produce on mars.
+    \item Bulk silicon - Silicon wafers, to be cut up and packaged on mars
+    \item Capital materiel  - goods or equipment required to increase the productive capacity of Mars.
+\end{enumerate}
+
+Exports
+\begin{enumerate}
+    \item Precious metals from near mars asteroid mining via Honeybee style automated robotic mining. The world market for precious metals is large such that with reasonable estimates of the price elasticity of demand significant amounts of gold, platinum and other precious metals can be exported to earth before it becomes uneconomical.
+    \item Fuel mined from comets and the like, exported to the refueling stations around the solar system. These refueling stations then allow spacecraft that would ordinarily only be able to reach LEO to make it to mars and the outer solar system via an on orbit refueling stage.
+    \item Intellectual property - both in the form of standard literary creations, but most importantly in the form of Artificial intelligence systems, designs and datasets. On mars it makes economic sense to semi automate or completely automate many more tasks than it does on earth. As such exporting the capability to do that for an implementation on earth can lead to significant improvements to earth bound processes.
+    \item Financial markets - This is a key point. The sale of bulk debt (housing, consumer, business) on the global market allows for the conversion of domestic martian GDP into an export good that costs nothing to transport and that can help restore the balance of trade. It also has the side benefit in that it links the Martian economy into the wider global economy, making the colony increasingly valuable politically. Similarly the shares in martian based companies (and related products such as ETF's) allows for investors on earth to fund the growth and development of large scale mining or other infrastructure projects that would simply be infeasible otherwise. 
+    \item Services contracts - Building and operating new devices such as telescopes, new probes and landers to be launched out to the far reaches of the solar system. A reasonable portion of the world's budget for space exploration would be better spent by relocating at least the final set of suppliers to be on Mars, with earth based producers. As one example, building large scale mirrors is a lot easier on mars due to it's low gravity and easy access to vacuum. Similarly it has easy access to peaks such as Olympus Mons, which are good locations for deep field astronomy.
+    \item Exotic exports - such as nuclear isotopes such as Pu240, Am, Co60, etc. That are required for various use cases, but are increasingly expensive on earth. As Mars is an ideal candidate for large scale nuclear production, isotropic extraction from spent fuel is a significant revenue source. This is especially true for isotopes such as Pu240 that are both incredibly expensive to produce, are used in space probes (which are likely being built nearby anyway), and have significant political opposition to being launched from the earth.
+\end{enumerate}
+
+\section{The UPU and multimodal trade}
+The United Postal Union is a group set up by treaty that allows for the exchange of mail between UN member countries. By entering the UPU, KC can then gains the ability to have globally recognised addresses. It also fits into the standard postal infrastructure, specifically in that it makes sending a package from anywhere on earth to mars much the same as sending it to any remote island. You have to pay higher postage, which is eventually distributed back to KC to pay for the postage itself. The package goes through standard 'multimodal routing', between trucks, trains, boats and planes, before eventually hitting the new mode of transport - the cargo rocket. These cargo rockets then transport bulk post from the earth through to Mars, for final distribution to the destination.
+
+With WTO developing nation status, something that is likely to be granted, postage via the UPU from developed nations is subsidised, reducing the cost of both sending and receiving goods from KC compared to the raw cost of transport itself.
+
+\section{The futures market for interplanetary trade}
+
+A forward contract is a contract between two parties to trade at some fixed price at some fixed point in the future. They're important to lock in prices and ensure that production is profitable, but they have the major disadvantage in that while they are flexible, they are generally bespoke and there's a significant cost associated with legal fees and the like to produce each individual forward contract. Futures on the other hand, are a standardised contract stating that a particular trade will happen at a particular time for a particular price. This is important to commodify the transaction through the use of an exchange. That is to say, buyers don't need to care who the sellers are and sellers don't need to care who the buyer is. The exchange takes care of those mechanics (along with details such as credit and underwriting, etc). This then allows for contracts to be traded by professional traders who don't have any particular interest in actually acquiring, say, rocket fuel, or a ticket for a transport container to mars, but who have the ability to accurately price model commodities and access to vast sums of capital to trade. This allows for the creation of 'market makers'. These parties are generally banks who have a model for the current price of, say, what a ticket for a shipping container to mars should cost. This then allows them to maintain standing orders to both buy and sell those tickets at particular prices at any time. So any other participant who wishes to buy or sell can do so instantaneously, without needing to wait to find someone else to decide to trade with.
+
+This is critically important as it determines what's known as the 'primary market'. This is the market where, for example, a new rocket charter would sell it's tickets. A rocket can launch X cargo containers to mars and costs Y to launch. If a broker can get a bank to underwrite tickets for those X containers for at least Y/X each, then the rocket can be chartered, the tickets can be sold on the market and everyone is guaranteed to be paid. Except the bank who has underwritten the tickets and is being paid for taking that risk, but that's a risk that is calculated as they have their models of the underlying secondary market. This helps to stabalise the price of commodities, and also helps to grow the market for producers who would otherwise face serious problems obtaining credit to grow due to fluctuations in demand and/or price.
+
+The futures market also allows for more efficient distribution of goods over time. As an example, assume that you have a set of tickets for a cargo container to mars leaving at time T1, T2, T3. If party A has a ticket at time T1 for time insensitive cargo and they see the price spiking, they can easily buy a new ticket at time T3, sell the ticket at T1 to someone with more time sensitive needs and pocket the difference. 
+
+One other important part of the market are consistent government supply orders, which provides a foundation of demand similar to the mail orders that helped to cement the fledgling Airline industry. By consistently buying futures for freight transport to mars and using that to transport mail, capital materials, or other government materials, the government can maintain a stable demand floor.
+
+\section{Geoscaping}
+At this stage in development, the colony only has the beginnings of the megastructure that will be formed over the next decade or so.
+
+The Craters rim has a hole bored through for the creation of a series of aquaducts, power lines and the like, along with multiple train lines that connect it to the outside world.
+
+The crater then has a space frame style aluminium construction with a series of support pillars holding up a structure that covers the entire crater itself. That is then covered in a thin layer of plastic, before being filled with a layer of lipid derived wax. This wax layer is clear, and forms a counterweight to the air pressure that sits beneath it.
+
+The crater itself is filled with SF6 until it hits the armstrong limit. As SF6 is an incredibly powerful greenhouse gas sitting inside of a greenhouse structure, it helps to increase the temperature of the atmosphere within the crater above 0C continuously. This then leads to the crater's ice layer melting and forming a glacial lake. This also leads to the evaporation of water vapor from that lake, helping to improve the atmospheric pressure of the crater itself. In further stages, O2 and Ar are pumped in to bring the atmosphere from being 'survivable in terms of pressure' to simply survivable without a suit for human and other life. The lake is seeded with nutrients, most notably metal trace nutrients along with sulfates and phosphates along with plants such as Azolla along with algae to produce food and oxygen en masse, along with fixing nitrogen from the atmosphere. Later, the lake is seeded with fish which eat the plants and form food for the colonists. The lake becomes green with life, the upper barrier forms artificial rain clouds as it cools warm moist air and condenses the water, and for the first time in billions of years, it rains on mars. And for the first time, animals can walk around freely on the surface.
+
+The main issue here is the train system, which needs to rapidly move through the pressure differential. It does this by having a series of locks built into the tunnel, which slowly raises the pressure from Martian standard atmospheric on one side, to crater atmospheric on the other side, with enough redundancy so that even in the event of a system failure the crater doesn't depressurise. Think of canal locks, only used for atmosphere. The entire ecosystem also requires a continuous importation of Martian atmosphere to provide the Co2 and N2 to feed the ever growing biomass.
+
+
+\section{Direct reduction cycle}
+A key production step of any society is the mass production of iron. On mars, the standard methods are inconvenient as they generally require large quantities of oxygen, which is expensive to produce in the quantities required to produce thousands of tons of metal. As such, direct hydrogen reduction couples with a Sulfur/Iodine water splitting cycle is used.
+
+Ore is ground into a fine powder. It is then injected into a reaction vessel made of ceramic which sits at approximately 800C and is filled with hot hydrogen. At that temperature, hydrogen reacts with Iron oxide to form standard iron along with water. It similarly converts sulfides and phosphides back into iron metal and the corresponding acid gasses. As such the output hydrogen stream is cooled and processed, the water is extracted along with any acid gasses formed. Those gasses are then further processed to form sulfuric and phosophoric acid for industry and as critical components of biomass formation. The cold hydrogen gas stream is then reheated through a recouperator before being reintroduced to the reaction chamber. As hydrogen gas volume is reduced by reaction, it is made up through the use of hydrogen liberated from water. As such most of the hydrogen used is constantly recycled, although there are some losses which require small amounts of water to be added over time.
+
+This produces sponge iron powder, which isn't especially suitable for construction, especially due to contamination with silica. As a secondary process, the sponge iron powder is entered into a furnace with carbon and other metals to form bulk steel, which can then be cast as needed into various steel products. The iron powder can also be refined through iron carbonyl to form pure iron powder, suitable for laser or electron beam metal 3d printing. Electron beam metal printing is especially valuable on mars as the lower atmospheric pressure makes larger pressure chambers practical, allowing for the creation of larger parts.
+
+One key component of the steel industry is the creation of the heavy presses. These presses take in large sets of sheet metal, and hydraulically press it to fit the mold as required. This allows for the creation of very large but very precisely manufactured parts, that would otherwise be impractical to produce.
+
+
+\begin{table}[htp!]
+\begin{center}
+\begin{tabular}{ | c | c | c | c | }
+\hline
+ & \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\ 
+ \hline
+ \textbf{Row 1} & a & b & c \\  
+ \hline
+\end{tabular}
+\caption{The table itself should be centered. The title should be aligned to left or centered, whichever looks better. The table title In AJUR goes below the table and ends with a period. Please bold column and row titles.}
+\label{sample table}
+\end{center}
+\end{table}
+
+\section*{methods and procedures}
+
+\subsection*{Subsections' titles should be mixed case and italicized.}
+Use sections and subsections without numbers, by using \verb+\section*{}+ and \verb+\subsection*{}+ with an \verb+*+. Describe technical details of your work,\cite{journal,chapters} mention the IRB/IACUC permissions' numbers when working with humans/animals.
+
+\section*{results}
+\subsection*{Subsections' titles should be mixed case and italicized.}
+When referring to other sections (such as \textit{Introduction}), italicize them. Figures should not be wrapped- regular text goes above and below them. Figures should be centered.
+
+%You will be uploading any pictures to the files on the left.
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.5\textwidth]{Untitled.png}
+\caption{Figure and scheme titles go below figures. Title may be left-aligned or centered, whichever looks better. It may be the width of the page or the width of the figure. There is no space between the figure and the figure title. Figure title ends with a period.}\label{sample image}
+\end{figure}
+
+\section*{discussion}
+Use tables and figures as described above. Use proper referencing.\cite{web}
+
+All reaction schemes and mathematical equations, unless used in-line, must be centered and not wrapped. The associated scheme or equation number should be bolded, on the right hand side of the page with a period after it. When referring to  in text, do not period after the scheme number.
+
+\begin{equation}
+x= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \label{equ1}
+\end{equation}
+
+This is the appropriate way to display an equation.
+
+\begin{verbatim}
+\begin{equation} 
+x= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \label{equ1}
+\end{equation}
+\end{verbatim}
+
+ Using the \$\$ method, the \verb+ \[, \] + environment, and the \verb+equation*+ environment produce unnumbered equations and should be avoided. 
+
+In multiline equations, label only the last line.
+
+\begin{align*}
+x &= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+  &= 2 \pm 3i \num \label{eqn2}
+\end{align*}
+
+This template automatically loads usual \verb+amsthm+ and \verb+amsmath+ packages.  Additional packages should be loaded in the preamble.  
+
+\section*{conclusions}
+Describe major outcomes, novelty, and significance of your work. Future work may be noted.
+
+\section*{acknowledgements}
+This section is optional. The authors thank and not ``would like to thank'' such and such an organization or person. Co-authors should not be listed here.
+%Note correct LaTeX quotations above. Do not use the " symbol, but rather double ` followed by double '
+
+%There will be no "notes on references" section in your final draft, please remove this section heading.
+\section*{notes on references}
+
+Use no indents. Follow the style given in the examples (journals and serial publications;\cite{journal} chapters and monographs;\cite{chapters} web sources,\cite{web} correspondingly) below. All references in text must be in order of appearance. Please include all authors, the complete title, and inclusive pagination, \textit{e.g.}, 1234--1237, not 1234--7; \ul{please make sure to use en-dash} (in \LaTeX, use \verb+--+) \ul{and not the regular dash or em-dash to indicate duration between page numbers or years.} The publication year should follow authors in parentheses. Supply DOI numbers whenever possible. \textit{Book titles} and \textit{web sites} are italicized. \textit{Titles of journals} should be abbreviated according to http://www.abbreviations.com/jas.php. \textbf{\ul{Reference accuracy is critical. It is authors responsibility to carefully check each reference.}} 
+
+In the text, separate superscripted numbers by comma and space,\cite{journal,chapters} they should be separated by an en-dash if the consecutive list of more than two numbers is used.\cite{journal,chapters,web} List them AFTER punctuation (be it comma or period) with no space.
+
+\begin{thebibliography}{9} %If you have more than 9 sources listed, replace this "9" with "99".
+
+\bibitem{journal} Marquez, V., Frohlich, T., Armache, J. P., Sohmen, D., Donhofer, A., Mikolajka, A., Berninghausen, O., Thomm, M., Beckmann, R., Arnold, G. J., and Wilson, D. N. (2011) Proteomic characterization of archaeal ribosomes reveals the presence of novel archaeal-specific ribosomal proteins, \textit{J Mol Biol} 405, 1215--1232. \textit {https://doi.org/10.33697/ajur.2019.003}
+
+
+\bibitem{chapters} Fierke, C. A., and Hammes, G. G. (1996) Transient Kinetic Approaches to Enzyme Mechanisms, in \textit{Contemporary Enzyme Kinetics and Mechanism} (Purich, D., Ed.) 2nd ed., 1--35, Academic Press, New York.
+
+\bibitem{web} Agricultural Research Service, U.S.D.A. National Nutrient Database for Standard Reference, Release 26, \textit{http://ndb.nal.usda.gov/ndb/search/list} (accessed Mar 2014)
+\end{thebibliography}
+
+% The About the Student Author section is NOT optional.  Write a paragraph about the student; see previous journal editions for examples.
+% If there is more than one student author, you must move the comment below.
+\section*{about the student author}
+%\section*{about the student authors}
+John Smith and Jane Smith will graduate in \ldots, \textit{etc.}
+
+% The Press Summary section is NOT optional.  Write a paragraph describing the paper in a manner suitable for the press; see previous journal editions for examples.
+\section*{press summary}
+
+Please rewrite your abstract so that it captures in few sentences the scope and focus of your publication but could be easily understood by the general public and hopefully shows why your work is exciting and important.
+
+Once done, review these guidelines and the entire document. Make sure that images are exactly where you want them, not at the end of the text. Insert page brakes to avoid orphan titles, words, or sentences being separated out at the end or the top of a page. If any questions remain, please e-mail editor@ajuronline.org.
+
+When you are ready to submit your article, use the share button above and send the read and edit  link.
+\end{document}
