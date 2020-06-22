@@ -90,6 +90,8 @@
 % Authors: Add additional packages and new commands here.  
 % Limit your use of new commands and special formatting.
 
+\usepackage{hyperref}
+
 % Place your title below. Use Title Capitalization.
 \title{Korolev Crater Special Administrative Region - Mars society prize 2020}
 
@@ -143,15 +145,15 @@ TODO: Build demo diagrams that show change in maturation vs. size of the workfor
 TODO: TODO list
  
 \section*{Introduction}
-Korolev Crater is an ice filled crater located at 73 degrees north, 165 degrees east on Mars. It contains approximately 2000 cubic KM of water ice inside an ancient impact crater approximately 80KM in diameter. The crater's rim rises approximately 2KM above the floor of the $Planum Boreum$ which surround it.  The city of Korolev crater is built circumnavigating the craters rim. Primarily on the northernmost point, with an outcrop winding down the crator to the nuclear reactor and associated chemical plants. The city extends in a crescent shape with greenhouses and the like taking up most of the room. The lake itself has been covered with a layer of fatty acids, forming a "fat cap". This fat cap has a negligible vapor pressure in the thin martian atmosphere, and floats on water. This then allows the water underneath it to be heated to form a vast stable glacial lake. This lake then constrained in a series of aquaculture segments - each segment allowing nutrient rich water to grow algae, fish, etc. With a darkened base to reduce the albedo and so retain more of the warmth of the martian sun.
+Korolev Crater is an ice filled crater located at 73 degrees north, 165 degrees east on Mars. It contains approximately 2000 cubic KM of water ice inside an ancient impact crater approximately 80KM in diameter. The crater's rim rises approximately 2KM above the floor of the $Planum Boreum$ which surround it.  The city of Korolev crater is built circumnavigating the craters rim. Primarily on the northernmost point, with an outcrop winding down the crater to the nuclear reactor and associated chemical plants. The city extends in a crescent shape with greenhouses and the like taking up most of the room. The lake itself has been covered with a layer of fatty acids, forming a "fat cap". This fat cap has a negligible vapor pressure in the thin martian atmosphere, and floats on water. This then allows the water underneath it to be heated to form a vast stable glacial lake. This lake then constrained in a series of aquaculture segments - each segment allowing nutrient rich water to grow algae, fish, etc. With a darkened base to reduce the albedo and so retain more of the warmth of the martian sun.
 
 \includegraphics[width=1\textwidth]{1024px-Perspective_view_of_Korolev_crater1024x576.jpg}
 \includegraphics[width=1\textwidth]{890px-Topography_of_Korolev_crater.jpg}
 
 
-https://en.wikipedia.org/wiki/File:Perspective_view_of_Korolev_crater.jpg
-https://en.wikipedia.org/wiki/File:Plan_view_of_Korolev_crater.jpg
-https://en.wikipedia.org/wiki/File:Topography_of_Korolev_crater.jpg
+\url{https://en.wikipedia.org/wiki/File:Perspective_view_of_Korolev_crater.jpg}
+\url{https://en.wikipedia.org/wiki/File:Plan_view_of_Korolev_crater.jpg}
+\url{https://en.wikipedia.org/wiki/File:Topography_of_Korolev_crater.jpg}
 
 $https://en.wikipedia.org/wiki/Korolev_(Martian_crater)$
 \section*{Social/Cultural/political design}
@@ -178,10 +180,10 @@ The fourth branch of the KCSAR government is a Taiwanese style Auditor branch. T
 
 
 
-https://voteflux.org/pdf/Redefining%20Democracy%20-%20Kaye%20&%20Spataro%201.0.2.pdf
-http://www.icare.cl/assets/uploads/2018/01/bryan-ford-ppt.pdf
-https://www.tdcommons.org/cgi/viewcontent.cgi?article=1092&context=dpubs_series
-https://en.wikipedia.org/wiki/Condorcet_criterion
+\url{https://voteflux.org/pdf/Redefining%20Democracy%20-%20Kaye%20&%20Spataro%201.0.2.pdf}
+\url{http://www.icare.cl/assets/uploads/2018/01/bryan-ford-ppt.pdf}
+\url{https://www.tdcommons.org/cgi/viewcontent.cgi?article=1092&context=dpubs_series}
+\url{https://en.wikipedia.org/wiki/Condorcet_criterion}
 
 \section*{Technical design}
 \subsection{Power and thermal design}
@@ -275,13 +277,13 @@ One of the key points in the push towards biochemistry instead of straight up in
 
 As an example of a much closer comparison, take an advanced low pressure haber reactor vs. protein catabolism of cyanobacteria for the mass production of ammonia. The haber reactor is significantly simpler than it's larger cousin, but is still at significant pressure and so requires reasonably sophisticated engineering to obtain. On the other hand the catabolic process requires nothing more complex than a bucket and fractional distillation. As such both processes would run side by side to meet market demand, with the haber reactor taking long term consistent demand and the catabolic process taking anything in excess, along with whatever fraction of demand that can be fulfilled using waste biomass, based on the cost of that waste biomass.
 
-Another interesting example is in the creation of bulk methane. A sabatier reactor is not especially complex to bring from earth, but it requires hydrogen and large quantities of energy. Similarly, producing large quantities of hydrogen then requires either very complex industrial chemistry (Z/S/I cycle), or an incredible amount of electrical energy (for electrolysis). On the other hand, lipogenic yeast can produce large quantities of long chain hydrocarbons. Those can be cracked over various catalysts at ~500C at low pressure with added hydrogen, forming methane. Methane can then be steam reformed into hydrogen and carbon dioxide. Overall, the process can produce all the hydrogen it needs and can produce methane in bulk with only two mildly complex steps of industrial chemistry. On the other hand it requires the production of large quantiites of biomass before it can produce enough methane to be useful, for example, to refuel rockets.
+Another interesting example is in the creation of bulk methane. A sabatier reactor is not especially complex to bring from earth, but it requires hydrogen and large quantities of energy. Similarly, producing large quantities of hydrogen then requires either very complex industrial chemistry (Z/S/I cycle), or an incredible amount of electrical energy (for electrolysis). On the other hand, lipogenic yeast can produce large quantities of long chain hydrocarbons. Those can be cracked over various catalysts at ~500C at low pressure with added hydrogen, forming methane. Methane can then be steam reformed into hydrogen and carbon dioxide. Overall, the process can produce all the hydrogen it needs and can produce methane in bulk with only two mildly complex steps of industrial chemistry. On the other hand it requires the production of large quantities of biomass before it can produce enough methane to be useful, for example, to refuel rockets.
 
 
 Aside:
 Co2 can be pulled in from the Atmosphere, but the atmosphere is very thin so the costs to compress it, chemically separate it from the N2/Ar/etc. is high. An alternative is to use carbonate roasters. Carbonates, ground into a fine powder, are placed in a chamber and heated. The heat then breaks down the carbonates into Co2 and an oxide (ie. CaCo3 -> CaO + CO2), it also releases the water of hydration from the crystal structure. Autologous heating uses the cooler gasses produced by the roasting, heated via a heat exchanger from reactor waste heat, to heat the chamber and continue the roasting process. The chamber is constantly pumped down, and the hot gasses are cooled via a heat exchanger (producing a recycled waste heat stream) before the water is condensed and the Co2 is separated and pressurised for storage.
 
-https://www.researchgate.net/profile/Paul_Niles/publication/47374184_Deep_crustal_carbonate_rocks_exposed_by_meteor_impact_on_Mars/links/004635143366fdd629000000/Deep-crustal-carbonate-rocks-exposed-by-meteor-impact-on-Mars.pdf
+\url{https://www.researchgate.net/profile/Paul_Niles/publication/47374184_Deep_crustal_carbonate_rocks_exposed_by_meteor_impact_on_Mars/links/004635143366fdd629000000/Deep-crustal-carbonate-rocks-exposed-by-meteor-impact-on-Mars.pdf}
 
 
 The primary aim of the KC chemical industry is to convert the available input materials (regolith, atmosphere, wastes, etc) into new useful products for either the city itself, or for export.
@@ -307,16 +309,15 @@ One major issue with the ISRU production of complex chemical products is the pro
 \begin{itemize}
     \item producing ethene from the dehydration of ethanol produced via standard fermentation
     \item E. coli SP1.1/PTS.SC6.090B, a species of E coli with a metabolism that was genetically modified to mass produce Shikimic acid, that acid can then be rapidly converted to Phenol using steam over a copper catalyst. 
-r polustrus -> Most versatile thing https://en.wikipedia.org/wiki/Rhodopseudomonas_palustris
-
+r polustrus -> Most versatile metabolism \url{https://en.wikipedia.org/wiki/Rhodopseudomonas_palustris}
     \item E. coli QP1.1/pKD12.138 produces Quinic acid, which can be readily converted into hydroquinone using a hypochlorite oxidation. 
-    \item E. coli MPS15/pET28-0958-ACC/pBAD-LPPβ to mass produce triglycerides and other fats and edible oils. These are useful as a food source, but also as an industrial source for things like soaps, cremes, surfactants, etc. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4295399/
+    \item E. coli MPS15/pET28-0958-ACC/pBAD-LPP$\beta$ to mass produce triglycerides and other fats and edible oils. These are useful as a food source, but also as an industrial source for things like soaps, cremes, surfactants, etc. \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4295399/}
     \item E. coli JM109SG (pKSSEP1, pMCSH5) to mass produce PHB (a reusable thermobioplastic) from glucose
     \item The addition of various cellulases/hemicellulases in the various E coli based cultures to allow them to grow on a diet of mostly cellulose
     \item The production of alcohols from alkanes via oxidation on Methylococcuscapsulatus(Bath).
     \item The production of Methylococcuscapsulatus (Bath) on Methanol/methane and NH4Cl, to convert spare reactor capacity to biomass. Carbon capture efficiency is approximately 60\%, with a doubling time of approximately 2.5 hours.
-    \item The production of Penicillin in yeast https://www.nature.com/articles/ncomms15202/
-    \item  a mechanism of producing artificial milk/cheese/other dairy products from yeast derived proteins http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=20170273328.PGNR.&OS=DN/20170273328&RS=DN/20170273328
+    \item The production of Penicillin in yeast \url{https://www.nature.com/articles/ncomms15202/}
+    \item  a mechanism of producing artificial milk/cheese/other dairy products from yeast derived proteins \url{http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=20170273328.PGNR.&OS=DN/20170273328&RS=DN/20170273328}
     \item mass producing nylon from cellulose via biologically derived phenol (via cyclohexanone and caprolactam)
     \item mass production of butyl rubber from ethanol on mixed oxide beds
     \item Producing acetone from ethanol on ZnO-Fe 2 O 3 beds
@@ -342,28 +343,28 @@ Agrobacterium -> Transfer to plants
 
 Damage supressor protein -> From tartigrades
 
-r polustrus -> Most versatile thing https://en.wikipedia.org/wiki/Rhodopseudomonas_palustris
+r polustrus -> Most versatile thing \url{https://en.wikipedia.org/wiki/Rhodopseudomonas_palustris}
 
 "Cell free protein synthesis"
 
 
 Factoring insurance, collateralized lines of credit trade contracts
 
-Ammonia from protein - https://doi.org/10.1016/j.ymben.2014.02.007
+Ammonia from protein - \url{https://doi.org/10.1016/j.ymben.2014.02.007}
 
 
 Ethanol and acetate production from synthesis gas via fermentation
 processes using anaerobic bacterium, Clostridium ljungdahlii
-Habibollah Younesi a , Ghasem Najafpour b,∗ , Abdul Rahman Mohamed a
+Habibollah Younesi a , Ghasem Najafpour b,* , Abdul Rahman Mohamed a
 
 Direct Conversion of Bio-ethanol to Isobutene on Nanosized Zn x Zr y O z
-Mixed Oxides with Balanced AcidBase Sites
-Junming Sun, † Kake Zhu, † Feng Gao, ‡ Chongmin Wang, † Jun Liu, † Charles H. F. Peden, † and Yong Wang* ,†,‡
+Mixed Oxides with Balanced Acid.Base Sites
+Junming Sun,  Kake Zhu, Feng Gao,  Chongmin Wang,  Jun Liu,  Charles H. F. Peden,  and Yong Wang 
 
 
 
 Growth yields of methanotrophs - David J. Leak** and  Howard Dalton 
-https://www.frontiersin.org/articles/10.3389/fmicb.2018.02947/full
+\url{https://www.frontiersin.org/articles/10.3389/fmicb.2018.02947/full}
 
 At 10mg/L/H, every 5KL (or 5 cubic meters) of bioreactor volume produces 1KG/fat/day. At the standard north american dose of 160g of fat per day, that's approximately 0.8 cubic meters per person, to have the entirety of their dietary fat needs taken care off synthetically.
 
@@ -378,7 +379,7 @@ TODO - Get a spreadsheet working for this. And find better approximations.
 
 Bath - going from 1 ton biomass to 2 tons biomass requires 1.6 tons of CH3OH, and an O2 ratio of ~1, that requires 1.6 tons O2. That would then require 50000 moles of O2, requiring the splitting of 0.9 Tons of water. 100000 moles of CH3OH then requires 200000 moles of H2, requiring the splitting of 3.6 tonnes with a total of 4.5 Tons of water, 4.4 Tons of Co2. 
 
-https://marspedia.org/images/a/a2/Propellant_production.png
+\url{https://marspedia.org/images/a/a2/Propellant_production.png}
 
 13Mwh -> 400kg of methane. 32.5Mwh/Ton of methane. 1.6 tones of Ch4 ~= 52 Mwh per tonne biomass.
 
@@ -403,11 +404,11 @@ James M. Gibson, Phillip S. Thomas, Joshua D. Thomas,
 Jessica L. Barker, Sunil S. Chandran, Mason K. Harrup,
 Karen M. Draths, and John W. Frost*
 
-https://www.sciencedirect.com/science/article/pii/002195178390297X
+\url{https://www.sciencedirect.com/science/article/pii/002195178390297X}
 
 
 
-https://www.sciencedirect.com/science/article/abs/pii/S0306261913002055
+\url{https://www.sciencedirect.com/science/article/abs/pii/S0306261913002055}
 
 The reverse water gas shift reaction converts Carbon dioxide and hydrogen to carbon monoxide and water. Given the existing thermochemical plant to split water, this provides an oxygen generation cycle where the H2 is recycled from the water back to the RWGS reactor, with the O2 being released to the atmosphere.
 
@@ -654,7 +655,7 @@ Embryo selection for cognative enhancement gwern Carl Shulman and Nick Bostrom
 
 One key consideration when determining the fitness function is that this problem sits under the umbrella of 'one armed bandit problems', whereby a search space needs to be both explored and exploited simultaneously. That is to say, a machine learning model that simply finds the 'best' phenotypes and optimises for that will only observe only a tiny fraction of the incredible diversity that is the state space of the phenotype of man. As such, although its decisions may be optimal with what it has seen, it hasn't seen everything and so globally the solution may be terrible. What's known as a 'regret minimising strategy' built on top of the machine learning heuristic function, then allows for more optimal searching of the state space, providing a much more optimal population overall. A higher order model determining the value to the population of having particular phenotypes would operate in a similar way, and would weigh in with the other models in the form of what's known as an 'ensemble classifier' - where one ML system takes in the input from several other, more specialised system, to form a decision.
 
-One other keys isuse comes in the form of ensuring sufficient phenotypic diversity to allow for a sustainable population - there are few humans on mars, and moving them over is extremely expensive, so the colony is an artificial genetic bottleneck. Studies have shown a lower limit of this in the tens of thousands (with higher limits generally for K selective species like humans - who have few offspring and vast resources into them), however given that the population needs to not only survive but thrive while adapting to an utterly alien landscape, significantly more diversity would be required. A solution to this is to ship, en masse, frozen gametes from millions of humans over to the martian colonies. The cost to transport is minor, and the individuals who donated can be genetically screened as needed. 
+One other keys issue comes in the form of ensuring sufficient phenotypic diversity to allow for a sustainable population - there are few humans on mars, and moving them over is extremely expensive, so the colony is an artificial genetic bottleneck. Studies have shown a lower limit of this in the tens of thousands (with higher limits generally for K selective species like humans - who have few offspring and vast resources into them), however given that the population needs to not only survive but thrive while adapting to an utterly alien landscape, significantly more diversity would be required. A solution to this is to ship, en masse, frozen gametes from millions of humans over to the martian colonies. The cost to transport is minor, and the individuals who donated can be genetically screened as needed. 
 
 https://doi.org/10.1016%2Fj.biocon.2007.06.011
 
@@ -662,6 +663,30 @@ https://doi.org/10.1016%2Fj.biocon.2007.06.011
 Using demographic data adapted from an existing country with a reproductive rate similar to that needed by a Martian colony, we can see an approximation for a martian demographic pyramid.
 
 TODO: Make these side by side
+
+% %-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% \begin{figure}[t!]
+%     \centering
+%     \begin{subfigure}[t]{0.45\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{fig_demopyr_f.png}
+%         \caption{Male demographic pyramid}
+%         \label{fig:maleDemograpichPyramid}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}[t]{0.45\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{fig_demopyr_m.png}
+%         \caption{Female demographic pyramid}
+%         \label{fig:femaleDemographicPyramid}
+%     \end{subfigure}
+%     \hfill
+%     \caption{Demographic pyramids}
+%     \label{fig:populationDemographics}
+% \end{figure} 
+% %-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
 \includegraphics{fig_demopyr_f.png}
 \includegraphics{fig_demopyr_m.png}
 
@@ -671,7 +696,7 @@ This then implies a workforce structured as seen in figure. This balance of work
 \includegraphics{fig_demo_up.png}
 \includegraphics{fig_demo_down.png}
 
-As can be seen in the above graphs, the age at which young people enter the workforce has a dramatic difference on the ratio of working age people vs. non working age people in a society wich such a high reproductive rate. This is a core incentive to provide the most efficient education possible in as short a time as possible, to increase the GDP/capita by both increasing the number of people working and by increasing the income per working person.
+As can be seen in the above graphs, the age at which young people enter the workforce has a dramatic difference on the ratio of working age people vs. non working age people in a society which such a high reproductive rate. This is a core incentive to provide the most efficient education possible in as short a time as possible, to increase the GDP/capita by both increasing the number of people working and by increasing the income per working person.
 
 
 TODO Demo Stats (from demo.py)
@@ -689,8 +714,8 @@ Housing spend \$3955M
 Housing stock value \$736B
 
 TODO Demographic data-
-https://www.cdc.gov/csels/dsepd/ss1978/lesson3/section3.html
-https://en.wikipedia.org/wiki/Age_and_female_fertility
+\url{https://www.cdc.gov/csels/dsepd/ss1978/lesson3/section3.html}
+\url{https://en.wikipedia.org/wiki/Age_and_female_fertility}
 
 
 
@@ -791,7 +816,7 @@ TODO Cultural - Given that space is at a premium, there would be a greater relia
 - Fines and service fees would be based on hour of wage, rather than a fixed dollar amount.
 - Pets and the like are not generally a thing, mostly due to practicality.
 - As the society is mostly underground and so doesn't really need to care about the day/night cycle, the people will be separated into a set of time delineated 'shifts'. This allows for smaller communal spaces to be used 24/7, rather than needing to build much larger spaces that are only occupied for a small fraction of each day. This also helps to spread out traffic, and helps to ensure that the capital equipment (in factories, schools, etc) is in constant use as there isn't a major price difference between the shifts, unlike on earth.
-- Using more communal space allows for less personal space. Down from ~20m^2, through to 1-5m^2 (Capsule hotel style bed through to a small studio room). More space for storage would be via 'pay as you use' storage, which would store/retrieve various standard sized containers in a larger warehouse. You would place the items in, update an inventory, and then have warehouse robots then stack the boxes you don't need until you need it again, in exchange for a small monthly fee. On a per m^3 basis, this is much more efficient than trying to keep everything on your own in one room.
+- Using more communal space allows for less personal space. Down from ~20$m^2$, through to 1-5$m^2$ (Capsule hotel style bed through to a small studio room). More space for storage would be via 'pay as you use' storage, which would store/retrieve various standard sized containers in a larger warehouse. You would place the items in, update an inventory, and then have warehouse robots then stack the boxes you don't need until you need it again, in exchange for a small monthly fee. On a per $m^3$ basis, this is much more efficient than trying to keep everything on your own in one room.
 - More communal space would also allow for things like arcades, computer cafe's, low cost 24h restaurants, etc. to thrive. There would also be smaller private areas (reading rooms, etc) which can be either booked or rented on an as needed basis.
 
 TODO Fountains/waterfalls for air perfusion - with large amounts of new oxygen generation/co2 sequestration happening in hydroponic algea gardens, small fountains/artificial waterfalls would provide a way to keep the air fresh while circulating gasses. The major issue is dealing with pumping biomass fouling equipment, so the water is likely going to be the supernatant after some form of filtration. Possibly using a combination of cyclonic filtration and straight decanting as Algea only generally grows near a light source. The nutrient rich water could also be used to grow small plants around the 'artificial ponds'. This would also be useful around the 'artificial beach'.

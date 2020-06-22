@@ -1,0 +1,128 @@
+Re. The nature of delegative democracy.
+
+
+Where does political power come from?
+-> "Political power grows from the barrel of a gun" - Mao
+-> Political power comes from the belief by the majority of the selectorate that the status quo is better for them than a rival - Paraphrased, the dictators handbook https://www.amazon.com/Dictators-Handbook-Behavior-Almost-Politics/dp/1610391845
+
+Where the selectorate are the power brokers in society. This then leads to the government redirecting resources to the selectorate over the greater populous. This is most obvious in autocratic societies where the selectorate is small (a handful of generals, police leaders, etc), who generally live lavish lives while the rest of the populous starves.
+
+In natural resource rich countries, the selectorate is also generally small, as reasonably few people are needed to extract and sell the natural resources in order for the country to make money. This leads to 'the resource curse'.
+
+In a district based representational democracy, the selectorate is unevenly distributed due to gerrymandering. This is due to the fundamental flaw that the number of votes per seat won in a district based representational democracy isn't fixed, and can be significantly modified for the benefit of one party over another. As the number of votes per seat won is uneven, and as the return per vote bought is uneven as the effect is nonlinear (once a seat is won, return becomes zero), distributing resources based on the marginal return per vote is erratic at best and is inefficient.
+
+This is exacerbated in systems with a fixed number of seats with a growing population - See the reapportionment act of 1929 in the US which fixed the number of seats in congress at 435. This means that the number of Americans represented by each congressperson increases significantly over time.
+
+Another major issue is that of representation - representational democracies can only have so many parties. In the case of first past the post systems, that generally means two broad parties - as splitting any party to form multiple more focused parties is suicide as they will never win the votes required to gain any form of electoral power. In the case of proportional systems a few major parties may emerge, forming government in coalition (see NZ or Norway for this). These are generally better governments, but they still can't fully represent the multitude of values of the citizens as a whole. Specifically, political parties represent clusters of values that generally correlate. But there's no real requirement that they do, and citizens with political values that sit on multiple clusters generally have no effective representation.
+
+A further point is that representatives are elected to act in the best interests of their constituents, but the drivers they have don't push them to do that. They need to be rel elected (as discussed in depth in the dictators handbook), and they are generally interested in their own life, both at the time and after politics. But 'acting in order to be re elected' 'acting in what your constituents would consider their best interests' and 'acting in your constituents best interests' are at best three distinct concepts.
+
+Delegative democracy doesn't have those issues. The selectorate is the entire population. There are no seats and so the effective 'power' of every vote is the same.
+
+Another major advantage is that it diffuses power. Unlike a representative system, where you have few major parties who all generally have leaders, in a delegative system the concept of a 'leader' loses meaning. Is it a group of people with sway over economic matters? Diplomatic matters? Labor reform? Those are all likely different groups of people, who are themselves not likely to be consolidated. This diffuse power base both limits the effects of lobbying or other coercion (as delegates have considerably less power over a more limited domain), it also helps safeguard the system by making it less likely that a consolidated power base will be able to attempt to subvert the Auditor arm and attempt to simply cheat it's way to victory.
+
+Direct democracy has always had the flaw that the majority of the issues of state aren't interesting to most people, and so getting people to vote is difficult - in the 5th C BC, slaves would herd Athenians from the Agora into the Pnyx for votes, to ensure that enough eligible citizens were there to allow for votes.
+
+One key issue with delegative democracy is that it has no concept of a 'term limit' for a delegate by default, and so nothing to prevent the aggregation of power. There's also nothing to prevent lobbying and the like by default. There is also nothing in particular to prevent a totalitarian style leader (See Bob Altemeyer's book 'The authoritarians'), from collecting Authoritarian followers to form a populist bloc.
+
+There's also a loose idea of a constitution, given that constitutions are generally amended through a plebiscite of sorts - a concept that can be generalised by having particular laws or particular types of laws (ie. laws on the structure and form of voting, etc), that require some arbitrary barrier (say 80% or more) to be changed rather than a simple majority.
+
+There's also only a loose idea of what to do for 'continuity of government' in case the standard voting system stops running. The closest answer is to form the delegative tree, finding the most popular delegate at each stage, and then using that as a fixed cabinet until infrastructure can be restored.
+
+This infrastructure also needs to be secure and inspectable for it to be trustable at scale. Something like Andrew Huang's 'betrusted' https://betrusted.io/ would make a good starting point for this.
+
+One other aside is that a simple version of this model can be built basically as is on top of the Monero cryptocurrency. The monero crptocurrency has at it's core two major innovations - that wallets have both a spend key and a view key. The view key being a key that can be used to verify what coins were sent to a wallet without knowing anything else. The second is that it allows anonymous spending of coins.
+
+Take a set of voters, V. They produce some certificate containing a public spend key S_v, view key V_v, along with some signature verifying their identity (for delegation) along with verifying that they are authorized to vote in this election. At time t=0, the genesis block is mined and transactions are created to send every Voter 1/nth of the genesis coin. This can be verified by any observer using the view keys. A set of keys are created for the vote results via key aggregation between the voters. They publish the jointly created public spend key, and view key for these vote result wallets. With the public spend key, any voter can send coins to the vote wallets. With the vote view key, any observer can verify the total amount of coins sent to any of the vote wallets. As the private spend keys are never distributed from any voter, the group private spend key can never be formed and so the coins that end up at the vote wallets are lost forever. This is fine, as the subnet is designed to run for the duration of the vote before being archived and reset.
+
+This base version can be extended to allow for preference voting through the use of multiple rounds. With N choices, N rounds are required. On round one the votes are cast, the choice with the lowest number of votes is eliminated, the remaining choices then move on to the next round. As of round N, there is only one choice which has won the runoff.
+
+In practice this would all be almost entirely automated, with a smart card providing voter identification, and a Betrusted device doing the crypto and talking with the network. The only real user interaction would be selecting their choice for either the vote, or to delegate.
+
+This is also verifyable, as on a trusted computing platform some portion of nodes can output audit logs for verification by the voter. This portion would be determined through some fair and unbiased method, such as the xor distance between the voters public key and some hash of the final vote totals. Given the private keys used in the procedure and the blockchain itself, it is then possible to verify every step is exactly correct. As it's impossible to know if any particular device will be audited until after the computation is complete, and given that all information needed to complete the audit is on a publicly accessible blockchain, it therefore forms a strong basis for the security of the system.It also prevents any particular voter from being coersed into proving who they voted for.
+
+https://web.getmonero.org/library/Zero-to-Monero-2-0-0.pdf
+
+AI:
+An idea that got cut, but may be useful.
+
+The idea is to take a combination of STRIPS goal directed pathfinding (http://www.diag.uniroma1.it/degiacom/didattica/dottorato-stavros-vassos/AI&Games-Lecture1-part2.pdf) and deep reinforcement learning to provide an agent to manage environments in an automated way. This would then be layered on top of prolog style business logic for anything that would be safety critical.
+
+This is useful as building a simulation to reasonably model a system is considerably easier than trying than trying to build a custom system to do the long term planning and control optimally. It's also a lot easier to make and verify logic in a single system.
+
+This would then tie back in to the delegative democracy, as the people would be able to tweak or modify the goals or the objective functions of the system (within some bounds), allowing the behaviour of the machine to be decided.
+
+A related idea is that of machine readable governance. That is:
+a) All official notices and the like are issued in machine readable form
+b) All forms and other inputs, when practical, can be provided through a machine readable format
+c) The mechanisms that process all of that data, running the 'business logic' of the government itself, is all public and open to inspection by the public.
+d) The data of any individual is owned by that individual, with GDPR style rights of access and modification of bad data
+e) The more general data of society is accessible either i) Directly, where no privacy issues can exist. ii) Through a FOIA request, where privacy issues could exist but can be managed, or iii) Through verification through the Audit branch, where privacy or other issues cannot be managed.
+f) These standards would be extended to include regulated companies, for example banks and the like.
+
+The practical consequence is the mechanisms of government then fit in to a wider automated picture, allowing for a significantly more efficient system. As an example, saying that the train timetable must exist in a machine readable and documented format then allows for anything that interacts with the trains can build or automate around that. 
+
+
+
+
+
+Re. the cold.
+
+One of the major challenges of the poles as a location is the cold - -130 - -150C at the pole itself. (~-125 dry ice snowfall? https://www.dlr.de/content/en/articles/news/2017/20170202_mars-north-pole-chronicle-of-the-martian-climate_20844.html )
+
+There is some disagreement on exactly how cold it gets, from what I can tell.
+
+10.1126/science.194.4271.1341 - Outside korolev crater is -33C, inside is -60C, measured on one summer day.
+
+One big plus is that forming caverns out of melting ice, when you have a nuclear power plant, is incredibly easy compared to trying to carve out chambers underground. Especially in permafrost style soil like you would find in Utopia planetia/etc. The water ice also acts as a radiation shield and thermal protective barrier.
+
+This isn't as bad as it seems:
+1. The thermal conductivity of Co2 is less than half of normal air - < 10mw/mk vs. 24mw/mk (miliwats) https://www.engineeringtoolbox.com/air-properties-viscosity-conductivity-heat-capacity-d_1509.html
+2. The heat lost is proportional to the difference in temperatures based on that conductivity. The difference between a 15c inside temperature and a -40c outside temperature (winter in minnesota, northern europe) is approx 2.4x the difference between a 15c inside temperature and a -130c outside temperature (on mars). That cancels out well against the difference in the thermal conductivity of the atmospheric materials. This then means that the thermal insulation required would be approximately equivalent to that used in northern europe or america.
+
+
+This still leaves the standard challenges to do with low temperature pressure seals, but after decades of dealing with cryogenic propellants this is more an inconvenience and an engineering limitation than something that would block the mission.
+
+This also makes it much easier to make and keep cryogenic propellants, as the thermal difference needed to be worked around (~50c for LOX) is much easier to work with. Especially as the tanks get larger (for example, large spherical tanks carved into the ice and lined with insulation), as the rate of thermal conductivity is proportional to the surface area (smallest for a sphere, 4pir^2) vs. the volume (4/3 pi r^3).
+
+This is also very interesting as the point at commercial superconductive tape (YBCO tape) is superconductive at -180C, which is again only ~50C away from ambient in the poles. Using a composite cable built around a YBCO core, with a metal outer core with channels cut for liquid argon to pass through (BP -185C), covered with any standard insulator, reasonably cheap superconducting cables can be created and used on Mars.
+
+This is obviously useful in things like power distribution, transformers and the like. What's more esoteric are things like SEMS' which store energy in the superconducting magnetic field. These are generally expensive on earth, mostly due to the cost of refrigeration. These offer the ability to store and retrieve immense amounts of power, at a fraction of the cost of large scale capacitor banks.
+
+in "YBCO superconductor wire based on IBAD-textured templates and RCE of YBCO: Process economics" we see current prices of YBCO tape at $400/kAm, with predictions of a drop down to <$10/Kam. The active component itself is only microns thick, so should be able to be shipped cheaply and reintegrated on a new substrate on Mars. 
+
+This also makes the cryocoolers useful, as they can reliquify the argon, and maintain long runs of cable with minimal power requirements.
+
+Of critical importance is that Korolev crater is above the martian actic circle (73 degrees north vs. ~67 degrees for the arctic circle), and so during summer there will be light constantly and winter will be constant darkness where everything will freeze.
+
+Units of conductivity are Watt meters / m^2 k, or W/mk. Oleic acid doesn't have solid numbers on thermal conductivity but Parafin wax has both high thermal capacity (2.5j/k g) along with thermal conductivity of ~0.1w/mk. Assuming flux of ~500W/M^2, 0.1 = 500WM/1k, so with a difference of 100K, 0.1 = 500M/100, 0.1 = 5M, M = 0.02M of wax will form a simple steady state. As such, during summer it is reasonable to assume that the farms will be able to retain heat (todo: second calculation on that?), and in winter they'll freeze. Enough oxygen must be safeguarded for that.
+
+Oxygen requirement = 0.8kg/day/person. 1M people = 1M kg/day. 1 martian year = 686 days. One season = 171 days. 171M kg oxygen to keep 1M people breathing through the winter. Density of LO2 = 1141 kg/m3. Dividing = 14986m^3 of oxygen needed. A tank with radius of 16m would be sufficient to store that. That's reasonable.
+
+If you have a farm that's aiming not to freeze during autumn, it's going to be throwing off excess waste heat during summer.
+
+http://large.stanford.edu/courses/2017/ph240/black1/docs/nasa-tm-102299.pdf <-- paper on solar irradiance.
+
+Latent heat of vaporization of O2 is ~7kj/mol, 213j/g. 1T of oxygen ~60kwh to liquify. 1GWH to liquefy enough oxygen for 171 days.
+
+The colony sitting within the ice then has the benefit of 4.18j/k*g * trillions of tons of ice to form a stable thermal environment. The majority of the colony never needs to see the thermal extremes, only things out dome. Even airlocks - A two stage airlock, with the first stage having a rough fit seal heating the internal atmosphere to some useful intermediate before a standard airlock would allow for standard cheap high reliability seals. As atm pressure is so low, thermal capacity of the atm is also low, so even with some leakage the energy loss is minimal.
+
+Interesting thought experiment:
+Assume a perfectly black surface, sitting under 1M of parafin wax (as a clear insulator). Assume -60 above the ice, 0c on the ice.
+0.1 = xM/M^2K
+1M^2, 1m thick 0.1=x/60, x = 6. 6W radiated back to atmo.
+
+Water has thermal conductivity ~0.5, ice block is atmo temp. x wats radiated to ice.
+0.5 = xM/K, 0.5=xM/60 
+30 = xM
+x = 30 / M
+400w = 30/M
+M = 0.075 in eq. 
+
+So neglecting convection (needs proper sim), a 10cm thick layer of water would be enough to be net positive on energy absorption in the middle of the martian summer.
+
+To rephrase - at the moment during summer the light hits a glacier with an albedo of about 1 (bare sea ice can be ~0.7 https://nsidc.org/cryosphere/seaice/processes/albedo.html ). This is then in an atmosphere with a pressure far too low to support liquid water, so any heat not lost to the heat sink that is a trillion tons of ice is lost to sublimating the ice uselessly.
+
+On the other hand, if we have a black sheet (with an albedo of ~0), with both sufficient pressure to allow liquid water to form, you can fairly easily have a sustained water pocket even without an insulated tank. With a constructed tank lined with insulation, things are even easier.
+
+
