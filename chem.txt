@@ -59,6 +59,9 @@ Electrolytic plants:
 
 Overall:
 -> Waste heat is cheap-free, so products that can be made mostly/entirely from that are very cheap.
+   -> Use plant heat to make methane for rockets, because your options are dump it into the glacier, or use it to create more things.
+   -> TSSE for water extraction
+
 -> Growing tanks of microbes is much cheaper than industrial processes in terms of fixed cost, but not on marginal cost.
 -> A mixed approach with microbes providing cheaper 'shortcuts' through difficult processes allows for cheaper production of useful goods (ie. nylon, plastics).
 -> A mixed approach also allows for a much wider 'energy capture' net. ie. you can convert heat, light, etc. into biomass.

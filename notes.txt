@@ -209,6 +209,8 @@ TODO: Thickness vs. thermal radiation calculation
 
 Culture/architecture:
 
+Source re. the persistence of beliefs from a well ordered government http://ftp.iza.org/dp5584.pdf ie. is it reasonable for people to believe in this government due to its past actions?
+
 Demographics pulled from Gambia and scaled -> 30 births/1000 pop. Growth rate ~40%, fertility rate 3.5 children/woman. (https://en.wikipedia.org/wiki/Demographics_of_the_Gambia)
 
 -> 10.1007/s00148-005-0024-0 report on incentives vs. family size.
