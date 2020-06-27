@@ -201,11 +201,20 @@ Why dig into ice? Building large pressure vessels as a habitat is incredibly exp
 
 Also an important question of comparative advantage' -> What are the things that this colony can do that others can't. What can it produce cheaper, and so why would the universe place production of those things there?
 
+Diagram showing mars seasons - https://upload.wikimedia.org/wikipedia/commons/4/4b/Mars_earth_orbit.svg
+
 
 TODO: Thickness vs. thermal radiation calculation
 - Tank size vs. people days sustained calculation
 
 Culture/architecture:
+
+Source re. the persistence of beliefs from a well ordered government http://ftp.iza.org/dp5584.pdf ie. is it reasonable for people to believe in this government due to its past actions?
+
+Demographics pulled from Gambia and scaled -> 30 births/1000 pop. Growth rate ~40%, fertility rate 3.5 children/woman. (https://en.wikipedia.org/wiki/Demographics_of_the_Gambia)
+
+-> 10.1007/s00148-005-0024-0 report on incentives vs. family size.
+'Overall, these empirical findings suggest that increased expenditure on family policy programs aimed at empowering women through opportunities to combine family and employment thereby reducing the opportunity cost of children generate positive fertility responses. More specifically, extending maternity and parental leave and childcare provisions causes women to have children earlier in life and to have more children.' https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3000017/
 
 Neoconfucian/Neocalvanist hybrid
 -> Learning and testing is important. Tests determine what jobs can be taken - factory work vs. knowledge work.
@@ -213,6 +222,7 @@ Neoconfucian/Neocalvanist hybrid
 -> Consumerist. Social status demonstrated through conspicuous consumption/consumer goods.
 -> Knowledge and learning is important. Libraries and other public spaces would be large, designed to be the focal point of the dome
 -> Hard work and innovation praised/rewarded. Belief in the 'American dream' if you work hard enough.
+-> Large families promoted 
 -> Respect for 'elders', society as a whole and common spaces.
 -> Government promotion of leaders in science/technology/business
 -> Patriotic pride in the achievements and of the hard work of the earlier generations in building the settlement
@@ -223,6 +233,10 @@ Neoconfucian/Neocalvanist hybrid
 -> Strong work ethic
 -> Games played, tv watched, etc. in shared communal spaces with friends and family. More team games.
 -> People are more compressed - less of a culture of personal space, more of the culturally enforced 'blindness' to the people around them. 
+-> Architecture of shared spaces, dining spaces, entertainment spaces, etc. is ornate and expensive as opposed to the mass produced 'suburbia' of standard commercial/industrial segments
+-> Music is based on shared experiences. Uplifting, patriotic music (government promoted) on the success of the various projects. Angry music when social unrest is left to fester. Sad music when tragedy strikes. Music and art are exported back to earth, where it's popular due to it's uniqueness - unique circumstances produce unique art.
+-> Social export programs promoting Martian culture/cultural products, where the government backs the promotion and distribution of cultural products, to make Martian culture a distinct but critical part of earth culture. With the unique accent martians form, this makes them instantly recognisable and also changes things musically, etc. - different things will rhyme, words and sentences will have different rhythm, etc.
+-> Movie/tv studios use the unique setting to produce movies/tv shows that make use of the new surroundings/different culture/etc. to form new plotlines that draw in audiences. This is bankrolled by the government both to help promote martian culture, but also as a money making venture. This also helps to fund less popular but more useful material like documentaries and the like, which help raise awareness.
 
 Architecture:
 -> Designed as large underice domes, cut into regular floors/sections. Each section then has it's own internal architecture
@@ -231,7 +245,8 @@ Architecture:
 -> Dome 'aquariums' with plastic roofing looking up into the domes with lights, looking up at the marine animals through the ice.
 -> Hybrid indoor/outdoor segments, that open up to the lake outside such that the air pressure inside the segment equals the water pressure outside, so marine life (usually fish from the fish farms) can freely swim inside/outside
 -> Hybrid beach for recreation. Same idea as the indoor/outdoor segment, but with artificial sand and warmed water for people to swim in instead of fish
--> Architecture is designed around the sloped outer walls, with a utilitarian theme. Many areas are mass produced and mass assembled, with only important buildings being unique.
+-> Architecture is designed around the sloped outer walls, with a utilitarian theme. Many areas are mass produced and mass assembled, with only important buildings being unique. Mass produced -> Brutalist. Unique areas -> Parameterist produced via 3d printers for flamboyant buildings in public spaces, Neoclassical for government buildings and other 'straight laced' buildings, specifically with neoroman ties such as having a central courtyard for greenery.  
+
 -> Painted lines on the floor showing routes to various parts of each dome
 -> Central elevator for transporting people and freight from the train station at the bottom level through the dome, through to the surface if the dome reaches the surface
 

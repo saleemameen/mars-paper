@@ -1,0 +1,69 @@
+Chemical industry
+
+Bulk products (in general, produced in the ~thousands to millions of tons in developed countries)
+H2
+-> From thermolysis (S/I cycle), Electrolysis, Steam reforming of CH4, Decomposition of NH3 via Sodium
+NH3
+-> Biologically via Catabolis of protein (which can come from atmospheric nitrogen via nitrogen fixing microbes, or be recycled NH3), Advanced Haber reactor. 
+CH4
+-> Sabatier reactor from CO2/H2, Cracking of alkanes (biological, etc) via H2.
+O2
+-> Via photosynthesis, themolysis/electrolysis of water
+CO2
+-> Extracted from the martian atmosphere, recycled dome atmosphere (easier), heated carbonates, dry ice 'snow' (seasonal).
+CO
+-> Produced from the Zn/S/I cycle, used to produce Alkanes via Ficher tropsch synthesis and methanol to feed biomass.
+Ethene
+-> Produced via the dehydration of ethanol, or directly from CO/H2
+H2So4/H3Po4 -> From metal refining
+HNO3 -> From the reduction of NH3
+
+Biological intermediates -> Produced by producing biomass. Grass/algea/cyanobacteria/methanotrophs/etc. Varying the metabolism of the organism based on what resources are at hand to produce as much of these as possible. Transgenic plants can be pushed to grow much faster via modification of PXY-regulation. 
+
+- Fats
+- Protein
+- Carbohydrates
+-> Grasses need to be treated to convert the cellulose into glucose (chemically and then enzymatically via cellulase)
+
+Biological products:
+- Penicillin
+- Egg protein
+- Milk protein
+- Gluten
+- Bioplastics (PHB, PLA, etc)
+
+Aromatics - Used for plastics, glues (epoxy) and pharmaceuticals:
+Benzine/Xylene/Toluene (BXT fraction) - via pyrolization of either biomass or glucose directly. As an example, used in PET via xylene and ethene.
+Phenol (via Shikimiric acid) - Grown directly. Useful as a solvent, reagent, used in epoxies, antiseptics, etc
+Quinone (via Quinic acid) - Grown directly. Useful for, for example the production of paracetamol via hydroquinone.
+Aniline -> Biologically via (US patent US 2011/0097767 A1). Chemical method via the amination of Phenol discouraged due to cost.
+
+alcohols/fatty acid biological products:
+Adipic acid (for nylon) https://aiche.onlinelibrary.wiley.com/doi/abs/10.1021/bp010179x
+Fatty alcohols (Octanol, etc)
+Ethanol (solvent, reagent, etc)
+Isobutanol (for Isobutene, for rubber)
+Lipids
+
+Solvents:
+Acetone as a solvent from ethanol
+THF (major industrial solvent) from C5 sugars https://pubs.acs.org/doi/10.1021/acs.chemrev.8b00134
+Chloroform from bleach and acetone
+
+Misc:
+ANFO -> For mining.
+
+Electrolytic plants:
+-> Chlorine/NaOH/HCl
+-> Aluminium
+
+Overall:
+-> Waste heat is cheap-free, so products that can be made mostly/entirely from that are very cheap.
+   -> Use plant heat to make methane for rockets, because your options are dump it into the glacier, or use it to create more things.
+   -> TSSE for water extraction
+
+-> Growing tanks of microbes is much cheaper than industrial processes in terms of fixed cost, but not on marginal cost.
+-> A mixed approach with microbes providing cheaper 'shortcuts' through difficult processes allows for cheaper production of useful goods (ie. nylon, plastics).
+-> A mixed approach also allows for a much wider 'energy capture' net. ie. you can convert heat, light, etc. into biomass.
+-> Economically forming an interlinked system makes the system more stable wrt supply/demand shocks, which are common in a real world system, especially a small one for a colony. Especially as some of the intermediates are reasonably easy to store in bulk.
+-> The industry is designed to avoid expensive processes as much as possible. ie. pumping Martian atmo through to algae tanks 
