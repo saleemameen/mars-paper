@@ -20,6 +20,8 @@
 \documentclass[fleqn,10pt]{Stylesheet} % Document font size and equations flushed left
 \usepackage[english]{babel} % Specify a different language here - english by default
 \usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+\usepackage{subcaption}
+\usepackage{gensymb}
 
 %---------------------------------------------------------------------------------
 %	COLUMNS
@@ -56,6 +58,8 @@
 \Keywords{} % Keywords: Keyword1 --- Keyword2 --- Keyword3
 \newcommand{\keywordname}{Keywords} % Defines the keywords heading name
 
+\graphicspath{ {figures/} }
+
 %---------------------------------------------------------------------------------
 %	ABSTRACT
 %---------------------------------------------------------------------------------
@@ -75,7 +79,11 @@
 %---------------------------------------------------------------------------------
 
 \section*{Introduction} % The \section*{} command stops section numbering
-\addcontentsline{toc}{section}{Introduction} % Add to Table of Contents
+%\addcontentsline{toc}{section}{Introduction} % Add to Table of Contents
+In this paper, we seek to outline the central processes and systems that would underpin a successful colony on Mars. To provide a substantive analysis, we limit ourselves to dealing most with the processes that we think are most unique to the Martian environment that cannot simply be transplanted directly from modern societies on Earth and those are are unique to our proposed colony Mars, the Korolev Crater Special Administrative Region. 
+
+The Korolev Crater Special Administrative Region (‘KCSAR’) is a special administrative region of the United States of America established in the 2060s. It is located within the Korolev Crater, an ancient ice-covered impact crater at 73 degrees North, 163 degrees East on Mars. The Crater was selected because it contains around 2000 km3 of water ice, which provides an abundant supply of water and serves as a simple and cheaply implemented cold sink and radiation shield. KCSAR is a subglacial city, housed within interconnected domes constructed into the ice and small domes that sit atop it to offer a means of egress to the Martian surface. It extends in a crescent shape from the northernmost point of the crater along its inner rim.
+
 
 \lipsum[11] % Dummy text
 
@@ -98,31 +106,58 @@
     \label{fig:mines}
 \end{figure}
 
+For human life to survive, and ultimately, flourish in KCSAR, cost-efficient manufacturing processes of essential bulk materials are critical. Operationally, this requires KCSAR to embody a close to autarkic self-sufficiency based existence, particularly given the presence of high transport costs from Earth, and the inherent risks that are associated with any delays in the transport of critical imports. Capitalising on novel technologies, therefore, is seen as the main driver for many of the absolute and economic necessities of life. In this section, we outline a range of technical processes that are crucial to the production of power, air, water, food, bulk and raw materials, and internet, to ensure that KCSAR has a vibrant and prosperous future.
 
-For human life to survive, and ultimately, flourish in KCSAR, cost-efficient manufacturing processes of essential bulk materials are critical. This not only ensures economic viability in the presence of high transport costs from Earth, but also mitigates the inherent risk associated with any delays in the transport of critical imports. Given that this requires KCSAR to function within a close to autarkic self-sufficiency framework; this section aims to identify and discuss some of the key technical processes involved in the production of both absolute necessities and utilities, and the productive and intermediary goods that are crucial to the survival and economic development of KCSAR.
+\subsection{Absolute Necessities of Life}
 
-\subsection{Absolute Necessities and Utilities}
-
-\subsubsection{Water}
-KCSAR is strategically located and built into water ice, which provides readily available access to an abundance of liquid water, provided that the ice is heated. To heat the ice, KCSAR capitalises on the heat exchangers from the reactor designed in section \ref{sec:power_and_thermal_design} that produces a high temperature output that is capable of heating a set of nearby ponds, which dissipate the heat into the surrounding ice walls to ultimately form an inlet of accessible liquid water. While the lake water is not initially potable, a novel two-stage temperature swing solvent extraction (TSSE) process \cite{ChanheeBoo2019}, provides an effective solution. In the first stage, the solvent Diisopropylamine (DIPA) is heated to absorb water from the raw water inlet until it is saturated. This is then cooled so that the DIPA rejects excess water and forms an aqueous layer that can be removed \cite{CRC_84Ed}. In the second stage, Diethyl ether (Eth) is used to extract the DIPA from the water. Given that Eth is mostly immiscible, it is easily removed with a low boiling point and high vapour pressure. Finally, the water is treated to maximise its safety using: (1) activated charcoal filtering, (2) added minerals, (3) NaF for dental health assistance, (4) NaOCl as a disinfectant, and (5) a buffered mixture of common ions to ensure that (a) the pH of the water remains slightly alkaline, (b) metal pipes passivate properly, and (c) leeched metal ions are insoluble.
+Given the resource scarcity, the production line for a number of essential necessities are designed to operate synergistically with one another. This maximises utility while enabling a futures market to arise from the multiple production processes with distinct production curves. The resulting overall system, therefore, is robust, efficient, and responsive to any market turbulence.
 
 \subsubsection{Power and Thermal Design}
-\begin{figure}
-    \centering
-    \includegraphics[width=80mm]{art/mining.jpg}
-    \caption{Artists rendition of the automated mines}
-    \label{fig:mines}
-\end{figure}
+\label{sec:necessities_power}
 
-\label{sec:power_and_thermal_design}
+Starting with power consumption and generation - arguably, the foundation of all subsequent processes - KCSAR requires on average ~1GWe (with an upper limit of ~3GWe) to sustain life for one million people. KCSAR’s power generation model encompasses ~16GW of instantaneous power, which is generated from three different processes: (1) 10GWth power output is produced from an integral fast-spectrum two-fluid molten-salt reactor that operates at 750\degree C, (2) 3GWe power output is yielded from a series of mass-producible standard sCo2 Brayton cycle pressure turbine systems that are connected to the reactor, and (3) 3GWe power output is derived from a cryogenic battery made up of LN2 that has a 24h capacity of 36GWh. Essential to the efficacy of this power generation model, is the requirement for an effective heat-sink, driven largely by the heat density of the molten salt reactor design and the difficulty of thermal rejection on Mars, due to the absence of a thick atmosphere and large bodies of water. Given that KCSAR is strategically located on water ice, it is well positioned to provide the required heat sink, and in fact, offers additional synergistic benefits across the entire supply chain, as will be observed shortly.
 
-If you are after the priority of life: #0 is energy, and the primary way to make scalable energy, requires a heat sink, which is what the ice is for. 
+The reactor itself is an integral design made up of standard high temperature materials, and houses a single crucible that contains the entire assembly. It uses Hastalloy-N disposable fuel pins, which are filled with a fuel salt mixture that comprises plutonium and U238. These pins are the only superalloys that are required to be produced and shipped from Earth. Since it is a fast spectrum reactor, there is no requirement to isotropically separate lithium for the FliBe mixed fuel salt. The fuel salt is separated and shipped carefully because of potential condensation of fission products, such as the outgassing of Xenon and Krypton from the heat transport salt. As a liquid fuel, it can be burned more completely because the standard Xenon intercalation problems found in MOX are not present. The coolant salt is then wrapped in a Thorium salt ‘blanket’, allowing it to be bred for Pa and then U233 for use in nuclear thermal vehicles, along with Kilopower style stationary reactors for things such as mining colonies. The outer coolant salt is chloride based. By operating under Argon on Mars, the usual corrosion problems associated with water or oxygen impurities in the fuel salt is removed. As a complete system, the reactor is designed to run at 100\% capacity at  all times, redirecting its output into industrial tasks, if there is sufficient supply of electrical power.
+
+Part of KCSAR’s engineering philosophy is the notion that maximal utility must be embodied into the design of every system. Thus, we will note how the reactor seamlessly permeates into other energy-producing processes that augment the energy capacity of KCSAR (refer to figure \ref{fig:power_diagram} for a diagrammatic representation of the power generation distribution). Excess thermal energy from the reactor is used within a  larger series of connected sCo2 Brayton cycle pressure turbines. The benefit of using these over high-pressure turbines is that they are mass-producible and do not require precision parts that are often difficult to transport. Input into the system are a combination of byproducts such as reactor fluids, absorption chillers, and waste heat from chemical industrial plants, which are then managed by a thermal distribution system that generates various output loops at chemically useful temperatures, as well as a rejection loop for any heat that is too low grade for industry. The combined heat and power system (driven largely by the reactor’s excess thermal energy), produces ‘plant heat’ that can be used within various chemical plants to develop other essential goods (e.g. food, and fuel), and also provides the necessary heat needed for natural ecosystems to thrive (e.g. facilitates the growth of cold water fish and algae). This is discussed further in section \ref{sec:necessities_food}. Furthermore, waste heat from the reactor is also capitalised on to address the challenge of bulk cooling on Mars. By using a series of absorption chillers, such as an LiBr absorption chiller that produces water at 2\degree C, and an ammonia absorption chiller that produces a chilled methanol loop at -30\degree C, the waste heat has useful properties that allow for the chilling of objects below the temperature of the lake.
 
 \begin{figure}
     \centering
     \includegraphics[width=100mm]{figures/fig_power.pdf}
     \caption{Power diagram}
     \label{fig:power_diagram}
+\end{figure}
+
+Finally, any excess energy produced is stored within a cryogenic battery \cite{Hogberg2018} made up of LN2. LN2 is heated by industrial waste heat to (1) form high pressure N2 that turns the locally produced low pressure turbines, and (2) provides the means to both operate the LN2 turbopump and pressurize the LN2 tanks. To ensure that the cryogenic tanks remain chilled, a novel approach to radiative cooling is used. A solar absorber that is made up of an undoped Ge film, below an epitaxial Ge02 scratch resistant layer, is used to create a shading mechanism for the black body radiative cooler through a ZnSe window. An anodized black-body radiator in a dewar then acts as a heat exchanger for He, which enters through the bottom and is cooled to create the cold loop that chills the cryogenic tanks. The chilled He can then be used to either liquify boiled off gasses, or cool liquid gas as required. Given that the thin atmosphere of Mars radiates less IR at night as a black body, it is relatively simple to build larger vacuum chambers to support this system as needed \cite{Chen2019}. Some of the key benefits of using cryogenic batteries are: (a) they provide a sacrificial LN2 blanket that reduces the loss associated with the relatively valuable LO2 and CH4; (b) economically, it creates elasticity in the supply of electrical energy, which would otherwise be produced highly inelastically from the nuclear reactor, and thus ensures stable, elastic demand; and (c) since there is a market for both reactor heat and power that can be converted into each other, the fungibility of these resources softens the demand curve for each, ensuring a stable market equilibrium.
+
+\subsubsection{Air and Atmosphere}
+\label{sec:necessities_air}
+
+\subsubsection{Water}
+\label{sec:necessities_water}
+
+\subsubsection{Food}
+\label{sec:necessities_food}
+
+\subsection{Economic Necessities of Life}
+
+\subsubsection{Bulk Materials}
+
+\subsubsection{Mining and Raw Materials}
+
+\subsubsection{Factories and Consumables}
+
+\subsubsection{Internet}
+
+\subsection{Services}
+NOTE: We might need some comment on services, but, if we are strapped for words, this could be integrated as part of demographics / initial migrant selection etc
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=80mm]{art/mining.jpg}
+    \caption{Artists rendition of the automated mines}
+    \label{fig:mines}
 \end{figure}
 
 \subsubsection{Atmosphere}
@@ -133,7 +168,7 @@ If you are after the priority of life: #0 is energy, and the primary way to make
     \label{fig:atmo_diagram}
 \end{figure}
 
-\subsubsection{Subsubsection}
+
 \begin{figure}
     \centering
     \includegraphics[width=100mm]{figures/fig_chem.pdf}
@@ -141,9 +176,6 @@ If you are after the priority of life: #0 is energy, and the primary way to make
     \label{fig:chem_diagram}
 \end{figure}
 
-\subsubsection{Subsubsection}
-
-\subsection{Subsection}
 
 %---------------------------------------------------------------------------------
 %	SECTION 2: LIFE ON MARS: SOCIETY AND ECONOMY
@@ -155,11 +187,15 @@ In this section, we lay out the defining characteristics of KCSAR's social and e
 
 \subsection{Governance}
 
-The KCSAR government is made up of four distinct branches, with government powers separated between the executive, legislature, judiciary and an auditor branch. Direct democracy acts as a constraint on the actions political elites, forcing them to represent the interests of the populace at large and to adopt cooperative rather than confrontational strategies. 
-\cite{Papadopoulos, 2001}
-The KCSAR political system embodies the most direct feasible form of democracy, a delegative democracy. 
+The KCSAR political system embodies the most direct feasible form of democracy, a delegative democracy. It has been argued that one of the greatest benefits of a direct democracy, is that it acts as a constraint on the actions of political elites, forcing them to represent the interests of the populace at large and to adopt cooperative rather than confrontational strategies \cite{Papadopoulos2001}. In practice, the direct democracy of KCSAR is governed by four distinct branches, with government powers separated between the executive, legislature, judiciary, and an auditor branch.
 
 Procedural laws substantially limit the powers of each of the branches of government, enforcing substantial oversight from each branch upon the others and requiring that for any substantial change in policy or exercise of non-standard powers, the issue is put to a ranked choice vote by all citizens. Additionally, where matters of judicial interpretation or issues raised by citizens receive a sufficient amount of public support, they are put to a vote. Thereby, citizens directly determine government decisions.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=95mm]{figures/fig_del_democracy.pdf}
+    \caption{Simplified delegative democracy tree: voters are letters, issues are numbers}
+\end{figure}
 
 These democratic arrangements are unpopular on Earth primarily because of the prohibitive time cost associated with voting on such a broad range of issues. In KCSAR, this cost is limited through a system of vote delegation by which citizens may delegate their voting right to other individuals or between individuals based on the subject area of the vote. For example, a citizen may delegate their military decisions to person X and economic decisions to person Y. These delegations may be changed at any time and are supported using cryptographic primitives such as homomorphic encryption and linkable ring signatures, allowing for both anonymous voting and cryptographic security.
 
@@ -178,30 +214,42 @@ In the presence of extremely high immigration costs, for an isolated colony to m
 \cite{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3000017/}
 
 
-In KCSAR, direct economic incentives, such as a Universal Basic Income ('UBI') are offered to guardians proportional to the number of children they care for. Non-cash incentives such as additional leave and guardian allowances are also offered. These incentives are routinely adjusted to maintain a stable fertility rate and help contribute to a culture that celebrates caring for large families while continuing to productively contribute to KCSAR society. 
+In KCSAR, direct economic incentives, such as a Universal Basic Income ('UBI') are offered to guardians proportional to the number of children for which they care and these have been shown to improve fertility outcomes \cite{Kalwij} \cite{Bjorklund}. Non-cash incentives such as additional leave and guardian allowances are also offered. These incentives are routinely adjusted to maintain a stable fertility rate and help contribute to a culture that celebrates caring for large families while continuing to productively contribute to KCSAR society 
+As the cost of raising children is substantial in both direct costs (such as providing food and atmosphere for the child) and indirect costs (such as the loss of productive labor of parents) KCSAR is concerned with the 'quality' of children - their capacity to contribute to GDP - as well as their quantity. 'Embryonic selection' is used to select for the most fit potential children. Gametes are extracted from parents and fused to form blastocysts \cite{Shulman}. A cell is taken from each blastocyst and its genome is fully sequenced using a nanopore sequencer. The full genome sequence is then processed to generate a polymorphism map that is analysed using artificial intelligence to determine a ‘fitness’ index score. To estimate this fitness function requires the search space be both explored and exploited simultaneously, posing a 'one-armed bandit' problem. Therefore, we use a regret minimising strategy to estimate the value to both individuals and society of particular phenotypes.
 
-As the cost of raising children is substantial in both direct costs (such as providing food and atmosphere for the child) and indirect costs (such as the loss of productive labor of parents) KCSAR is concerned with the 'quality' of children - their capacity to contribute to GDP - as well as their quantity. Embryonic selection is used to select for the most fit potential children. Gametes are extracted from parents and fused to form blastocysts. A cell is taken from each blastocyst and its genome is fully sequenced using a nanopore sequencer. The full genome sequence is then processed to generate a polymorphism map that is analysed using artificial intelligence to determine a ‘fitness’ index score. To estimate this fitness function requires the search space be both explored and exploited simultaneously. We use a regret minimising strategy to estimate the value to the population of a particular phenotype and provide this input to an ensemble classifier to best approximate the global maximum of the fitness problem.
+We use a regret minimising strategy to estimate the value to the population of a particular phenotype and provide this input to an ensemble classifier to best approximate the global maximum of the fitness problem.
 
 The KCSAR also faces a phenotypic diversity bottleneck created by the small size of its population. Studies have shown that a lower limit on a genetic bottleneck is in the tens of thousands, with higher estimates for K selective species like humans that have few offspring but vast resources available for them. As the population must thrive while adapting to the Martian environment, genetic diversity must be thought of as a resource with risk amelioration benefits even for a population as high as one million. Therefore, frozen gametes from screened and compensated individuals are imported to the KCSAR en masse. The transport costs are relatively low due to the light weight of the cargo.
 
 \subsection{Demographics}
-To project KCSAR's population demographics, we scale demographics from Gambia, which has a similar fertility rate (3.5 children/woman) and population growth rate (40\%). \cite{https://en.wikipedia.org/wiki/Demographics_of_the_Gambia)} Below, we approximate a demographic pyramid for KCSAR.
+To project KCSAR's population demographics, we scale demographics from Gambia, which has a similar fertility rate (3.5 children/woman) and population growth rate (40\%). \cite{Gambia} Below, we approximate a demographic pyramid for KCSAR.
 
 \begin{figure}
     \centering
-    \includegraphics{}
-    \caption{Caption}
-    \label{fig:my_label}
+    \includegraphics[width=95mm]{figures/fig_demopyr_t.png}
+    \caption{Simplified delegative democracy tree}
 \end{figure}
 
 Young children and the elderly are not part of the labor force and are provided for by the government. As the cost of providing for non-productive individuals is much higher on Mars than Earth, the proportion of people who are part of the working population must be relatively high. Assuming various cutoffs for the working age population, we project the occupations of citizens below.
 
-\begin{figure}
-    \centering
-    \includegraphics{}
-    \caption{Caption}
-    \label{fig:my_label}
-\end{figure}
+\begin{figure*}[t!]
+    \begin{subfigure}[t]{0.3\textwidth}
+        \centering
+        \includegraphics[height=40mm]{fig_demo_down.png}
+        \caption{CUTOFF WWW}
+    \end{subfigure}%
+    \qquad \qquad  %This adds space between images
+    \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[height=40mm]{fig_demo.png}
+        \caption{CUTOFF XXX}
+    \end{subfigure}%
+    \qquad \qquad  %This adds space between images
+    \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[height=40mm]{fig_demo_up.png}
+        \caption{CUTOFFYYY}
+    \end{subfigure}
+\caption{ }\label{fig:animals}
+\end{figure*}
 
 As is evident from the figures above, the age at which young people enter the workforce has a dramatic impact on the ratio of working age people to others in a society with such a high reproductive rate. While the proportion of the population entering retirement is low, children engaged in schooling are a substantial burden on KCSAR. 
 
@@ -219,7 +267,7 @@ All KC citizens receive a Universal Basic Income (‘UBI’), which is a cash pa
 
 \begin{enumerate}
     \item On Mars, where space and air have material costs, unemployment and homelessness have even larger social burdens. A UBI provides a security net, helping to tide people over and thereby reducing the number of people who are initially part of cyclical or frictional unemployment from becoming long-term unemployed.
-    \item Studies have shown that there is a strong association between relative poverty and crime. In a Mars colony, where crime is relatively difficult and expensive to prosecute, making sure that all individuals have access to a living wage may be a cost-saving measure. 
+    \item Studies have shown that there is a strong association between relative poverty and crime. In a Mars colony, where crime is relatively difficult and expensive to prosecute, making sure that all individuals have access to a living wage may be a cost-saving measure \cite{Hooghe}.
     \item It provides support to unpaid care workers and individuals who are not engaged in the formal workforce. This in turn relieves pressure on public services that provide care to ill and differently abled people as well as incentivizing the growth of families.  
     \item It simplifies the provision of transfer payments to citizens by eliminating the need for secondary transfer payments. 
 \end{enumerate}
@@ -229,7 +277,7 @@ The primary objections to a UBI are that it reduces motivation to work and that 
 While there is no economy-wide, government mandated ‘minimum wage’ in the KCSAR, unions are formed within each major industry that then demand appropriate working conditions and remuneration for members. In guaranteeing that the returns of corporations are distributed to labor (rather than absorbed entirely by capitalists), labor unions serve an important role in allocating resources to the population most likely to spend them and encourage further growth, as the Marginal Propensity to Consume (‘MPC’) of workers is higher than that of wealthier business owners. These labor unions will operate as delegative institutions. As companies grow larger, the importance of their unions also grows and unions will take on a direct oversight role as members of the company board. 
 
 \subsection{Taxation}
-The taxation mix broadly aims to incentivize taxpayers to engage in the most efficient economic activities (maximising GDP per capita) whilst remaining progressive (maintaining a minimum degree of inequitability). The largest component of the taxation mix is a simple income tax, that is highly progressive and ensures that the net effect of the UBI is positive for low income earners but negative for higher ones. Additionally, a substantial inheritance tax will be utilised to reduce wealth inequality and encourage social mobility. Lower wealth inequality is associated with higher capital mobility, as wealth is negatively correlated with MPC and higher social mobility likely improves labor engagement and provides incentives for hard work and innovation
+The taxation mix broadly aims to incentivize taxpayers to engage in the most efficient economic activities (maximising GDP per capita) whilst remaining progressive (maintaining a minimum degree of inequitability). The largest component of the taxation mix is a simple income tax, that is highly progressive and ensures that the net effect of the UBI is positive for low income earners but negative for higher ones. Additionally, a substantial inheritance tax will be utilised to reduce wealth inequality and encourage social mobility. Lower wealth inequality is associated with higher capital mobility, as wealth is negatively correlated with MPC and higher social mobility likely improves labor engagement and provides incentives for hard work and innovation \cite{Brueckner-2018}.
 
 Taxation is also used as a lever to encourage productive economic behaviors. Capital gains taxes are levied on the increased value of capital goods with active asset rollover exemptions that allow for deferral or reduction of tax burden if the profits generated from the sale of a capital asset are reinvested in new capital assets. This will creates an incentive for individuals to reinvest returns, helping to improve liquidity in the capital market and grow the economy as a whole. Land value taxes are levied on the unimproved value of the real estate of the colony (on shops, apartments etc.). This creates an incentive for land to be used for its most efficient purpose and thereby encourages the endogenous formation of regional specialisation. For example, if an area of land were an industrial zone, and it would be more productive for that land to be used for the creation of a shopping area, the tax provides an economic incentive for the industrial zone to relocate, likely to areas that already have a mass of industrial sites, where firms can benefit from the economies of scale of regional specialisation.
 
@@ -238,6 +286,9 @@ Within the city of KCSAR, land is granted to private individuals for a fixed dur
 
 \subsection{Regulation of natural monopolies}
 Many of KCSAR's essential markets are natural monopolies in which the cost function of mass production is more highly correlated with the number of distinct designs produced, rather than the number of items that each produces. In particular, regulated modules are the building blocks of the multitude of designs required to service the colony's needs. As these must be produced at scale, through an Original Design Manufacturing model, to minimise costs, they form a natural monopoly. To make these monopolistic industries profitable, while limiting the undue usage of monopoly power, a regulated utility corporation model is used. Candidate organisations are offered monopolitic control over a sector as well as cheap loans provided through the KCWF in exchange for significant public oversight. The charters offered to these organisations issue board seats that are mangaged by the community through delegative democracy. The audit branch is given additional powers to inspect company documents, ensure compliance and to provide the public a means of redress. This oversight also ensures that these corporations are extremely stable, making them ideal candidates for conservative investors.
+
+\subsection{Law and order}
+On Mars, the cost of incarceration is prohibitive, as the cost of space and providing for individual citizens are extremely high. KCSAR implements a rehabilitative rather than retributive model of justice that aims to limit the incentives for crime and to prevent the emergence of environments that may encourage radicalisation. It prioritises early intervention programs that identify and satisfy the needs of citizens experiencing hardship. The political and economic system outlined above also ensures that every individual has a say in government decision-making as well as access to meaningful work and the promise of a bright future. This removes some of the key incentives around which larger scale structural crime might develop \cite{10.1093/bjc/azq067}. Policies and monitoring are also implemented to prevent ghettoization, and thereby structural disprivilege that may lead to structural crime. 
 
 \subsection{Leased rockets}
 An increasingly mature market for leased rockets is pivotal in the reduction of costs associated with interplanetary travel and for the viability of interplanetary trade. A leasing market for reusable rockets enables relatively small companies involved in interplanetary travel and commerce to operate despite extremely high startup costs. As rockets are extremely expensive purchases and proper actuarial models to determine the risk associated with the asset did not yet exist, an insurance policy for the potential shortfall was created to ensure the profitability of investing in rocket ownership. The insurance policy relied on the usage of catastrophe bonds and government intervention through targeted reinsurance programs that restrict the unhedged risk to the insurer to standard commercial risks. This enabled the repackaging and reselling of debt with the same credit rating as the insurer and thereby the on-selling of leases on the wholesale debt market, refilling the initial fund and including extra profit on the lease (a Credit Default Swap). As the market continues to mature and the asset risk is better understood, liquidity continues to improve.
@@ -248,73 +299,77 @@ As an isolated colony, KCSAR remains dependent on key imports from Earth includi
 To purchase these crucial imports, KCSAR must produce a sufficient quantity of exports. The prohibitive costs of transporting goods to Earth (\$200/kg) requires that only products with extremely high value-add to weight ratios be exported. These products include:
 
 \begin{enumerate}
-\item Precious materials are mined from asteroids near Mars by 'Honeybee-style' automated robotic mining. Modelling of the price elasticity of demand or gold, platinum and the like indicate that significant quantities may be exported before oversaturation of supply makes it uneconomical.
+\item Precious materials are mined from asteroids near Mars by 'Honeybee-style' automated robotic mining \cite{Shaw}. Modelling of the price elasticity of demand or gold, platinum and the like indicate that significant quantities may be exported before oversaturation of supply makes it uneconomical.
 \item Fuel mined from comets is exported to refueling stations around the solar system. These stations enable spacecraft that would only able to reach Low Earth Orbit to reach Mars and the outer solar system via an on orbit refueling stage.
 \item Creative and productive intellectual property produced on Mars serves as a key export. In particular, on Mars, there is a greater imperative to semi-automate or completely automate tasks, producing a comparative advantage in the creation of some AI systems, designs and datasets. Where applications for efficiency gains in Earth-bound processes are found, these assets are exported with close to zero marginal cost.
 \item  The sale of debt and equity will also serve as a key ‘export’ that will finance ventures on Mars, helping to stabilize the balance of trade. In particular capital intensive projects such as mining ventures and infrastructure projects will require external financing which will be recorded as a credit on the capital account.
 \item Mars will also has a competitive advantage in the building and operation of telescopes, probes and landers that are to be launched to the far reaches of the solar system. For example, the building of large scale mirrors is far easier on Mars due to its low gravity and access to a vacuum. Some peaks on Mars, such as Olympus Mons also serve as a good location for deep field astronomy.
 \item Mars is an ideal candidate for large scale nuclear production, so isotropic extraction from spent fuel will be a significant source of revenue. Nuclear isotopes such as Pu240, Am241 and Co60 are extremely expensive on Earth but would be relatively easy to produce on Mars. Pu240 is used in space probes that are likely to be built nearby in any case.
 \item In the future, it’s likely that more uses for zero and low gravity as well as vacuum environments will emerge. It is already clear that some types of research are only possible in these environments. Leasing out space in KC and providing labor to conduct experiment and create these goods may therefore constitute a substantial source of revenue. 
+\end{enumerate}
 
 \subsection{The mechanics of trade}
 
-The exchange of packages through the inter-planetary postal services is the basis for trade between KCSAR and earth-bound parties. The KCSAR is a member of the United Postal Union (UPU) and therefore part of the standard postal infrastructure between member states. The distribution network relies on ‘multi-modal’ routing, by which packages are carried by the most cost (or time, depending on the cargo) efficient mixture of trucks, trains, boats, and planes. The final step is a cargo rocket that transports bulk post from Earth to Mars. As Mars is crucially reliant on imports of some necessities, the economic viability of the transportation system that underpins trade is a primary concern.
+The exchange of packages through the inter-planetary postal services is the basis for trade between KCSAR and earth-bound parties. The KCSAR is a member of the United Postal Union (UPU) and therefore part of the standard postal infrastructure between member states. The distribution network relies on ‘multi-modal’ routing, by which packages are carried by the most cost (or time, depending on the cargo) efficient mixture of trucks, trains, boats, and planes. The final step is a cargo rocket that transports bulk post from Earth to Mars. Cargo is transported in standardised containers, allowing for the most space efficient distribution of cargo while maintaining a regulated shape and size to enable easy handling and development of economies of scale in freight handlers.
 
-The results of a sensitivity analysis shown below indicate that the primary mechanism for reducing the transport cost for delivery of freight to Mars is increasing the lifespan and reusability of leased rockets (at least to the 10-year mark). We take the partial derivative of price with respect to a vector of potentially explanatory input variables to provide an indication of how much a change in each factor would impact price. While the rocket lifespan effect dominates, secondary factors such as reducing launch costs (by, for example, connecting the launch complex on Earth to a natural gas pipeline) and reducing the cost of rockets would have significant impact. The technological innovation and reduction in cost of factors of production necessary to change these key factors is most easily stimulated through economies of scale. To enable these economies of scale, a significant market must be generated to enable producers to benefit from scaling up production facilities and investing in research and development.
+As Mars is crucially reliant on imports of some necessities, the economic viability of the transportation system that underpins trade is a primary concern. The results of a sensitivity analysis shown below indicate that the primary mechanism for reducing the transport cost for delivery of freight to Mars is increasing the lifespan and reusability of leased rockets (at least to the 10-year mark). We take the partial derivative of price with respect to a vector of potentially explanatory input variables to provide an indication of how much a change in each factor would impact price. While the rocket lifespan effect dominates, secondary factors such as reducing launch costs (by, for example, connecting the launch complex on Earth to a natural gas pipeline) and reducing the cost of rockets would have significant impact. The technological innovation and reduction in cost of factors of production necessary to change these key factors is most easily stimulated through economies of scale. To enable these economies of scale, a significant market must be generated to enable producers to benefit from scaling up production facilities and investing in research and development.
 
 \begin{figure}
     \centering
-    \includegraphics{}
+    \includegraphics{fig_numflights.png}
     \caption{Caption}
     \label{fig:my_label}
 \end{figure}
 
+\begin{figure}
+    \centering
+    \includegraphics{fig_reuse.png}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics{fig_disclaunchflights.png}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics{fig_fuel.pdf}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+
 Three mechanisms are used to generate stable demand for interplanetary trade: government intervention in its futures market and competition regulation. A futures market for interplanetary trade emerged endogenously, helping to stabilize the demand for and price of traded goods and thereby enabling small and marginal producers to reduce their exposure to liquidity risk and enter the market. It also encouraged more efficient allocation of resources over time. The government intervened by providing a demand floor for interplanetary trade by consistently buying futures for freight transport and using them to transport mail, capital and other government materials. An independent watchdog monitors, reports and provides recommendations to the government on non-competitive behaviors in the rocket production industry. Due to the substantial start-up costs and competitive advantage associated with holding intellectual property in the industry for producing and maintaining rockets. The emergence of vertically integrated firms and firms with substantial market (monopolistic) power is therefore likely. Through the use of the leased rocket model, nonintegrated rocket production companies can easily support an ecosystem of launch providers if they are encouraged to through substantive oversight. A substantially competitive market will keep the costs of production low and encourage innovation amongst competing firms.
 
 \subsection{Culture}
-Given that the residents of KCSAR face extraordinary labor and resource scarcity and live in closely contained quarters, it is critical its emerging culture is one that: (a) cultivates a passion for work that is motivated by a desire to advance the collective interests of the colony, (b) values close communal relationships, (c) fosters and applauds innovative thinking, (d) promotes an appreciation and love for both knowledge acquisition, and knowledge sharing, through a life-long pursuit of education, and (e) celebrates large families. 
+Given that the residents of KCSAR face extraordinary labor and resource scarcity and live in closely contained quarters, it is critical its emerging culture is one that: (a) cultivates a passion for work that is motivated by a desire to advance the collective interests of the colony, (b) values close communal relationships, (c) fosters and applauds innovative thinking, (d) promotes an appreciation and love for both knowledge acquisition, and knowledge sharing, through a life-long pursuit of education, and (e) celebrates large families.  TODO
 
+\subsection{The future of KCSAR}
+To this point, we have laid out the bare bones social and economic processes needed to support a colony of one million people facing pressing existential risk. We have focused on the processes that are distinctively 
 
-\cite{https://scholar.smu.edu/cgi/viewcontent.cgi?httpsredir=1&article=1307&context=jalc}
-\end{enumerate}
+detailed how the emerging colony will be set up and develop social structures. 
 
+We turn now, by way of conclusion, to look at what the future will hold. 
+Over the coming years, a substantial geoscaping operation will be implemented to make the Crater habitable for humans. A central aluminium space frame-style construction with a series of support pillars will hold up a cover, consisting of a thin PHB layer and a clear layer of lipid-derived wax, acting as a counterweight to the air pressure beneath. This greenhouse structure will be filled with the potent greenhouse gas, SF6, until it reaches the Armstrong limit, increasing the Crater temperature to above 0°C. The Crater’s ice layer will melt, forming a glacial lake. Evaporation of water vapour from the lake can then occur, improving the atmospheric pressure within the Crater. O2 and Ar will then be pumped into the atmosphere to make it habitable for human and other air-breathing life.
+The lake will be seeded with nutrients, including metal trace nutrients, sulfates and phosphates to make it habitable for plants and algae. Azolla and algae will be added to produce food and oxygen, whilst fixing nitrogen from the atmosphere. Once it is habitable, the lake will be seeded with fish that will become an important food source for the KCSAR colonists. The upper barrier will form artificial rain clouds as it cools warm moist air that condenses into water and falls as rain. Animals will be able to walk freely about the surface and the lake will be green with life. 
 
-\begin{equation}
-\cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta
-\label{eq:refname2}
-\end{equation}
-
-\lipsum[5] % Dummy text
-
-\begin{enumerate}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
-\item First item in a list
-\item Second item in a list
-\item Third item in a list
-\end{enumerate}
-
-\subsection{Subsection}
-
-\lipsum[6] % Dummy text
-
-\paragraph{Paragraph} \lipsum[7] % Dummy text
-\paragraph{Paragraph} \lipsum[8] % Dummy text
-
-\subsection{Subsection}
-
-\lipsum[9] % Dummy text
-
-\begin{figure}[ht]\centering
-\includegraphics[width=\linewidth]{figures/template_results.pdf}
-\caption{In-text Picture}
-\label{fig:results}
+\begin{figure}
+    \centering
+    \includegraphics[width=80mm]{art/terraformed_dome.jpg}
+    \caption{Artists rendition of the goal, the terraformed crater}
+    \label{fig:mines}
 \end{figure}
 
-Reference to Figure \ref{fig:results}.
+\cite{https://scholar.smu.edu/cgi/viewcontent.cgi?httpsredir=1&article=1307&context=jalc}
 
 %---------------------------------------------------------------------------------
 %	SECTION 3: ACKNOWLEDGEMENTS:
 %---------------------------------------------------------------------------------
-\phantomsection
+% \phantomsection
 \section*{Acknowledgments} % The \section*{} command stops section numbering
 \addcontentsline{toc}{section}{Acknowledgments} % Add to Table of Contents
 
