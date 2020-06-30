@@ -78,104 +78,170 @@
 %	INTRODUCTION
 %---------------------------------------------------------------------------------
 
-\section*{Introduction} % The \section*{} command stops section numbering
+\section*{Introduction}
 %\addcontentsline{toc}{section}{Introduction} % Add to Table of Contents
-In this paper, we seek to outline the central processes and systems that would underpin a successful colony on Mars. To provide a substantive analysis, we limit ourselves to dealing most with the processes that we think are most unique to the Martian environment that cannot simply be transplanted directly from modern societies on Earth and those are are unique to our proposed colony on Mars, the Korolev Crater Special Administrative Region. 
+In this paper, we seek to outline the central processes and systems that would underpin a successful colony on Mars. To provide a substantive analysis, we limit ourselves to dealing most with the processes that we think are most unique to the Martian environment that cannot simply be transplanted directly from modern societies on Earth as well as those that are unique to our proposed colony on Mars, the Korolev Crater Special Administrative Region. 
 
 The Korolev Crater Special Administrative Region (‘KCSAR’) is a special administrative region of the United States of America established in the 2060s. It is located within the Korolev Crater, an ancient ice-covered impact crater at 73 degrees North, 163 degrees East on Mars. The Crater was selected because it contains around 2000 $km^{3}$ of water ice, which provides an abundant supply of water and serves as a simple and cheaply implemented cold sink and radiation shield. KCSAR is a subglacial city, housed within interconnected domes constructed into the ice, as seen in figure \ref{fig:dome}, and small domes that sit atop it to offer a means of egress to the Martian surface. It extends in a crescent shape from the northernmost point of the crater along its inner rim.
+
+% TODO: Maybe we should make a comment introducing the idea of "this is what it will be at first" and "this is where it will eventually be" referencing the terraform
+
+% TODO: IF we have space, setting out the scene for the structure of this paper
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{art/dome_crop.jpg}
+    \caption{Artist's rendition of the dome under the ice.}
+    \label{fig:dome}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{art/terraformed_dome.jpg}
+    \caption{Artist's rendition of the goal, the terraformed crater.}
+    \label{fig:terraformed_dome}
+\end{figure}
 
 %---------------------------------------------------------------------------------
 %	SECTION 1: TECHNICAL DESIGN
 %---------------------------------------------------------------------------------
 
 \section{Technical Design}
-\begin{figure}
-    \centering
-    \includegraphics[width=100mm]{art/dome_crop.jpg}
-    \caption{Artist's rendition of the dome under the ice}
-    \label{fig:dome}
-\end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=100mm]{art/terraformed_dome.jpg}
-    \caption{Artist's rendition of the goal, the terraformed crater}
-    \label{fig:mines}
-\end{figure}
-
-For human life to survive, and ultimately flourish in KCSAR, cost-efficient manufacturing processes of essential bulk materials are critical. Operationally, this requires KCSAR to embody a close to autarkic self-sufficiency based existence, particularly given the presence of high transport costs from Earth, and the inherent risks that are associated with any delays in the transport of critical imports. Capitalising on novel technologies, therefore, is seen as the main driver for many of the absolute and economic necessities of life. In this section, we outline a range of technical processes that are crucial to the production of power, air, water, food, bulk and raw materials, and internet, to ensure that KCSAR has a vibrant and prosperous future.
-
-% TODO: Integrate this into here, to make it stronger, and also mention the overall structure that will guide the marker through the reading of this section.
-
-% Mars is an inhospitable place. Much like the arctic and the deserts of earth, surviving Mars is possible only through technology and, specifically, through applied engineering and chemistry. It’s not possible to show all of the various specific chemical pathways that are needed to maintain an industrialised society in a few pages, and so we will highlight a few key points along with the guiding principles determining the design of the chemical engineering system for KC.
+Due to the presence of high transport costs from Earth and the inherent risks of delays in the transport of critical imports; for human life to survive and ultimately flourish on KCSAR, the colony must be highly self-sufficient and operate as a close to autarkic entity. To achieve this, cost-efficient manufacturing processes of essential bulk materials are critical. In this section, we outline the engineering that underpins these processes, first dealing with necessities for human life, namely, power, air, water, and food; then addressing economic necessities and focusing on bulk materials, mining, consumables and the internet. Within each of these sectoral subsections, we introduce the structure and scale of resource dependence, before analysing the key production pathways (chemical, engineering, manufacturing) needed to achieve essential self sufficiency.
 
 \subsection{Absolute Necessities of Life}
 
-Given the resource scarcity, the production line for a number of essential necessities are designed to operate synergistically with one another. This maximises utility while enabling a futures market to arise from the multiple production processes with distinct production curves. The resulting overall system, therefore, is robust, efficient, and responsive to any market turbulence.
+Given the resource scarcity, the production line for a number of essential necessities proposed here, are designed to operate synergistically with one another. This maximises productivity while enabling a futures market to arise from the multiple production processes with distinct production curves. The resulting overall system, therefore, is robust, efficient, and responsive to any market turbulence.
 
 \subsubsection{Power and Thermal Design}
-%%% TODO WE NEED SOMETHING ABOUT THE COLD/WE ARE ON THE POLE HERE
-
 \label{sec:necessities_power}
 
-%I would reframe this slightly. We say that we need approximately 5-10kwth, of which ~1-3kw is electrical per person (source https://en.wikipedia.org/wiki/List_of_countries_by_energy_consumption_per_capita https://en.wikipedia.org/wiki/List_of_countries_by_electricity_consumption ). Over a million people, that leaves us with 5-10GWth required, at 1-3GWe. Rounding up, that gives us 12GWth, with 4GWe average. So 15Gwth, 4Gwe turbines, 4Gwe battery turbines
-%As we see from actual data, peak demand is roughly double minimal, https://www.nemweb.com.au/mms.GRAPHS/GRAPHS/GRAPH_5NSW1.gif
-%This also means that in these points of minimal demand, there is a lot of spare reactor output that can be used in the chemical market to produce bulk goods, or to recharge the cryobattery. It also lets us 'build for the average' in terms of turbine capacity, without being worried about grid stability problems due to overoad.
-% https://en.wikipedia.org/wiki/Cryogenic_energy_storage
+We begin with power consumption and generation, as all subsequent processes depend upon it. KCSAR requires on average $\approx$1GWe (with an upper limit of $\approx$3GWe) to sustain life for one million people. KCSAR’s complete power generation model can be described as an interconnected system that encompasses thermal and electric power generated via two different processes: (1) a nuclear base-load plant that produces 12GWth power output from an integral fast-spectrum two-fluid molten-salt reactor operating at 750\degree{}C, of which, 4GWe power is obtained from a series of in-situ mass-producible low pressure turbines; and (2) a cryogenic peaker plant that produces 4GWe power output derived from a cryogenic energy storage system (CES) that stores energy in the form of LN2, with capacity of 96GWh, providing the energy requirements to meet peak demand. As seen in figure \ref{fig:power_diagram}, this two-way system maximises the productivity of the power generated, by interacting with other energy-producing processes. For example, during periods of peak demand, the risk to grid instability arising from network overload is ameliorated through the usage of a cryobattery, and, during periods of minimal demand, the excess thermal output can be redistributed for other uses, such as powering the chemical market to increase the production of bulk goods, or recharging the cryobattery. This system relies crucially on the presence of a sufficient heat-sink, due to the heat density of the molten salt reactor design, and the particularities of the Martian context. The absence of large bodies of water and a thick atmosphere make thermal rejection particularly problematic. Opportunistically, however, KCSAR is located on water ice, which provides the necessary heat-sink needed for the long-term viability of the system.
 
-Starting with power consumption and generation - arguably, the foundation of all subsequent processes and indeed life on Mars itself - KCSAR requires on average $\approx$1GWe (with an upper limit of $\approx$3GWe) to sustain life for one million people. KCSAR’s complete power generation model can be described as an interconnected system that encompasses thermal and electric power generated via two different processes: (1) a nuclear base-load plant that produces 12GWth power output from an integral fast-spectrum two-fluid molten-salt reactor that operates at 750\degree{}C, of which, 4GWe power is obtained from a series of in-situ mass-producible low pressure turbines; and (2) a cryogenic peaker plant that produces 4GWe power output derived from a cryogenic energy storage system (CES) that stores energy in the form of LN2, with capacity of 96GWh, which provides the energy requirements to meet peak demand. This two-way system ensures that during periods of peak demand, the cryobattery circumvents the risk to grid stability due to problems with overload, and during periods of minimal demand, there is an abundance of spare thermal output that can either power the chemical market to produce more bulk goods, or alternatively, recharge the cryobattery, thereby maximising the utility of the overarching system, as seen in figure \ref{fig:power_diagram}. This is notwithstanding the way that the reactor is seamlessly permeated into other energy-producing processes that augment the overall energy profile of KCSAR, which will be detailed below. 
+The reactor itself is an integral design made up of standard high temperature materials, and houses a single crucible that contains the entire assembly. It uses Hastalloy-N disposable fuel pins, which are filled with a fuel salt mixture that comprises plutonium and U238. These pins are the only superalloys that are required to be produced and shipped from Earth. Since it is a fast spectrum reactor, there is no requirement to isotropically separate lithium for the FliBe mixed fuel salt to maintain acceptable neutronics. By using this two fluid contained pin design, we can separate the fuel to simplify the reactor maintenance and construction, and therefore avoid the complications arising from (1) the potential condensation of fission products, and (2) the production of Xenon and Krypton. Additionally, as a liquid fuel, it can be burned more completely because the standard Xenon intercalation problems found in MOX are not present. The chloride based coolant salt is then wrapped in a Thorium salt ‘blanket’, allowing it to be bred for U233 via Pa for use in nuclear thermal vehicles, along with Kilopower style stationary reactors for use in mining colonies and the like. By operating under low pressure Argon on Mars, the usual corrosion problems associated with water or oxygen impurities in the fuel salt are eliminated. Overall, the reactor is designed to run at a 100\% capacity factor, with redundant heat exchangers and turbines, and at $\approx$100\% load factor between the electrical and thermal energy demands on the system, matching demand via a smart grid system \cite{Shultis2016}. 
 
-Opportunistically, KCSAR is located on water ice, which satisfies a key requirement of this energy model: the availability of a sufficient heat-sink. Given the heat density of the molten salt reactor design, and the inherent issues of thermal rejection on Mars due to the absence of a thick atmosphere or large bodies of water, there is a critical need for a sufficient heat-sink. Opportunistically, KCSAR is located on water ice, which provides the basis for this energy ss
-
-A key dependency of this system is the need for a sufficient heat-sink, due to the heat density of the molten salt reactor design and the pertinent challenges of thermal rejection on Mars, due to the absence of a thick atmosphere or large bodies of water. 
-
-While the heat density of the molten salt reactor design, combined with the inherent issues of thermal rejection on Mars due to the absence of a thick atmosphere or large bodies of water, would ordinarily present pertinent implementation challenges; the strategic location of KCSAR on water ice is well positioned to provide the necessary heat sink required for the system to thrive. 
-
-Part of KCSAR’s engineering philosophy is the notion that maximal utility must be embodied into the design of every system. Thus, we will note how the reactor seamlessly permeates into other energy-producing processes that augment the energy capacity of KCSAR (refer to figure \ref{fig:power_diagram} for a diagrammatic representation of the power generation distribution). 
-
-
-Essential to the efficacy of this power generation model, is the requirement for an effective heat-sink, driven largely by the heat density of the molten salt reactor design and the difficulty of thermal rejection on Mars, due to the absence of a thick atmosphere or large bodies of water. Given that KCSAR is strategically located on water ice, it is well positioned to provide the required heat sink, and in fact, offers additional synergistic benefits across the entire supply chain, as will be observed shortly.
-
-lower pressure turbines are cheaper and less efficient, but we don't care about this because our primary output is the plant heat / not the electricity. They're made locally and cheaper to produce and its less of a concern because the plant heat is not wasted in our case, because we're using it. 
-
-Turbines are designed to be made on Mars and are cheap.
-
-The reactor itself is an integral design made up of standard high temperature materials, and houses a single crucible that contains the entire assembly. It uses Hastalloy-N disposable fuel pins, which are filled with a fuel salt mixture that comprises plutonium and U238. These pins are the only superalloys that are required to be produced and shipped from Earth. Since it is a fast spectrum reactor, there is no requirement to isotropically separate lithium for the FliBe mixed fuel salt to maintain acceptable neutronics. By using this two fluid contained pin design, we can separate the fuel to simplify the reactor maintenance and construction, and therefore avoid the complications arising from (1) the potential condensation of fission products, and (2) the production of Xenon and Krypton. Additionally, as a liquid fuel, it can be burned more completely because the standard Xenon intercalation problems found in MOX are not present. The chloride based coolant salt is then wrapped in a Thorium salt ‘blanket’, allowing it to be bred for U233 via Pa for use in nuclear thermal vehicles, along with Kilopower style stationary reactors for applications such as mining colonies. By operating under low pressure Argon on Mars, the usual corrosion problems associated with water or oxygen impurities in the fuel salt are eliminated. As a complete system, the reactor is designed to run at a 100\% capacity factor, with redundant heat exchangers and turbines, and at \approx 100\% load factor between the electrical and thermal energy demands on the system, matching demand via a smart grid system \cite{Shultis2016}.
-
-Thermal energy is converted to electricity via low pressure turbines. The benefit of using these over standard high-pressure turbines is that they are mass-producible on Mars and do not require precision parts that are often difficult to transport. Input into the thermal distribution system are a combination of the rejected heat of the reactor fluids themselves, absorption chillers, and waste heat from chemical industrial plants, which are then used to generate various output loops at chemically useful temperatures, as well as a final rejection loop for any heat that is too low grade for industry, which is used to melt ice and for district heating. The combined heat and power system (driven largely by the reactor’s excess thermal energy), produces ‘plant heat’ that can be used within various chemical plants to develop other essential goods (e.g. food, and fuel), and also provides the necessary heat needed for natural ecosystems to thrive (e.g. facilitates the growth of cold water fish and algae). This is discussed further in section \ref{sec:necessities_food}. Furthermore, waste heat from the reactor is also capitalised on to address the challenge of bulk cooling on Mars. By using a series of absorption chillers, such as an LiBr absorption chiller that produces water at 2\degree C, and an ammonia absorption chiller that produces a chilled methanol loop at -30\degree C, the waste heat has useful properties that allow for the chilling of objects below the temperature of the lake.
+The thermal energy generated by the reactor is converted to electricity via low pressure turbines that are manufactured on Mars. The benefit of using these turbines over standard high-pressure turbines is that they do not require precision manufacturing or advanced metallurgy, allowing them to be mass-produced in-situ, on Mars. Inputs into the thermal distribution system are a combination of the rejected heat of the reactor fluids themselves, absorption chillers, and waste heat from chemical industrial plants, which are then used to generate various output loops at chemically useful temperatures, as well as a final rejection loop for any heat that is too low grade for industry, which is used to melt ice and for district heating. The combined heat and power system (driven largely by the reactor’s excess thermal energy), produces ‘plant heat’ that can be used within various chemical plants to develop other essential goods such as food (refer to section \ref{sec:necessities_food}) and fuel (refer to section \ref{sec:necessities_bulk}), while also providing the necessary heat needed for natural ecosystems to thrive (e.g. by facilitating the growth of cold water fish and algae). Furthermore, waste heat from the reactor is also capitalised on to form large inlets of liquid water by heating the ice (an essential resource for life, that is discussed at great lengths in section \ref{sec:necessities_water}). A second purpose of the waste heat from the reactor, is that is can address the challenge of bulk cooling on Mars. By using a series of absorption chillers, such as a LiBr absorption chiller that produces water at 2\degree{}C, or an ammonia absorption chiller that produces a chilled methanol loop at -30\degree{}C, the waste heat has useful properties that allow for the chilling of objects below the temperature of the inlet as required.
 
 \begin{figure}
     \centering
-    \includegraphics[width=100mm]{figures/fig_power.pdf}
+    \includegraphics[width=\linewidth]{figures/fig_power.pdf}
     \caption{Power diagram}
     \label{fig:power_diagram}
 \end{figure}
 
-Finally, any excess energy produced is stored within a cryogenic battery \cite{Hogberg2018} made up of LN2. LN2 is heated by industrial waste heat to (1) form high pressure N2 that turns the locally produced low pressure turbines, and (2) provides the means to both operate the LN2 turbopump and pressurize the LN2 tanks. To ensure that the cryogenic tanks remain chilled, a novel approach to radiative cooling is used. A solar absorber that is made up of an undoped Ge film, below an epitaxial Ge02 scratch resistant layer, is used to create a shading mechanism for the black body radiative cooler through a ZnSe window. An anodized black-body radiator in a dewar then acts as a heat exchanger for He, which enters through the bottom and is cooled to create the cold loop that chills the cryogenic tanks. The chilled He can then be used to either liquify boiled off gasses, or cool liquid gas as required. Given that the thin atmosphere of Mars radiates less IR at night as a black body, it is relatively simple to build larger vacuum chambers to support this system as needed \cite{Chen2019}. Some of the key benefits of using cryogenic batteries are: (a) they provide a sacrificial LN2 blanket that reduces the loss associated with the relatively valuable LO2 and CH4; (b) economically, it creates elasticity in the supply of electrical energy, which would otherwise be produced highly inelastically from the nuclear reactor, and thus ensures stable, elastic demand; and (c) since there is a market for both reactor heat and power that can be converted into each other, the fungibility of these resources softens the demand curve for each, ensuring a stable market equilibrium.
+Finally, any excess energy produced is stored within a cryogenic battery \cite{Hogberg2018} made up of LN2, that is used as needed to meet peak energy demands. LN2 is heated by industrial waste heat to (1) form high pressure N2 that turns the locally produced low pressure turbines, and (2) provides the means to both operate the LN2 turbopump and pressurize the LN2 tanks. To ensure that the cryogenic tanks remain chilled, a novel approach to radiative cooling is used. A solar absorber that is made up of an undoped Ge film, below an epitaxial Ge02 scratch resistant layer, is used to create a shading mechanism for the black body radiative cooler through a ZnSe window. An anodized black-body radiator in a dewar then acts as a heat exchanger for He, which enters through the bottom and is cooled to create the cold loop that chills the cryogenic tanks. The chilled He can then be used to either liquify boiled off gasses, or cool liquid gas as required. Given that the thin atmosphere of Mars radiates less IR at night as a black body, it is relatively simple to build larger vacuum chambers to support this system as needed \cite{Chen2019}. Some of the key benefits of using cryogenic batteries are: (a) they provide a sacrificial LN2 blanket that reduces the loss associated with the relatively valuable LO2 and CH4; (b) economically, it creates elasticity in the supply of electrical energy, by ensuring demand for electricity from the reactor and offering the capacity to redistribute it as needed; and (c) since there is a market for both reactor heat and power that can be converted into each other, the fungibility of these resources softens the demand curve for each, ensuring a stable market equilibrium.
 
-Building a colony at the martian pole at first glance seems like a brutal trade off - trading the easily ability to produce living space and energy for dealing with the bitter cold. But it's less brutal than it would seem at first glance - most of the colony exists within the glacier, which can be built, much like an Igloo, to take advantage of the insulating properties of ice and the large thermal mass of the glacier, to maintain a reasonable temperature. Secondly on the surface, even if the air temperature itself may be under -100C, the low pressure environment reduces convection losses and the co2 atmosphere reduces conduction losses (compared to an N2 based environment), making the engineering problem of heat conservation somewhat more equivalent to much warmer temperatures on earth.
+While developing a colony in the bitter cold of the Martian pole may seem like a brutal trade off for easily producible energy and living space; it is less brutal than one would initially assume. Most of the colony exists within the glacier in domes that are designed with striking similarities to Igloos, in that they take advantage of (1) the insulating properties of ice and (2) the large thermal mass of the glacier, in order to maintain a reasonable temperature. Furthermore, at the surface, even though the temperature itself may be below -100\degree{}C, the low pressure environment reduces convection losses, while the CO2 atmosphere reduces conduction losses (compared to an N2-based environment). This means that as a frame of reference, the engineering problem of heat conservation is actually comparable to the equivalent of much warmer temperatures on Earth.
 
 \subsubsection{Air and Atmosphere}
 \label{sec:necessities_air}
+%For the westinghouse design, the reference is wrong and I can't find a new one.
+% Old text was "a Westinghouse \cite{ErhongDuan2011} style sulfuric acid decomposer"
+
+
+% Modular decomposer citation: 10.13182/NT12-A13551
+
+Next, of primary concern is the supply of the chemicals that form the basis of survival: air and water. In this section we explore the atmospheric conditions required for life to permeate Mars, dealing first with oxygen, the foundation of human life. By far, the easiest method to produce oxygen on Mars is via photosynthesis. However, the challenge is that the supply needs must be determined long in advance (via building farms) and is reasonably unreliable. To mitigate this issue, cryogenic oxygen that is kept cold via the cryobattery’s LN2 that we introduced in section \ref{sec:necessities_power}, offers a short term solution to stabilizing the supply. In the medium term, or where farming is impractical, a Zn/S/I thermochemical cycle \cite{YanweiZhang2013} is proposed to produce oxygen from water at a reasonable cost, using a turboinductor heat pump to efficiently provide optimal operating temperature \cite{JohnBucknellVideo, 2013Dujarric}. The reactor would use an electrochemical bunsen stage \cite{YanweiZhang2016}, with a modular decomposer akin to [citation here ], to save on complexity and cost. Similar designs would also be used to produce O2 from CO2 by omitting the HI decomposition stage, making them suitable for other things, such as life support on mining outposts, powered by kilopower style power plants. A further benefit to Zn/S/I systems is that they both produce the syngas needed for the direct reduction of iron, and consume the water/CO2 generated from the reduction. The interrelationship of these processes used to generate atmospheric conditions are displayed in \ref{fig:atmo_diagram}. 
+
+Given that KCSAR’s atmosphere is primarily made up of low pressure Oxygen and Argon (Argox), the photosynthetic farms can capitalise on a CO2 enriched atmosphere, which can produce an enriched Argox fraction when processed, by recycling the CO2 back into the farms. This  Argox fraction underpins  the city’s atmosphere, supplemented as needed using Air Handling Units(AHU) which maintain total pressure, along with things like temperature, the partial pressures of O2/CO2, and humidity. To ensure that excess atmosphere does not pose a serious threat during events such as a fire, a reject line is used; and any water produced via dehumidification is rejected via a drain line. Another potentially lethal threat on Mars, is the issue of dust, which can lead to health problems such as chronic silicosis. To address this issue, cyclonic filtration with a second electrostatic stage is employed as a scalable way to remove possibly harmful small particles. Provisions must also be made for potential atmospheric failures. Respirators that enclose the ears and eyes are maintained at regular intervals to ensure that citizens have enough time to return to safety if they are unable to access a full pressure suit. Atmospheric monitors and alarms are built into each AHU that operates if pressure falls to a dangerous level, or if the partial pressure of oxygen or CO2 moves outside of safe bounds. The potent odorant Ethanethiol is added to the emergency habitat pressurisation lines, to provide a warning for underpressure and hypoxic situations. While above the ice, depressurization due to pinhole leaks is a major concern, under the ice, the primary hazard is hypoxia or toxic gas buildup due to fire or a chemical leak that rapidly replaces the atmosphere with high pressure, unbreathable gas. An overpressure system within the AHU’s allows for them to rapidly vent out the excess gas, preventing the problems associated with overpressure.
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig_atmo.pdf}
+    \caption{Atmospheric processing diagram}
+    \label{fig:atmo_diagram}
+\end{figure*}
 
 \subsubsection{Water}
 \label{sec:necessities_water}
 
+Extending on our treatment of air, access to liquid water is equally critical, and, once again, the value proposition of settling on the Korolev crater presents itself. Since KCSAR is located and built into water ice, it is surrounded by an accessible water source if heat energy is available. To heat the ice, KCSAR capitalises on the heat exchangers from the reactor proposed in section \ref{sec:necessities_power}. The high temperature output from the reactor produces waste heat that leads to the formation of local ponds, which, over time, transforms into an inlet of accessible liquid water, particularly as the heat dissipates through the surrounding ice walls. While the lake water is not initially potable, a novel two-stage temperature swing solvent extraction (TSSE) process \cite{ChanheeBoo2019}, provides an effective solution for the bulk recycling of water. In the first stage, the solvent Diisopropylamine (DIPA) is heated to absorb water from the raw water inlet until it is saturated. It is then cooled so that the DIPA rejects excess water and forms an aqueous layer that can be removed \cite{CRC_84Ed}. In the second stage, Diethyl ether (Eth) is used to extract the remaining DIPA from the extracted water. Given that Eth is mostly immiscible with water, and has a low boiling point and high vapour pressure, it is easily extracted. Finally, the water is treated to maximise its safety using: (1) activated charcoal filtering (2) NaOCL is added as a disinfectant and (3) a buffered mixture of common ions to ensure that (a) the pH of the water remains slightly alkaline, (b) metal pipes passivate properly, and (c) leeched metal ions are insoluble. Minerals are also added to improve nutritional outcomes, such as NaF for dental health.
+
+ TSSE is an attractive candidate process because (1) it only requires simple mechanical equipment, and (2) it runs on low grade waste heat, at standard pressure, and with mild reaction conditions. This is preferred to more standard reverse osmosis systems that rely on high precision semi-permeable membranes that are complex to manufacture, and that require energy intensive high pressure pumps. Moreover, this TSSE process can internally recycle the low-grade waste heat using a recuperator, which makes it highly energy efficient, and only requires chemicals and materials that are easy to produce in-situ. This ensures that the system is easily scalable as the population grows \cite{ChanheeBoo2019}. Particularly as the population grows, recycled wastewater is therefore the most efficient primary source of water and only supplemented by the energy-costly process of converting large blocks of ice into water where necessary. A relatively simple recycling process is used for 'greywater', produced from sources such as showers on Mars. Greywater does not contain harmful biological organisms, and therefore, the water can be passed through a simple filter stage and fed back into the aquaponic loop that we describe in section \ref{sec:necessities_food}. 'Blackwater', by contrast, does contain harmful organisms that need to be removed, but also contains nitrates and phosphates that make it a good fertiliser. Thus, by diluting blackwater with greywater, and using NaOCl and thermal processing to sterilise it, it is also capable of being utilised in the aquaponics loop. This overarching synergistic water treatment process is laid out in figure \ref{fig:water_diagram}.
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig_water.pdf}
+    \caption{Water diagram}
+    \label{fig:water_diagram}
+\end{figure*}
+
 \subsubsection{Food}
 \label{sec:necessities_food}
+ 
+For an isolated community such as KCSAR, maintaining food security is vital. Producing a sufficient quantity of cost-efficient, nutrient-diverse foods, while maintaining efficient supply lines, is a prerequisite for the sustenance of life. In this section, we outline the artificial ecosystem that provides a varied diet for the citizens of KCSAR, building from the simplest (and most cost efficient) food sources, to the most complex luxury goods. Given the complexity of maintaining food security, we have divided the treatment of this section into two sequential parts, answering the vital questions of: (1) What chemical processes are needed to enable the production of food? (2) How then, do we mass produce the food in a sustainable way?
+
+\paragraph{The Chemical Pathways Required for Food Production}
+Edible industrial products are an extremely cheap food source, and underpin food security, even when there are disruptions in the supply of other nutrient sources. They serve a dual purpose, forming inputs for the biochemical industry discussed in section \ref{sec:necessities_bulk} once they are processed. For example, edible glucose is converted into plastice and protein into ammonia. These edible industrial products are primarily produced in ditch-style farms and grass farms. Ditch-style farming involves injecting water into an earthen dam and covering it in a layer of Oleic acid to protect it from the low pressure / temperature of the surface, so that optimal growth conditions are maintained. Figure \ref{fig:oleic_acid_bp} shows the depth of Oleic acid needed to enable growth. Below the red line, no economically useful growth is possible. Between the red and orange lines, many forms of algae can be grown in useful quantities. The two green lines show the range of optimal growing conditions for Spirulina, a useful cyanobacteria that has adapted to very warm water environments. Within this range, it grows rapidly, producing nutrient rich biomass that feeds both people and animals. The cost efficiency of producing candidate algaes is routinely reviewed to create an appropriate environment for rapid growth. This is achieved, for example, by rotating the crop, or adjusting the depth of the Oleic acid. Since Oleic acid is produced from biomass and is needed for biomass production, this forms a feedback loop that limits the growth of farming over time, as observed in figure \ref{fig:oleic_acid_depth}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig_bp.png}
+    \caption{Depth of oleic acid vs. maximum water temperature}
+    \label{fig:oleic_acid_bp}
+\end{figure}
+
+%This isn't useful at this stage
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=\linewidth]{figures/fig_mass.png}
+%    \caption{Mass of oleic acid}
+%    \label{fig:oleic_acid_depth}
+%\end{figure}
+
+The primary obstacle to ditch-style farming is the method of gas perfusion. There is no viable natural path to enable CO2 and N2 from the Martian atmosphere to reach the aqueous layer for biosynthesis. Hence perfusion stations are used, replacing consumed dissolved gasses such as CO2 and possibly N2, and then extracting the dissolved O2. Mushroom farming is also used to catabolise otherwise indigestible biomass into nutrients for future farming. This removes insoluble products that cannot be ground into a colloid and fed into hydroponic systems. Mushroom farming require O2 and waste biomass that can be seeded with spores to form edible mushrooms.
+
+Given that nitrogen is critical to facilitating plant growth across the farms, either atmospheric nitrogen, or the artificial urea derived from the haber process described in section \ref{sec:necessities_bulk}, will be used as a nitrogen source. While the N2 found within the Mars atmosphere is cheaper to use and requires less processing, its primary drawback is that it results in slower growth. Artificial urea, on the other hand, is more effective, but subject to market fluctuations in the industrial price of urea.
+
+\paragraph{The Sustainable Mass Production of Food}
+
+Whilst building robotic greenhouses that can grow standard crops is a daunting technical challenge, automated farming of light grasses and particularly Miscanthus Giganteus (‘elephant grass’) have been reliably implemented. On KCSAR, this procedure is replicated to produce a cost-efficient source of industrial glucose. Small modular greenhouse sections are fused together and filled with low pressure CO2-enhanced atmosphere. Quantum dots are employed as a layer on top of the greenhouse membrane to increase quantum efficiency by downconverting light that is unsuitable for the grass, such as UV light, into light that is most effective for photosynthesis. The growth beds resemble traditional hydroponic growth beds and are made from processed, crushed regolith. These are robotically mowed, with the farmed grass cracked into glucose by cellulases. Using a similar approach, hydroponic gardens will be used to grow more traditional foods including vegetables, grains and spices. Due to the complexity of harvesting, hydroponic gardens require laborers and a shirt-sleeve environment, making their output substantially more expensive.
+
+Aquaponic farming is also used to supplement the Martian diet with fish and aquatic lifeforms. Aquaponic farms are contained within large bioplastic boxes with an Oleic acid cap, placed in segmented areas cut into the ice. The box acts as insulation, keeping the water warm and separating out the nutrient-rich (particularly phosphate-rich) water that accelerates the growth of cyanobacteria and algae, from dilute water. As these organisms are at the bottom of an artificial food chain, the speed of their growth is highly correlated with the supply of fish of various kinds, that are a staple of the relatively wealthy. 
+
+While relatively expensive, meat is also sufficiently cheap to supplement the diets of most households with varying frequency. Battery poultry, rabbits and similar livestock are the primary source of meat as they may be grown relatively cost efficiently, rapidly and in confined spaces, and they are farmed for eggs and meat. A substantial amount of farmed meat is processed, with cellulose ‘padding’ added (such as in chicken nuggets) to make it more affordable for consumers. 
+
+Yeast, farmed in bioreactors, is used to grow bulk substitute animal proteins, such as albumin from eggs and caseins from milk, from industrial feedstock. This allows for the creation of cheaper substitute products, such as artificial egg whites, as opposed to far more expensive chicken eggs. These are also mixed with processed meats or fish to form more complete processed foods, or even added to semi-natural pathways to create, for example, real cheese out of artificial milk \cite{Pandya2017}. Similarly, using artificial gluten and eggs enables the colony to bake bread and make pasta, which would otherwise be infeasible, thereby allowing for a more varied diet.
+
+In the highest price bracket, are the imported foods from Earth that are infeasible to replicate on Mars such as chocolate and coffee, depending on demand. Where possible, these foods are produced using a mixture of local and imported ingredients. For example, chocolate is produced from combining artificial oils and bulk glucose produced on Mars with cocoa that is imported from Earth. To improve food flavour in a relatively inexpensive way, some spices are engineered chemically (such as simple esters) and biologically (such as limonene, linalool, among others), which makes the food more palatable to those familiar with traditional foods consumed on Earth. Spices that cannot be produced through these methods are imported from Earth. The change in the relative costs of ingredients provides the impetus for culinary innovation and the growth of a distinctive Martian cuisine.
+
+While these diverse farming practices meet most of citizens' nutritional needs, some nutrient deficiencies arise because foods that are high in particular nutrients are difficult or expensive to produce. To address the possibility of widespread deficiencies and resulting health impacts, many foods are fortified with artifical sources of Vitamin C, Vitamin D and Iodine.
+
+
+% TODO: Didn't find a suitable place for this in food, needs to be re-evaluated:
+%------------------------------------------------------------------------
+% Reactor plant heat can also be used to produce methanol to farm methanotrophs, providing a reasonably direct mechanism to convert nuclear power to food or other products.
+% For example, CO2 separated through amine or ionic liquid scrubbing \cite{Lotto2018,StephenYates2016} is used a chemical input
 
 \subsection{Economic Necessities of Life}
 
+% TODO: Add some sort of very brief introduction regarding what we mean by economic necessities of life and how this differs from the absolute necessities, we just spoke about. 
+
 \subsubsection{Bulk Materials}
+\label{sec:necessities_bulk}
+
+% TODO: Ensure that the structure makes sense after @Alex's attempt at a reintegration of a paragraph last night.
+
+The next most important chemical pathways are those that are economically essential for survival - producing plastics and other bulk products. Of primary importance are benzene and its derivatives (BXT \cite{QingfengChe2019} along with Phenol \cite{2001Gibson}, Quinone \cite{NingqingRan2001}, Aniline \cite{Pharkya2020} and more \cite{JianLi2017}). These are produced from biomass, either directly through digestion or via catalytic conversion of biological precursors. Next is ammonia, produced through the catabolic degradation of protein \cite{KwonYoungChoi2014} along with a low pressure advanced haber reactor \cite{BosongLin2019}. Ethene is produced from bioethanol. Sulfuric/Phosphoric acid from acid gases produced in the metal refining process. Nitric acid is produced by the oxidation of ammonia. And methane, which is produced through the sabatier \cite{JohnBucknell2014} process along with  bioalkane cracking \cite{2004JoseComas, XWang2002}, and is used to produce hydrogen via steam reforming \cite{JianhuaTong2006} along with ammonia decomposition, thus allowing for the non-cryogenic storage of bulk hydrogen. 
+
+Methanotrophs use methane/methanol, produced using excess plant heat , as both a carbon and energy source. This allows them to grow rapidly in large-scale bioreactors (some have a doubling time under three hours). They are used to produce polyhydroxybutyrate (PHB), which is crucial for bioplastic production, as well as protein (via Methylococcus capsulatus), Vitamin B12 and artificial oils.
+The key point here is that there are generally multiple pathways to produce any given product, with differing economic factors. Producing Aniline in a bioreactor requires very little in the way of startup cost and is easily scalable, but has a higher marginal cost per ton than building a dedicated plant to aminate phenol. A market that includes both, then, is able to both produce cheaply and scale rapidly to meet market demand.
+
+In some cases biological processes need to be augmented with industrial chemistry to produce useful products - producing acetaminophen from biosynthetic Quinone, for example. Or Nylon from synthetic Adipic acid \cite{WeiNiu2002}, Rubber from ethanol \cite{JunmingSun2011} (via isobutene), Epoxy from phenol, THF from processed plant sugars \cite{ShuoChen2018}, etc. All key components of a modern industrial economy.
+
 
 \subsubsection{Mining and Raw Materials}
+\label{sec:necessities_raw}
 
 \subsubsection{Factories and Consumables}
+\label{sec:necessities_consumable}
 
 \subsubsection{Internet}
+\label{sec:necessities_internet}
 
 \subsection{Services}
-NOTE: We might need some comment on services, but, if we are strapped for words, this could be integrated as part of demographics / initial migrant selection etc
+% NOTE: We might need some comment on services, but, if we are strapped for words, this could be integrated down as part of demographics / initial migrant selection etc
 
 
 \begin{figure}
@@ -183,14 +249,6 @@ NOTE: We might need some comment on services, but, if we are strapped for words,
     \includegraphics[width=80mm]{art/mining.jpg}
     \caption{Artist's rendition of the automated mines}
     \label{fig:mines}
-\end{figure}
-
-\subsubsection{Atmosphere}
-\begin{figure}
-    \centering
-    \includegraphics[width=100mm]{figures/fig_atmo.pdf}
-    \caption{Atmospheric processing diagram}
-    \label{fig:atmo_diagram}
 \end{figure}
 
 \begin{figure}
@@ -202,10 +260,13 @@ NOTE: We might need some comment on services, but, if we are strapped for words,
 
 \begin{figure}
     \centering
-    \includegraphics[width=100mm]{figures/fig_chem.pdf}
+    \includegraphics[width=\linewidth]{figures/fig_chem.pdf}
     \caption{Chemical processing diagram}
     \label{fig:chem_diagram}
 \end{figure}
+
+
+% TODO: At the end of the overall section we could possibly play around with the wording here and reiterate the message we started with, which should seamlessly lead us into the next section. As mentioned previously, water is recycled through a two stage TSSE process, with air being produced through a multitude of pathways depending on market conditions. This market mechanism, along with having multiple pathways for production, then allows for a more robust production process. Similarly, by financially structuring the chemical commodities market through a common futures and spot market, capital for the expansion of production facilities can be easily obtained.
 
 
 %---------------------------------------------------------------------------------
@@ -213,8 +274,7 @@ NOTE: We might need some comment on services, but, if we are strapped for words,
 %---------------------------------------------------------------------------------
 
 \section{Life on Mars: Society and Economy}
-
-In this section, we lay out the defining characteristics of KCSAR's social and economic makeup. Throughout, we integrate commentary on the ways in which KCSAR's political, cultural and aesthetic makeup contribute to its vibrant society.
+Having outlined the technical processes needed to sustain human life on Mars in \ref{sec:Technical Design}, in this section, we lay out the defining characteristics of KCSAR's social and economic makeup. Throughout, we integrate commentary on the ways in which KCSAR's political, cultural and aesthetic makeup contribute to its vibrant society.
 
 \subsection{Governance}
 
@@ -256,25 +316,19 @@ The KCSAR also faces a phenotypic diversity bottleneck created by the small size
 \subsection{Demographics}
 To project KCSAR's population demographics, we scale demographics from Gambia, which has a similar fertility rate (3.5 children/woman) and population growth rate (40\%). \cite{Gambia} Below, we approximate a demographic pyramid for KCSAR.
 
-
-
 Young children and the elderly are not part of the labor force and are provided for by the government. As the cost of providing for non-productive individuals is much higher on Mars than Earth, the proportion of people who are part of the working population must be relatively high. Assuming various cutoffs for the working age population, we project the occupations of citizens below.
 
 \begin{figure*}[t!]
-    \begin{subfigure}[t]{0.3\textwidth}
+    \begin{subfigure}[t]{0.45\textwidth}
         \centering
-        \includegraphics[height=40mm]{fig_demo_down.png}
-        \caption{Workforce 15-64}
+        \includegraphics[height=60mm]{fig_demo_down.png}
+        \caption{Workforce aged 15-64}
     \end{subfigure}%
     \qquad \qquad  %This adds space between images
-    \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[height=40mm]{fig_demo.png}
-        \caption{Workforce 20-64}
-    \end{subfigure}%
-    \qquad \qquad  %This adds space between images
-    \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[height=40mm]{fig_demo_up.png}
-        \caption{Workforce 25-64}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[height=60mm]{fig_demo.png}
+        \caption{Workforce aged 20-64}
     \end{subfigure}
 \caption{Impact of working age cutoff on labour force}\label{fig:animals}
 \end{figure*}
@@ -282,7 +336,7 @@ Young children and the elderly are not part of the labor force and are provided 
 As is evident from the figures above, the age at which young people enter the workforce has a dramatic impact on the ratio of working age people to others in a society with such a high reproductive rate. While the proportion of the population entering retirement is low, children engaged in schooling are a substantial burden on KCSAR. 
 
 \subsection{Education}
-Optimising the educational process and limiting the amount of time spent in education is one of the key methods to increase the working population. With the advent of the information age, ever more efficient educational methodologies have emerged. KSCAR's educational facilities rely on developments in AI-assisted learning such as in optimising curriculum to the needs and abilities of individual students and in adapting examination difficulty to the level of students. Students are grouped together by ability, rather than age group and provided access to pre-recorded lectures, teaching assistants and learning materials from a variety of sources, enabling them to take ownership of maximising the speed of their learning experience. Curricula are simplified and specified to the greatest extent possible so that students are prepared to enter an occupation that reflects both their preferences and ability. Particularly for children, methods that focalize ‘learning through playing’ and student enjoyment are preferred to foster a culture that values and enjoys the process of learning and work.
+Optimising the educational process and limiting the amount of time spent in education is one of the key methods to increase the size of the working population. With the advent of the information age, ever more efficient educational methodologies have emerged. KSCAR's educational facilities rely on developments in AI-assisted learning such as in optimising curriculum to the needs and abilities of individual students and in adapting examination difficulty to the level of students. Students are grouped together by ability, rather than age group and provided access to pre-recorded lectures, teaching assistants and learning materials from a variety of sources, enabling them to take ownership of maximising the speed of their learning experience. Curricula are simplified and specified to the greatest extent possible so that students are prepared to enter an occupation that reflects both their preferences and ability. Particularly for children, methods that focalize ‘learning through playing’ and student enjoyment are preferred to foster a culture that values and enjoys the process of learning and work.
 
 \subsection{Work}
 The majority of the workforce are engaged in key sectors laid out in KCSAR's technical design and the largest proportion are engaged as factory workers. KCSAR does not receive natural sunlight, so rather than relying on traditional day-night shift working cycles, KCSAR workers work to an eight-hour shift cycle that enables continuous work. To maximise the working population proportion, full employment is sustained through a federal jobs guarantee. All able-bodied workers are provided work at below market wages, enabling otherwise unemployed labor for government operations and ventures. Workers are also encouraged to engage in education to reskill to meet the needs of a dynamic labor marke and are provided significant subsidies.   
@@ -327,7 +381,7 @@ As an isolated colony, KCSAR remains dependent on key imports from Earth includi
 To purchase these crucial imports, KCSAR must produce a sufficient quantity of exports. The prohibitive costs of transporting goods to Earth (\$200/kg) requires that only products with extremely high value-add to weight ratios be exported. These products include:
 
 \begin{enumerate}
-\item Precious materials are mined from asteroids near Mars by 'Honeybee-style' automated robotic mining \cite{Shaw}. Modelling of the price elasticity of demand or gold, platinum and the like indicate that significant quantities may be exported before oversaturation of supply makes it uneconomical.
+\item Precious materials are mined from asteroids near Mars by 'Honeybee-style' automated robotic mining. Modelling of the price elasticity of demand for gold, platinum and other precious metals indicates that significant quantities may be exported before oversaturation of supply makes it uneconomical. The movement of mined goods and intra-colony trade is facilitated by 'nuclear hoppers' - relatively cheap reusable single stage nuclear thermal rockets that use martian CO2 as propellant \cite{Zubrin2011}.
 \item Fuel mined from comets is exported to refueling stations around the solar system. These stations enable spacecraft that would only able to reach Low Earth Orbit to reach Mars and the outer solar system via an on orbit refueling stage.
 \item Creative and productive intellectual property produced on Mars serves as a key export. In particular, on Mars, there is a greater imperative to semi-automate or completely automate tasks, producing a comparative advantage in the creation of some AI systems, designs and datasets. Where applications for efficiency gains in Earth-bound processes are found, these assets are exported with close to zero marginal cost.
 \item  The sale of debt and equity will also serve as a key ‘export’ that will finance ventures on Mars, helping to stabilize the balance of trade. In particular capital intensive projects such as mining ventures and infrastructure projects will require external financing which will be recorded as a credit on the capital account.
@@ -368,10 +422,11 @@ Perhaps the most powerful example of such cultural 'nudges' is in the aesthetic 
 
 The government also takes a more direct role by providing economic incentives for individuals to engage in childrearing and education, as detailed previously, as well as providing educational campaigns (for example, tv infotainment campaigns) that encourage socially beneficial behaviours. For example, as living and working in the difficult close contact conditions of a Mars colony has ramifications for people's mental health and life satisfaction, these programs encourage people to form tight-nit relationships with their close neighbours and provide information about how to form supportive relationships that improve mental health outcomes. Self expression through the arts and recreational activities are also highly encouraged and subsidised through government grants.
 
-
 \subsection{The future of KCSAR}
 To this point, we have laid out the bare bones social and economic processes needed to support a colony of one million people facing pressing existential risk. We turn now, by way of conclusion, to look at what the future will hold. 
-Over the coming years, a substantial geoscaping operation will be implemented to make the Crater habitable for humans. A central aluminium space frame-style construction with a series of support pillars will hold up a cover, consisting of a thin PHB or other bioplastic layer and a clear layer of lipid-derived wax, acting as a counterweight to the air pressure beneath and thermal insulation. This greenhouse structure will be filled with the potent greenhouse gas, SF6, until it reaches the Armstrong limit, increasing the Crater temperature to above 0°C. The Crater’s ice layer will melt, forming a glacial lake. Evaporation of water vapour from the lake can then occur, improving the atmospheric pressure within the Crater. O2 and Ar will then be pumped into the atmosphere to make it habitable for human and other air-breathing life.
+
+Over the coming years, a substantial geoscaping operation will be implemented to make the Crater habitable for humans. A central aluminium space frame-style construction with a series of support pillars will hold up a cover, consisting of a thin PHB or other bioplastic layer and a clear layer of lipid-derived wax, acting as a counterweight to the air pressure beneath and thermal insulation. This greenhouse structure will be filled with the potent greenhouse gas, SF6, until it reaches the Armstrong limit, increasing the Crater temperature to above 0\degree{}C. The Crater’s ice layer will melt, forming a glacial lake. Evaporation of water vapour from the lake can then occur, improving the atmospheric pressure within the Crater. O2 and Ar will then be pumped into the atmosphere to make it habitable for human and other air-breathing life.
+
 The lake will be seeded with nutrients, including metal trace nutrients, sulfates and phosphates to make it habitable for plants and algae. Azolla and algae will be added to produce food and oxygen, whilst fixing nitrogen from the atmosphere. Once it is habitable, the lake will be seeded with fish that will become an important food source for the KCSAR colonists. The upper barrier will form artificial rain clouds as it cools warm moist air that condenses into water and falls as rain. Animals will be able to walk freely about the surface and the lake will be green with life. 
 
 \begin{figure}
