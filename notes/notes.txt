@@ -251,3 +251,6 @@ Architecture:
 -> Central elevator for transporting people and freight from the train station at the bottom level through the dome, through to the surface if the dome reaches the surface
 
 
+p = hpg + p_atm
+(101325 - 610) / (3.72 * 1024)
+So about 26m.

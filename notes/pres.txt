@@ -1,0 +1,154 @@
+We have 30 mins total: 20-25 mins of speaking time, 5-10 mins questions.
+
+
+    30 points technical design: What engineering systems will be used? How will they work?
+    30 points economic: How can the city state be made economically successful?
+    20 points social/cultural/political: What should Martian society be like? What kinds of schools, arts, sports and other activities should there be? How, given a fresh start, can life on Mars be made better than life on Earth? How should the city state govern itself?
+    20 points aesthetic: How can the city state be made an attractive and enjoyable place to live?
+
+2 major areas, 2 minor areas. so ~5 minutes per area. That's ~2-3 slides per area.
+
+Here are some test slides.
+
+A lot have more specific numbers than we have
+
+Some have a "Staging/how it's built slide".
+Some have a "here is the name/this is why it's chosen" slide
+
+#People have also asked re. cost of setting it up as a common question - i have some slides on the economics?
+#From zubrin - the key point is can it be economically self sustaining? So that's the larger question vs. actual costs. We're going to want some actual numbers somewhere.
+#ie. SKA telescope is 2.3 billion USD construction cost, JWT is $4 billion usd.
+# North america space launch services 4 billion + spacecraft manufacture (?)
+# ML 390BN USD by 2025 - 10% for training, that's 40BN for quantum speedups.
+# ZBLAN fiber replaces global fiber market ~billions
+# 
+Quantum computing needs to be at low temperatures - having electric isolation/cold environments offers a speed up to a 5 bn industry. 
+Exporting materials - ZBLAN fiber production and export to earth, comparative advantage? Zero gravity production is easier. 
+Exporting services - telescope services. 
+James Web Telescope_space based can be improved on, ball-park $4bn+
+Machine learning worth 390 BN by 2025 - we'd export quantum speedups - D-wave services to improve computational speed for earth-bound processes related to quantum ML.
+Calcium alloys can be produced with no fire risk. 
+
+
+Location slide: - Why did we choose this particular spot?
+- Access to fresh water
+- radiation shielding
+- plentiful living space that's cheap and easy to excavate - Can grow in 3d space
+- Heatsink for power production
+
+Power: #This seems to be a common slide "Power/storage/etc".
+Fast spectrum dual salt breeder reactor - Simplify as needed.
+- Simple design - good neutronics making the design robust, high fuel burnup, no reprocessing needed
+- Fuel pins cheap to import - not a radiological hazard/weapons restricted.
+- Cryobattery doubles as cooling for fuel stores
+- Mass produced locally manufactured turbines
+- High temperature process heat for chemical industry
+- Waste heat produces an artificial subglacial lake/habitat warming
+
+Food: - this tends to be a big focus
+Ditch farming - this is a novel concept, so we should have a slide.
+
+Food 2:
+Aquaponics in the subglacial lake. This can be a quick slide, but it's worth calling out. It's also similar to ditch farming, so it might end up on a combined slide.
+- mass producible with modular construction
+# How are they illuminated is a fairly common question
+
+Maybe grass farms/hydroponics.
+
+Materials:
+- direct metal refining
+- 3d printing/E beam printing
+- Mass production of O2 from ore
+- S/P extraction for biological cycle
+- bulk bioplastics
+- Show miners?
+- Maybe show table 1?
+
+one group had a "resource chain" slide
+
+Technology:
+- Zn/S/I cycle mass producing H2/CO/O2
+- Biochemical processing cycle
+- Xenotrophs and GMO's
+- Use biological processes instead of complicated chemical processes
+
+https://marspedia.org/Nuclear_food_cycle
+"1kg uranium could be converted to approximately 850,000 person days of food"
+If we include the $500/kg import cost, that's $0.0006/person day of imputed import cost. (Not counting plant cost, etc)
+
+- GMO eggs/milk.
+
+Life support: - some groups had a life support slide
+Amine/ionic liquid CO2 scrubbers
+Mass produced O2
+Dehumidifiers
+Biological waste recycling
+TSSE water recycling
+
+
+Society:
+
+Societal ideals:
+-Working towards the terraformed dome (Show terraformed crater)
+- Value of hard work/education
+
+#some groups had a more general "how does the government work" slide.
+SAR:
+
+
+Delegative democracy:
+- World is too complex for every person to understand everything
+- Everyone knows someone who knows more than than them in any particular field
+- Scaleable version of direct democracy using cryptography
+
+Policy:
+- Produce large quantities of well educated children
+- Encourage work
+- Encourage immigration via actuarial incentives
+- Encourage low crime, cheaper to spend on prevention than detention
+- Evidence based society
+- Show demographic pyramid?
+- ES and genetic diversity #May be controversial 
+
+Recreation: - Eye candy is always good.
+Underwater beach slide
+
+Architecture: #TODO we are weak on this.
+- Initial dome slide
+- Second slide with final terraformed crater (?)
+- Combination of asthetics and ease of production.
+
+#TODO do we split economics slide?
+Local economics:
+- Mining leases and development banks funding mining operations
+- Land sales and the mortgage market funding "land production"
+- Futures market for long term/short term production. ie. electrolysis vs. farming for O2 sales.
+- Capital goods funded via sovereign wealth fund.
+- Integration into UPU/international financial system, MBS/etc.
+- Include government reinsurance/etc?
+
+#Should we move this earlier, as it's a major differentiator, and something that gets asked fairly often.
+#This might be foreign trade?
+#Maybe a slide on "how are you going to raise money to pay for this? Including information on the synthetic financial products and the like.
+
+Economics: - This is something nobody had, so this is a step up.
+- FDI
+- Futures market for interplanetary trade to stabalise prices for bulk trade
+- Leased rockets driving down the cost per kg to mars
+- Export of financial products to earth
+- Base for asteroid mining
+- Export of fuel to LEO
+- Export of biomass to commercial outposts on the south pole of the moon, specifically P/S, C.
+- Substitute market from earth (Large scale telescopes, sat production, rockets, space probes, etc)
+- Unique market (Dwave style Quantum computers, ZBLAN optic fiber, reactive superalloys, etc)
+#TODO work out the C input from the moon society lecture required for selling CH4
+#Might need at least a ballpark cost figure
+
+-------
+Extra slides
+
+#There was a question about after death things
+- Default being cremation/burial at sea
+
+#There was a question about post productive people
+- Demographic slide, include soverign wealth fund/super system. Maybe a 
